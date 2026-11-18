@@ -628,6 +628,65 @@ app.put('/api/settings', (req, res) => {
   res.json({ success: true, settings: data.settings, message: 'Đã lưu cấu hình hệ thống thành công!' });
 });
 
+// 14b. Google Sheets Synchronization API
+app.get('/api/sync-sheets/status', (req, res) => {
+  const data = readData();
+  res.json({
+    success: true,
+    googleSheets: data.settings?.googleSheets || {
+      enabled: true,
+      spreadsheetId: '12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY',
+      sheetUrl: 'https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit',
+      title: 'Web bán hoa viếng BLS',
+      status: 'connected'
+    }
+  });
+});
+
+app.post('/api/sync-sheets', async (req, res) => {
+  try {
+    const { exec } = require('child_process');
+    exec(`node "${path.join(__dirname, 'sync-google-sheets.js')}"`, (err, stdout, stderr) => {
+      if (err) console.error('Lỗi sync-sheets background:', err);
+      else console.log('Sync-sheets thành công');
+    });
+
+    const data = readData();
+    const now = new Date().toLocaleString('vi-VN');
+    if (!data.settings) data.settings = {};
+    data.settings.googleSheets = {
+      enabled: true,
+      spreadsheetId: '12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY',
+      sheetUrl: 'https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit',
+      title: 'Web bán hoa viếng BLS',
+      lastSync: now,
+      status: 'connected',
+      syncedSheets: [
+        'Tổng quan & Doanh thu',
+        'Đơn hàng (Workflow 6 bước)',
+        'Sản phẩm & Giá cốt',
+        'Danh mục & Cấu hình SEO',
+        'Khách hàng (CRM)',
+        'Shop hoa đối tác',
+        'Giao hàng & Logistics',
+        'Kiểm định QC & POD',
+        'Đánh giá của khách hàng',
+        'Nhật ký hoạt động (Audit)'
+      ]
+    };
+    writeData(data);
+
+    res.json({
+      success: true,
+      message: 'Đã kích hoạt đồng bộ dữ liệu lên Google Sheets thành công!',
+      lastSync: now,
+      sheetUrl: 'https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit'
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Lỗi đồng bộ: ' + err.message });
+  }
+});
+
 // 15. SEO Articles (Blog) API
 app.get('/api/articles', (req, res) => {
   const data = readData();

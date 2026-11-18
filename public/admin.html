@@ -827,9 +827,199 @@
       box-shadow: var(--shadow-md);
       font-size: 12px;
     }
+
+    /* Google Sheets Sync Status Buttons */
+    .btn-sheets-sync {
+      background: #E8F5E9;
+      border: 1px solid #A5D6A7;
+      color: #1B5E20;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-sheets-sync:hover {
+      background: #C8E6C9;
+    }
+    .btn-sheets-link {
+      background: #F1F8E9;
+      border: 1px solid #C5E1A5;
+      color: #33691E;
+      padding: 6px 11px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+    }
+    .btn-sheets-link:hover {
+      background: #DCEDC8;
+    }
+    .sync-dot {
+      width: 7px;
+      height: 7px;
+      background: #2E7D32;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseSync 2s infinite;
+    }
+    @keyframes pulseSync {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* Admin Sidebar Backdrop (for Mobile & Tablet Drawer) */
+    .admin-sidebar-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(2px);
+      z-index: 998;
+      display: none;
+    }
+
+    /* ================= RESPONSIVE QUERIES (DESKTOP & MOBILE) ================= */
+    @media (max-width: 992px) {
+      .admin-sidebar {
+        position: fixed !important;
+        left: -270px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        height: 100vh !important;
+        z-index: 1000 !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 4px 0 25px rgba(0,0,0,0.35) !important;
+      }
+      .admin-sidebar.mobile-open {
+        left: 0 !important;
+      }
+      .admin-main {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+      .top-navbar {
+        padding: 10px 14px !important;
+        height: auto !important;
+        min-height: 58px !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+      }
+      .top-search-wrapper {
+        width: 200px !important;
+      }
+      .kpi-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+      .chart-and-donut-row,
+      .map-and-activity-row {
+        grid-template-columns: 1fr !important;
+      }
+      /* Fallback for inline grid columns */
+      [style*="grid-template-columns: 1.6fr 1fr"],
+      [style*="grid-template-columns: 1.3fr 1fr"],
+      [style*="grid-template-columns: 1.2fr 1fr"],
+      [style*="grid-template-columns: 1fr 1.4fr"],
+      [style*="grid-template-columns: 1fr 1fr"],
+      [style*="grid-template-columns: repeat(2, 1fr)"],
+      [style*="grid-template-columns: 240px 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .content-body {
+        padding: 12px 10px 40px !important;
+      }
+      .top-search-wrapper {
+        display: none !important;
+      }
+      .kpi-row {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+      .kpi-card {
+        padding: 14px 16px !important;
+      }
+      .top-right {
+        gap: 6px !important;
+        flex-wrap: wrap !important;
+      }
+      .urgent-banner-pill {
+        padding: 4px 8px !important;
+        font-size: 11px !important;
+      }
+      .btn-front-preview {
+        padding: 4px 8px !important;
+        font-size: 11px !important;
+      }
+      .btn-front-preview span,
+      .btn-sheets-link span {
+        display: none !important;
+      }
+      .btn-sheets-sync {
+        padding: 5px 8px !important;
+        font-size: 11px !important;
+      }
+      .btn-sheets-sync .sheets-full-title {
+        display: none !important;
+      }
+      .panel-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+      }
+      .panel-header .btn-action {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      .order-group-tabs {
+        display: flex !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-bottom: 6px !important;
+        scrollbar-width: none !important;
+      }
+      .order-group-tabs::-webkit-scrollbar {
+        display: none !important;
+      }
+      .order-group-tab {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+      }
+      .slide-drawer {
+        width: 100vw !important;
+        max-width: 100vw !important;
+      }
+      .modal-dialog,
+      .modal-content,
+      .order-modal {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin: 10px auto !important;
+        padding: 14px !important;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Admin Sidebar Backdrop for Mobile/Tablet -->
+  <div id="adminSidebarBackdrop" class="admin-sidebar-backdrop" onclick="closeAdminSidebar()"></div>
 
   <!-- ================= SIDEBAR NAVIGATION (PHÂN LOẠI 5 NHÓM CHUẨN) ================= -->
   <aside class="admin-sidebar">
@@ -972,7 +1162,7 @@
     <!-- Top Navbar -->
     <header class="top-navbar">
       <div class="top-left">
-        <button class="nav-toggle-btn"><i class="fa-solid fa-bars"></i></button>
+        <button class="nav-toggle-btn" onclick="toggleAdminSidebar()" title="Đóng/mở Menu điều hướng"><i class="fa-solid fa-bars"></i></button>
         <div class="top-search-wrapper">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" id="adminGlobalSearch" class="top-search-input" placeholder="Tìm kiếm đơn hàng, khách hàng, người mất..." onkeyup="handleGlobalSearch(event)">
@@ -980,6 +1170,17 @@
       </div>
 
       <div class="top-right">
+        <!-- Google Sheets Quick Sync Button -->
+        <button class="btn-sheets-sync" id="btnSheetsSync" onclick="triggerGoogleSheetsSync()" title="Nhấn để đồng bộ dữ liệu thời gian thực lên Google Sheets">
+          <i class="fa-solid fa-file-excel" style="color: #107C41;"></i>
+          <span>Sheets BLS: <b id="sheetsSyncStatusTop">Đã kết nối</b></span>
+          <span class="sync-dot active"></span>
+        </button>
+
+        <a href="https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit" target="_blank" class="btn-sheets-link" title="Mở file Google Sheets trên tab mới">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> <span>Mở Sheets</span>
+        </a>
+
         <!-- Urgent Orders Banner Pill -->
         <div class="urgent-banner-pill" onclick="filterOnlyUrgentOrders()">
           <i class="fa-solid fa-circle-exclamation"></i>
@@ -987,7 +1188,7 @@
         </div>
 
         <a href="/" target="_blank" class="btn-front-preview">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Front-end
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> <span>Xem Front-end</span>
         </a>
 
         <div class="top-action-btn" title="Thông báo hệ thống" onclick="showNotificationAlert()">
@@ -1063,8 +1264,39 @@
           </div>
         </div>
 
+        <!-- GOOGLE SHEETS LIVE DATA HUB BANNER -->
+        <div class="sheets-sync-card" style="background: linear-gradient(135deg, #0F5132 0%, #198754 100%); color: #FFFFFF; border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 22px; box-shadow: 0 4px 18px rgba(16, 124, 65, 0.2); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; background: rgba(255, 255, 255, 0.18); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px;">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <h4 style="font-size: 16px; font-weight: 700; margin: 0; color: #FFFFFF;">
+                  Hệ Thống Đồng Bộ Google Sheets: <span style="color: #D1E7DD;">Web bán hoa viếng BLS</span>
+                </h4>
+                <span class="badge" style="background: #20c997; color: #052c1e; font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 12px;" id="badgeSheetsLive">
+                  <i class="fa-solid fa-circle" style="font-size: 8px; margin-right: 4px;"></i> 10 Bảng Đã Đồng Bộ
+                </span>
+              </div>
+              <p style="font-size: 12.5px; opacity: 0.95; margin: 5px 0 0; color: #E8F5E9;">
+                Đơn hàng, Sản phẩm, Doanh thu, Khách hàng & Đối tác được tự động kết nối và đồng bộ hai chiều thời gian thực.
+                Lần cập nhật cuối: <b id="sheetsLastSyncTimeBanner" style="color: #FFF;">Đang tải...</b>
+              </p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn-action" id="btnOverviewSheetsSync" onclick="triggerGoogleSheetsSync()" style="background: #FFFFFF; color: #0F5132; font-weight: 700; border: none; padding: 9px 16px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: inline-flex; align-items: center; gap: 7px; cursor: pointer;">
+              <i class="fa-solid fa-rotate"></i> Đồng Bộ Lập Tức Lên Sheets
+            </button>
+            <a href="https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit" target="_blank" class="btn-action" style="background: rgba(255, 255, 255, 0.2); color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.4); font-weight: 600; padding: 9px 14px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Google Sheets
+            </a>
+          </div>
+        </div>
+
         <!-- HÀNG 2: BIỂU ĐỒ DOANH THU & DONUT CHART TỶ LỆ ĐƠN HÀNG (CONCEPT CHUẨN) -->
-        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; margin-bottom: 22px;">
+        <div class="chart-and-donut-row" style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; margin-bottom: 22px;">
           <!-- Biểu đồ cột doanh thu theo ngày / khung giờ -->
           <div class="dashboard-panel" style="margin-bottom: 0;">
             <div class="panel-header">
@@ -1919,6 +2151,35 @@
               </div>
             </div>
           </div>
+
+          <!-- GOOGLE SHEETS CONFIGURATION SECTION -->
+          <div style="background: #F0FDF4; border: 1.5px solid #86EFAC; border-radius: var(--radius-md); padding: 18px; margin-top: 20px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 40px; height: 40px; background: #16A34A; color: #FFF; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                  <i class="fa-solid fa-file-excel"></i>
+                </div>
+                <div>
+                  <h5 style="font-size: 14.5px; font-weight: 700; color: #14532D; margin: 0;">Đồng Bộ Dữ Liệu Hai Chiều Với Google Sheets</h5>
+                  <p style="font-size: 12px; color: #166534; margin: 2px 0 0;">File bảng tính liên kết: <b>Web bán hoa viếng BLS</b> (ID: 12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY)</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn-action" onclick="triggerGoogleSheetsSync()" style="background: #16A34A; color: #FFF; border: none; padding: 8px 16px; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+                  <i class="fa-solid fa-rotate"></i> Đồng Bộ Ngay
+                </button>
+                <a href="https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit" target="_blank" class="btn-action btn-secondary-action" style="padding: 8px 14px; border-radius: 6px; font-size: 12.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Google Sheets
+                </a>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 12.5px; color: #14532D; background: rgba(255,255,255,0.75); padding: 14px; border-radius: 8px; border: 1px solid #BBF7D0;">
+              <div><b>Tên file:</b> Web bán hoa viếng BLS</div>
+              <div><b>Tổng số Tab:</b> 10 Tab Dữ Liệu Vận Hành</div>
+              <div><b>Trạng thái kết nối:</b> <span style="color: #16A34A; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> Đang hoạt động</span></div>
+              <div><b>Lần đồng bộ cuối:</b> <span id="sheetsSettingsLastSync" style="font-weight: 700;">Đang tải...</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2291,8 +2552,76 @@
     // Initial Load
     window.addEventListener('DOMContentLoaded', async () => {
       await refreshAllData();
+      await checkSheetsSyncStatus();
       setInterval(refreshAllData, 5000); // Polling every 5 seconds
+      setInterval(checkSheetsSyncStatus, 15000); // Check sheets sync status every 15s
     });
+
+    // GOOGLE SHEETS LIVE SYNC
+    async function checkSheetsSyncStatus() {
+      try {
+        const res = await fetch('/api/sync-sheets/status');
+        const data = await res.json();
+        const info = data.googleSheets || data.status || {};
+        if (data.success && (data.googleSheets || data.status)) {
+          const timeStr = info.lastSync || 'Vừa xong';
+          
+          const topEl = document.getElementById('sheetsSyncStatusTop');
+          if (topEl) topEl.innerText = 'Đã kết nối (' + timeStr + ')';
+          
+          const bannerEl = document.getElementById('sheetsLastSyncTimeBanner');
+          if (bannerEl) bannerEl.innerText = timeStr;
+          
+          const settingsEl = document.getElementById('sheetsSettingsLastSync');
+          if (settingsEl) settingsEl.innerText = timeStr;
+        }
+      } catch (e) {
+        console.error('Sheets status error:', e);
+      }
+    }
+
+    async function triggerGoogleSheetsSync() {
+      const btn = document.getElementById('btnSheetsSync');
+      const btnOverview = document.getElementById('btnOverviewSheetsSync');
+      const originalText = btn ? btn.innerHTML : '';
+      if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Đang đồng bộ...</span>';
+      if (btnOverview) btnOverview.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tải dữ liệu lên Sheets...';
+      
+      try {
+        const res = await fetch('/api/sync-sheets', { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+          alert('Đồng bộ Google Sheets thành công!\nToàn bộ 10 bảng dữ liệu (Tổng quan, Đơn hàng, Sản phẩm, Khách hàng, v.v...) đã được đồng bộ với file "Web bán hoa viếng BLS".');
+          await checkSheetsSyncStatus();
+        } else {
+          alert('Có lỗi khi đồng bộ: ' + (data.error || 'Vui lòng kiểm tra lại kết nối.'));
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Lỗi kết nối máy chủ khi đồng bộ Sheets.');
+      } finally {
+        if (btn) btn.innerHTML = originalText;
+        if (btnOverview) btnOverview.innerHTML = '<i class="fa-solid fa-rotate"></i> Đồng Bộ Lập Tức Lên Sheets';
+      }
+    }
+
+    // MOBILE SIDEBAR CONTROLS
+    function toggleAdminSidebar() {
+      const sidebar = document.querySelector('.admin-sidebar');
+      const backdrop = document.getElementById('adminSidebarBackdrop');
+      if (!sidebar) return;
+      sidebar.classList.toggle('mobile-open');
+      if (backdrop) {
+        backdrop.style.display = sidebar.classList.contains('mobile-open') ? 'block' : 'none';
+      }
+    }
+
+    function closeAdminSidebar() {
+      const sidebar = document.querySelector('.admin-sidebar');
+      const backdrop = document.getElementById('adminSidebarBackdrop');
+      if (sidebar) sidebar.classList.remove('mobile-open');
+      if (backdrop) backdrop.style.display = 'none';
+    }
 
     async function refreshAllData() {
       try {
@@ -3737,6 +4066,9 @@
 
     // TAB SWITCHER
     function switchAdminTab(tabName) {
+      if (window.innerWidth <= 992) {
+        closeAdminSidebar();
+      }
       document.querySelectorAll('.menu-link').forEach(el => el.classList.remove('active'));
       const activeLink = document.getElementById('nav-' + tabName);
       if (activeLink) activeLink.classList.add('active');

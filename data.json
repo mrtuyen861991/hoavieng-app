@@ -1,0 +1,2532 @@
+{
+  "stats": {
+    "todayRevenue": 34500000,
+    "todayRevenueFormatted": "34.500.000đ",
+    "monthRevenue": 685000000,
+    "monthRevenueFormatted": "685.000.000đ",
+    "urgentOrdersCount": 3,
+    "slaRate": 98.6,
+    "b2bRevenue": 428000000,
+    "b2bRevenuePercent": 62.5,
+    "ordersToday": 24,
+    "pendingOrders": 5,
+    "shippingOrders": 7,
+    "completedOrders": 1248,
+    "hourlyRevenue": [
+      {
+        "hour": "06h-08h",
+        "orders": 3,
+        "revenue": 4200000,
+        "staffLoad": "Thấp"
+      },
+      {
+        "hour": "08h-10h",
+        "orders": 8,
+        "revenue": 11800000,
+        "staffLoad": "Cao (Cần tăng thợ)"
+      },
+      {
+        "hour": "10h-12h",
+        "orders": 6,
+        "revenue": 8500000,
+        "staffLoad": "Vừa"
+      },
+      {
+        "hour": "12h-14h",
+        "orders": 2,
+        "revenue": 2600000,
+        "staffLoad": "Thấp"
+      },
+      {
+        "hour": "14h-16h",
+        "orders": 7,
+        "revenue": 10400000,
+        "staffLoad": "Cao"
+      },
+      {
+        "hour": "16h-18h",
+        "orders": 5,
+        "revenue": 7200000,
+        "staffLoad": "Vừa"
+      },
+      {
+        "hour": "18h-20h",
+        "orders": 3,
+        "revenue": 4500000,
+        "staffLoad": "Thấp"
+      }
+    ],
+    "topProducts": [
+      {
+        "name": "Kệ hoa chia buồn 2 tầng Vĩnh Cửu",
+        "sku": "HV-KE02",
+        "sold": 142,
+        "revenue": 213000000,
+        "growth": "+18%"
+      },
+      {
+        "name": "Vòng hoa cúc trắng dạng tròn tiễn biệt",
+        "sku": "HV-VH01",
+        "sold": 128,
+        "revenue": 153600000,
+        "growth": "+12%"
+      },
+      {
+        "name": "Lan hồ điệp trắng 10 cành đại tang",
+        "sku": "HV-LAN10",
+        "sold": 85,
+        "revenue": 170000000,
+        "growth": "+25%"
+      },
+      {
+        "name": "Kệ hoa lan vàng hoàng gia kính viếng",
+        "sku": "HV-KE03",
+        "sold": 76,
+        "revenue": 136800000,
+        "growth": "+8%"
+      },
+      {
+        "name": "Vòng Hoa Thánh Giá Đạo Thiên Chúa",
+        "sku": "HV-TG01",
+        "sold": 64,
+        "revenue": 96000000,
+        "growth": "+15%"
+      }
+    ]
+  },
+  "orders": [
+    {
+      "id": "ĐH26117127",
+      "seq": 7,
+      "customer": "tuyên test 2",
+      "customerType": "B2C",
+      "companyName": "",
+      "phone": "0966789639",
+      "product": "Kệ hoa lan trắng, ly vàng dạng vòng hiện đại",
+      "productId": "prod-2",
+      "sku": "HV-VH01",
+      "price": 1400000,
+      "cost": 868000,
+      "status": "Chờ xác nhận",
+      "time": "11:36 17/11",
+      "fullTimestamp": "2026-11-17T04:36:36.130Z",
+      "district": "Quận 3",
+      "address": "tư gia",
+      "isUrgent": false,
+      "deliveryDeadline": "Trong 90 phút",
+      "minutesLeft": 90,
+      "deceased": {
+        "name": "Người quá cố",
+        "funeralTime": "Lễ viếng tang lễ",
+        "place": "tư gia"
+      },
+      "ribbon": "Công ty / Gia đình - Thành Kính Phân Ưu",
+      "ribbonStyle": "Lụa đen viền vàng sang trọng",
+      "assignedPartner": null,
+      "shipper": null,
+      "photos": {
+        "shopPhoto": null,
+        "funeralPhoto": null,
+        "gpsLocation": null
+      },
+      "qcStatus": "Chưa có ảnh",
+      "paymentStatus": "Chờ thanh toán (MBBank VietQR)",
+      "bankInfo": {
+        "bank": "MBBank",
+        "bankName": "Ngân hàng TMCP Quân Đội",
+        "accountNumber": "0966789639",
+        "accountName": "HOA VIENG",
+        "memo": "HVĐH26117127"
+      },
+      "notes": "Giao hoa trang trọng, đúng giờ."
+    },
+    {
+      "id": "DH26092501",
+      "seq": 1,
+      "customer": "Nguyễn Thị Lan",
+      "customerType": "B2C",
+      "companyName": "",
+      "phone": "0912 345 678",
+      "product": "Vòng hoa cúc trắng dạng tròn tiễn biệt",
+      "productId": "prod-1",
+      "sku": "HV-VH01",
+      "price": 1200000,
+      "cost": 750000,
+      "status": "Đang giao",
+      "time": "09:30 25/09",
+      "fullTimestamp": "2026-09-25T09:30:00",
+      "district": "Quận 3",
+      "address": "Nhà tang lễ TP.HCM, Số 25 Lê Quý Đôn, Phường Võ Thị Sáu, Q.3",
+      "isUrgent": true,
+      "urgentReason": "Khâm liệm lúc 11:30 - Cần giao trước 11:00",
+      "deliveryDeadline": "11:00 hôm nay",
+      "minutesLeft": 35,
+      "deceased": {
+        "name": "Cố Cụ Bà: NGUYỄN THỊ MAI (Hưởng thọ 89 tuổi)",
+        "funeralTime": "Khâm liệm: 09:00 | Động quan: 14:00 ngày 26/09",
+        "place": "Vãng Sanh Đường - Nhà tang lễ TP.HCM"
+      },
+      "ribbon": "Ban Giám Đốc Công Ty Cổ Phần Công Nghệ ABC - Thành Kính Phân Ưu",
+      "ribbonStyle": "Lụa đen chữ vàng kim sang trọng",
+      "assignedPartner": {
+        "id": "part-1",
+        "name": "Shop Hoa Tươi Sài Gòn Q.3",
+        "phone": "0908 111 222",
+        "address": "148 Võ Thị Sáu, Q.3"
+      },
+      "shipper": {
+        "name": "Trần Quốc Bảo",
+        "phone": "0988 123 456",
+        "plate": "59F1-889.24",
+        "eta": "10:35 - 10:50 (Còn 25 phút)",
+        "currentLocation": "Đang di chuyển trên đường Nam Kỳ Khởi Nghĩa, cách 1.2km"
+      },
+      "photos": {
+        "shopPhoto": "/assets/products/prod_1_cuc_trang_tien_biet.jpg",
+        "funeralPhoto": "/assets/products/prod_1_cuc_trang_tien_biet.jpg",
+        "gpsLocation": "10.7785° N, 106.6912° E (Nhà tang lễ TP.HCM, Q.3)"
+      },
+      "qcStatus": "Đã duyệt",
+      "qcReviewer": "Trần Thùy Linh (QC)",
+      "paymentStatus": "Đã thanh toán (MBBank VietQR)",
+      "notes": "Chụp ảnh xác nhận gửi Zalo trước khi đặt vào linh đường"
+    },
+    {
+      "id": "DH26092502",
+      "seq": 2,
+      "customer": "Trần Văn Minh",
+      "customerType": "B2C",
+      "companyName": "",
+      "phone": "0903 887 766",
+      "product": "Kệ hoa chia buồn 2 tầng Vĩnh Cửu",
+      "productId": "prod-2",
+      "sku": "HV-KE02",
+      "price": 1500000,
+      "cost": 950000,
+      "status": "Chờ duyệt QC (Ảnh tại shop)",
+      "time": "09:20 25/09",
+      "fullTimestamp": "2026-09-25T09:20:00",
+      "district": "Quận 3",
+      "address": "Tư gia: 142/8 Nguyễn Đình Chiểu, Phường Võ Thị Sáu, Q.3, TP.HCM",
+      "isUrgent": true,
+      "urgentReason": "Khách yêu cầu có mặt trước lễ Nhập Quan 11:15",
+      "deliveryDeadline": "11:15 hôm nay",
+      "minutesLeft": 50,
+      "deceased": {
+        "name": "Cố Ông: TRẦN VĂN ĐỨC (Hưởng thọ 78 tuổi)",
+        "funeralTime": "Lễ Nhập Quan: 11:30 | Động quan: 06:00 ngày mai",
+        "place": "Tư gia gia đình"
+      },
+      "ribbon": "Tập Thể Cựu Sinh Viên Khóa 2012 ĐH Bách Khoa - Vô Cùng Thương Tiếc",
+      "ribbonStyle": "Lụa trắng chữ đen tuyền truyền thống",
+      "assignedPartner": {
+        "id": "part-1",
+        "name": "Shop Hoa Tươi Sài Gòn Q.3",
+        "phone": "0908 111 222",
+        "address": "148 Võ Thị Sáu, Q.3"
+      },
+      "shipper": null,
+      "photos": {
+        "shopPhoto": "/assets/products/prod_2_ke_hoa_2_tang.jpg",
+        "funeralPhoto": null,
+        "gpsLocation": null
+      },
+      "qcStatus": "Chờ duyệt",
+      "paymentStatus": "Đã thanh toán (MBBank VietQR)",
+      "notes": "Giao trước 11h trưa để kịp giờ nhập quan. Shop vừa upload ảnh cắm xong."
+    },
+    {
+      "id": "DH26092503",
+      "seq": 3,
+      "customer": "Ngân hàng Vietcombank - CN Tân Bình",
+      "customerType": "B2B",
+      "companyName": "Ngân hàng TMCP Ngoại Thương Việt Nam - Chi nhánh Tân Bình",
+      "phone": "0977 223 344",
+      "product": "Giỏ hoa lan ly trang nhã kính viếng",
+      "productId": "prod-3",
+      "sku": "HV-GH01",
+      "price": 800000,
+      "cost": 500000,
+      "status": "Hoàn tất (POD - Ảnh tại lễ viếng)",
+      "time": "08:50 25/09",
+      "fullTimestamp": "2026-09-25T08:50:00",
+      "district": "Quận 3",
+      "address": "Chùa Vĩnh Nghiêm, 339 Nam Kỳ Khởi Nghĩa, Q.3, TP.HCM",
+      "isUrgent": false,
+      "deliveryDeadline": "Đã hoàn tất",
+      "minutesLeft": 0,
+      "deceased": {
+        "name": "Cụ Bà: HOÀNG THỊ THU (Pháp danh Diệu Tâm)",
+        "funeralTime": "Tang lễ tại Vãng Sanh Đường Chùa Vĩnh Nghiêm",
+        "place": "Chùa Vĩnh Nghiêm, Q.3"
+      },
+      "ribbon": "Ban Giám Đốc & Công Đoàn Vietcombank Chi Nhánh Tân Bình - Thành Kính Phân Ưu",
+      "ribbonStyle": "Lụa xanh sẫm viền kim nhũ",
+      "assignedPartner": {
+        "id": "part-1",
+        "name": "Shop Hoa Tươi Sài Gòn Q.3",
+        "phone": "0908 111 222"
+      },
+      "shipper": {
+        "name": "Nguyễn Hoàng Nam",
+        "phone": "0933 654 321",
+        "plate": "59H2-341.12",
+        "deliveredAt": "08:48 25/09"
+      },
+      "photos": {
+        "shopPhoto": "/assets/products/prod_3_gio_hoa_ly.jpg",
+        "funeralPhoto": "/assets/products/prod_3_gio_hoa_ly.jpg",
+        "gpsLocation": "10.7909° N, 106.6834° E (Chùa Vĩnh Nghiêm, 339 Nam Kỳ Khởi Nghĩa)"
+      },
+      "qcStatus": "Đã duyệt",
+      "qcReviewer": "Trần Thùy Linh (QC)",
+      "paymentStatus": "Đã thanh toán (MBBank VietQR)",
+      "notes": "Đã ký biên bản bàn giao và gửi ảnh cho Trợ lý Giám đốc Vietcombank qua Zalo"
+    },
+    {
+      "id": "DH26092504",
+      "seq": 4,
+      "customer": "Tập đoàn Vingroup (Phòng Hành chính)",
+      "customerType": "B2B",
+      "companyName": "Tập Đoàn Vingroup - Công Ty CP",
+      "phone": "0918 999 111",
+      "product": "Lan hồ điệp trắng 10 cành đại tang",
+      "productId": "prod-4",
+      "sku": "HV-LAN10",
+      "price": 2000000,
+      "cost": 1250000,
+      "status": "Đang cắm hoa",
+      "time": "08:45 25/09",
+      "fullTimestamp": "2026-09-25T08:45:00",
+      "district": "Gò Vấp",
+      "address": "Nhà tang lễ Bộ Quốc Phòng, 05 Phạm Ngũ Lão, Gò Vấp, TP.HCM",
+      "isUrgent": true,
+      "urgentReason": "Đoàn đại biểu lãnh đạo Tập đoàn vào viếng lúc 13:00",
+      "deliveryDeadline": "12:30 hôm nay",
+      "minutesLeft": 85,
+      "deceased": {
+        "name": "Đại tá Quân đội Nhân dân: NGUYỄN VĂN AN (75 tuổi)",
+        "funeralTime": "Lễ viếng: 12:30 - 16:00 | Truy điệu: 07:00 ngày 27/09",
+        "place": "Nhà tang lễ Quốc gia phía Nam (BQP)"
+      },
+      "ribbon": "Chủ Tịch HĐQT & Ban Tổng Giám Đốc Tập Đoàn Vingroup - Kính Điếu",
+      "ribbonStyle": "Lụa nhung đen thêu chữ vàng kim",
+      "assignedPartner": {
+        "id": "part-2",
+        "name": "Shop Hoa Tươi Tâm An Gò Vấp",
+        "phone": "0909 333 444",
+        "address": "88 Quang Trung, Gò Vấp"
+      },
+      "shipper": {
+        "name": "Lê Anh Tuấn",
+        "phone": "0909 777 888",
+        "plate": "59K1-778.90"
+      },
+      "photos": {
+        "shopPhoto": null,
+        "funeralPhoto": null,
+        "gpsLocation": null
+      },
+      "qcStatus": "Chưa có ảnh",
+      "paymentStatus": "Công nợ Doanh nghiệp (Kỳ 30 ngày)",
+      "notes": "Chậu lan đại sảnh 10 cành hoa to nở đều, thắt nơ lụa đen trang nghiêm."
+    },
+    {
+      "id": "DH26092505",
+      "seq": 5,
+      "customer": "Công ty Cổ phần Chứng khoán SSI",
+      "customerType": "B2B",
+      "companyName": "Công ty Cổ phần Chứng khoán SSI",
+      "phone": "0982 555 666",
+      "product": "Kệ hoa lan vàng hoàng gia kính viếng",
+      "productId": "prod-2",
+      "sku": "HV-KE03",
+      "price": 1800000,
+      "cost": 1100000,
+      "status": "Đã nhận & Chuyển đối tác",
+      "time": "10:15 17/11",
+      "fullTimestamp": "2026-11-17T03:15:00",
+      "district": "Bình Tân",
+      "address": "Nhà tang lễ Trung tâm Bình Hưng Hòa, Bình Tân, TP.HCM",
+      "isUrgent": false,
+      "deliveryDeadline": "15:00 hôm nay",
+      "minutesLeft": 180,
+      "deceased": {
+        "name": "Cố Cụ Ông: LÊ VĂN LONG (Hưởng thọ 91 tuổi)",
+        "funeralTime": "Lễ viếng bắt đầu từ 15:30",
+        "place": "Linh đường 2 - Nhà tang lễ Bình Hưng Hòa"
+      },
+      "ribbon": "Ban Điều Hành & Tập Thể Nhân Viên SSI - Thành Kính Phân Ưu",
+      "ribbonStyle": "Lụa vàng chữ đồng trang nghiêm",
+      "assignedPartner": {
+        "id": "part-3",
+        "name": "Điện Hoa An Bình (Bình Hưng Hòa)",
+        "phone": "0944 888 999",
+        "address": "12 Bình Long, Bình Tân"
+      },
+      "shipper": null,
+      "photos": {
+        "shopPhoto": null,
+        "funeralPhoto": null,
+        "gpsLocation": null
+      },
+      "qcStatus": "Chưa có ảnh",
+      "paymentStatus": "Đã thanh toán (MBBank VietQR)",
+      "notes": "Đối tác đã nhận lệnh qua Zalo OA, chuẩn bị hoa cúc mẫu đơn và lan vàng."
+    },
+    {
+      "id": "DH26092506",
+      "seq": 6,
+      "customer": "Phạm Hồng Ngọc",
+      "customerType": "B2C",
+      "companyName": "",
+      "phone": "0903 112 233",
+      "product": "Vòng Hoa Thánh Giá Đạo Thiên Chúa",
+      "productId": "prod-9",
+      "sku": "HV-TG01",
+      "price": 1500000,
+      "cost": 950000,
+      "status": "Chờ xác nhận",
+      "time": "10:45 17/11",
+      "fullTimestamp": "2026-11-17T03:45:00",
+      "district": "Phú Nhuận",
+      "address": "Giáo xứ Tân Định / Tư gia: 289 Hai Bà Trưng, P.8, Q.3",
+      "isUrgent": true,
+      "urgentReason": "Thánh lễ An táng cử hành lúc 14:00",
+      "deliveryDeadline": "13:00 hôm nay",
+      "minutesLeft": 110,
+      "deceased": {
+        "name": "Linh hồn: GIUSE NGUYỄN VĂN BÌNH",
+        "funeralTime": "Thánh lễ An táng: 14:00 tại Thánh đường Giáo xứ",
+        "place": "Giáo xứ Tân Định"
+      },
+      "ribbon": "Gia Đình Các Con Cháu Tại Hải Ngoại - Nguyện Cầu Cho Linh Hồn Giuse Sớm Về Hưởng Nhan Thánh Chúa",
+      "ribbonStyle": "Lụa tím tím than Đạo Thiên Chúa thêu chữ trắng",
+      "assignedPartner": null,
+      "shipper": null,
+      "photos": {
+        "shopPhoto": null,
+        "funeralPhoto": null,
+        "gpsLocation": null
+      },
+      "qcStatus": "Chưa có ảnh",
+      "paymentStatus": "Chờ thanh toán (MBBank VietQR)",
+      "notes": "Đơn mới đặt qua web, cần gọi điện xác nhận và gán cho Shop Q.3 hoặc Phú Nhuận."
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Vòng hoa cúc trắng dạng tròn tiễn biệt",
+      "tagline": "Thanh khiết, trang nghiêm truyền thống",
+      "price": 1200000,
+      "priceDisplay": "Từ 1.200.000đ",
+      "image": "/assets/products/prod_1_cuc_trang_tien_biet.jpg",
+      "category": "vong-hoa",
+      "description": "Mẫu vòng hoa cúc trắng truyền thống kết hợp lá thiết mộc lan và cúc mẫu đơn. Thể hiện sự tiếc thương vô hạn và kính cẩn tiễn biệt linh hồn người đã khuất.",
+      "rating": 5,
+      "deliveryTime": "Giao hỏa tốc 60-90 phút",
+      "sku": "HV-VH01",
+      "cost": 744000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 1200000,
+          "cost": 744000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1500000,
+          "cost": 930000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 1900000,
+          "cost": 1178000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 175,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-2",
+      "name": "Kệ hoa lan trắng, ly vàng dạng vòng hiện đại",
+      "tagline": "Sang trọng, tinh tế đi đám tang",
+      "price": 1400000,
+      "priceDisplay": "Từ 1.400.000đ",
+      "image": "/assets/products/prod_2_ke_lan_ly_vang.jpg",
+      "category": "ke-hoa",
+      "description": "Kệ hoa chia buồn 2 tầng phong cách vòng tròn hiện đại, phối hoa lan Mokara trắng, lily vàng hoàng gia và lá phụ xanh trang nhã.",
+      "rating": 4.9,
+      "deliveryTime": "Giao hỏa tốc 60-90 phút",
+      "sku": "HV-KE02",
+      "cost": 868000,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 1400000,
+          "cost": 868000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1700000,
+          "cost": 1054000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 2100000,
+          "cost": 1302000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 156,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-5",
+      "name": "Kệ Hoa Viếng 2 Tầng Lan Trắng Cao Cấp",
+      "tagline": "Sang trọng, trang nghiêm",
+      "price": 2750000,
+      "priceDisplay": "Từ 2.750.000đ",
+      "image": "/assets/products/prod_5_ke_lan_2tang.jpg",
+      "category": "ke-hoa",
+      "description": "Kệ hoa chia buồn 2 tầng phối lan Mokara trắng và hoa hồng trắng cồ Đà Lạt, kết hợp dải nơ nhung viếng sang trọng.",
+      "rating": 5,
+      "deliveryTime": "Giao hỏa tốc 60-90 phút",
+      "sku": "HV-KE05",
+      "cost": 1705000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Trang trọng cao cấp"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 2750000,
+          "cost": 1705000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 3050000,
+          "cost": 1891000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 3450000,
+          "cost": 2139000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 142,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-9",
+      "name": "Vòng Hoa Thánh Giá Đạo Thiên Chúa",
+      "tagline": "Trang trọng nghi lễ Công Giáo",
+      "price": 1500000,
+      "priceDisplay": "Từ 1.500.000đ",
+      "image": "/assets/products/prod_9_vong_thanh_gia.jpg",
+      "category": "vong-hoa",
+      "description": "Vòng hoa kết hình Thánh Giá từ hoa lan trắng và hoa ly thơm ngát dành riêng cho đám tang tín đồ Công Giáo.",
+      "rating": 5,
+      "deliveryTime": "Giao trong 90 phút",
+      "sku": "HV-VH09",
+      "cost": 930000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 1500000,
+          "cost": 930000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1800000,
+          "cost": 1116000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 2200000,
+          "cost": 1364000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 128,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-12",
+      "name": "Chậu Lan Hồ Điệp Trắng Đột Biến 9 Cành",
+      "tagline": "Quý phái, hoa tươi 2-3 tuần",
+      "price": 2800000,
+      "priceDisplay": "Từ 2.800.000đ",
+      "image": "/assets/products/prod_12_vong_lan_trang_1tang.jpg",
+      "category": "lan-ho-diep",
+      "description": "Chậu lan hồ điệp trắng 9 cành Đài Loan hoa to dày, uốn cánh đối xứng, trang trí dải lụa viếng vàng hoàng gia.",
+      "rating": 5,
+      "deliveryTime": "Giao trong 2 giờ",
+      "sku": "HV-LAN12",
+      "cost": 1736000,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Trang trọng cao cấp"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 2800000,
+          "cost": 1736000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 3100000,
+          "cost": 1922000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 3500000,
+          "cost": 2170000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 115,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-3",
+      "name": "Lẵng hoa 3 tầng lan trắng cao cấp sang trọng",
+      "tagline": "Bề thế, trang trọng bậc nhất",
+      "price": 1700000,
+      "priceDisplay": "Từ 1.700.000đ",
+      "image": "/assets/products/prod_3_lang_3tang_lan_trang.jpg",
+      "category": "ke-hoa",
+      "description": "Lẵng hoa 3 tầng bề thế, hoa lan thái trắng nở rộ kết hợp hoa đồng tiền và nơ voan trắng tinh tế, phù hợp cho đoàn cơ quan, đối tác lớn.",
+      "rating": 5,
+      "deliveryTime": "Giao trong 90 phút",
+      "sku": "HV-KE03",
+      "cost": 1054000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 1700000,
+          "cost": 1054000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 2000000,
+          "cost": 1240000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 2400000,
+          "cost": 1488000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 108,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-11",
+      "name": "Giỏ Hoa Hồng Trắng Mix Lan Để Bàn",
+      "tagline": "Tinh tế đặt cạnh linh cữu",
+      "price": 950000,
+      "priceDisplay": "Từ 950.000đ",
+      "image": "/assets/products/prod_11_gio_hong_lan_tron.jpg",
+      "category": "gio-hoa",
+      "description": "Giỏ hoa dạng vòm tròn để bàn gọn đẹp, hoa hồng trắng mix cúc Calimero và lan hồ điệp trang nhã.",
+      "rating": 4.9,
+      "deliveryTime": "Giao trong 45 phút",
+      "sku": "HV-KE11",
+      "cost": 589000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 950000,
+          "cost": 589000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1250000,
+          "cost": 775000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 1650000,
+          "cost": 1023000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 95,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-8",
+      "name": "Kệ Hoa Lan Tím & Cúc Mẫu Đơn Chia Buồn",
+      "tagline": "Nhẹ nhàng, thành kính",
+      "price": 720000,
+      "priceDisplay": "Từ 720.000đ",
+      "image": "/assets/products/prod_8_lan_tim_chia_buon.jpg",
+      "category": "ke-hoa",
+      "description": "Kệ hoa lan tím phối thạch thảo và cúc mẫu đơn, thể hiện sự thủy chung, nuối tiếc và cầu chúc người đã khuất an nghỉ vĩnh hằng.",
+      "rating": 4.8,
+      "deliveryTime": "Giao hỏa tốc 60 phút",
+      "sku": "HV-KE08",
+      "cost": 446400,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 720000,
+          "cost": 446400
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1020000,
+          "cost": 632400
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 1420000,
+          "cost": 880400
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 88,
+      "isBestSeller": true
+    },
+    {
+      "id": "prod-4",
+      "name": "Vòng hoa hồng trắng mix cúc Calimero dạng vòng",
+      "tagline": "Nhẹ nhàng, thanh nhã viếng người trẻ",
+      "price": 950000,
+      "priceDisplay": "Từ 950.000đ",
+      "image": "/assets/products/prod_4_vong_hong_trang_vong.jpg",
+      "category": "vong-hoa",
+      "description": "Thiết kế dạng vòng tròn nghệ thuật phối hoa hồng trắng Đà Lạt, cúc Calimero trắng và lá bạc nhập khẩu. Tượng trưng cho sự thanh thản, tinh khôi.",
+      "rating": 4.9,
+      "deliveryTime": "Giao hỏa tốc 45-60 phút",
+      "sku": "HV-VH04",
+      "cost": 589000,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 950000,
+          "cost": 589000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1250000,
+          "cost": 775000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 1650000,
+          "cost": 1023000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 76,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-6",
+      "name": "Kệ Hoa Lan Hồ Điệp Trắng 3 Tầng Hiện Đại",
+      "tagline": "Bề thế, tôn kính bậc nhất",
+      "price": 2200000,
+      "priceDisplay": "Từ 2.200.000đ",
+      "image": "/assets/products/prod_6_lan_hodiep_3tang.jpg",
+      "category": "ke-hoa",
+      "description": "Kệ hoa 3 tầng hoành tráng, kết từ lan hồ điệp trắng loại 1, hồng môn trắng và baby nhập khẩu. Phù hợp đoàn cấp cao phúng điếu.",
+      "rating": 5,
+      "deliveryTime": "Giao trong 90 phút",
+      "sku": "HV-KE06",
+      "cost": 1364000,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Trang trọng cao cấp"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 2200000,
+          "cost": 1364000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 2500000,
+          "cost": 1550000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 2900000,
+          "cost": 1798000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 72,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-7",
+      "name": "Từ Biệt - Vòng Hoa Lan Trắng Nơ Đen",
+      "tagline": "Cao 1m7, tưởng niệm sâu sắc",
+      "price": 720000,
+      "priceDisplay": "Từ 720.000đ",
+      "image": "/assets/products/prod_7_tu_biet_vong_lan.jpg",
+      "category": "vong-hoa",
+      "description": "Vòng hoa đám tang màu trắng đẹp sang trọng với hoa lan trắng cắm tròn đều, thắt nơ lụa đen trang nghiêm cao 1,7 mét.",
+      "rating": 4.9,
+      "deliveryTime": "Giao hỏa tốc 60 phút",
+      "sku": "HV-VH07",
+      "cost": 446400,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 720000,
+          "cost": 446400
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1020000,
+          "cost": 632400
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 1420000,
+          "cost": 880400
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 68,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-10",
+      "name": "Kệ Hoa Cúc Mẫu Đơn Trắng Chân Gỗ",
+      "tagline": "Phong cách mộc mạc, thanh nhã",
+      "price": 1650000,
+      "priceDisplay": "Từ 1.650.000đ",
+      "image": "/assets/products/prod_10_cuc_mau_don_go.jpg",
+      "category": "ke-hoa",
+      "description": "Kệ hoa 2 tầng sử dụng chân gỗ tự nhiên mộc mạc, kết hoa cúc mẫu đơn trắng, đồng tiền trắng và lá phụ nhập khẩu.",
+      "rating": 4.9,
+      "deliveryTime": "Giao trong 60-90 phút",
+      "sku": "HV-KE10",
+      "cost": 1023000,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Khai trương chia buồn"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 1650000,
+          "cost": 1023000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 1950000,
+          "cost": 1209000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 2350000,
+          "cost": 1457000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 65,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-15",
+      "name": "Lẵng Hoa Cúc Trắng & Cát Tường Để Bàn Tang Lễ",
+      "tagline": "Nhẹ nhàng, thanh tịnh để linh cữu",
+      "price": 850000,
+      "priceDisplay": "Từ 850.000đ",
+      "image": "/assets/prod_giohoa.jpg",
+      "category": "gio-hoa",
+      "description": "Giỏ hoa để bàn tang lễ được phối từ hoa cúc trắng Nhật Bản, cát tường xanh ngọc và lá trầu bà, thích hợp đặt bên cạnh linh cữu hoặc bàn thờ Phật.",
+      "rating": 4.9,
+      "deliveryTime": "Giao nhanh 60 phút",
+      "sku": "HV-GH02",
+      "cost": 520000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Nhẹ nhàng thanh nhã"
+      ],
+      "variants": [
+        {
+          "name": "Kích thước tiêu chuẩn",
+          "price": 850000,
+          "cost": 520000
+        },
+        {
+          "name": "Kích thước lớn",
+          "price": 1100000,
+          "cost": 680000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng",
+          "qty": "20 bông",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Hoa cát tường",
+          "qty": "10 cành",
+          "status": "Đủ nguồn cung"
+        }
+      ],
+      "orderCount": 62,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-18",
+      "name": "Chậu Lan Hồ Điệp Trắng Đại Tang 5 Cành Tinh Khiết",
+      "tagline": "Thuần khiết, thanh cao, tươi lâu 30 ngày",
+      "price": 1350000,
+      "priceDisplay": "Từ 1.350.000đ",
+      "image": "/assets/prod_lanhodiep.jpg",
+      "category": "lan-ho-diep",
+      "description": "Chậu lan hồ điệp trắng 5 cành hoa loại A nở căng đều, chậu sứ trắng sang trọng đính nơ nhung đen, hoa tươi bền suốt cả tháng.",
+      "rating": 5,
+      "deliveryTime": "Giao hỏa tốc 60-90 phút",
+      "sku": "HV-LHD05",
+      "cost": 830000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Cao cấp",
+        "Tươi lâu"
+      ],
+      "variants": [
+        {
+          "name": "Chậu sứ trắng 5 cành",
+          "price": 1350000,
+          "cost": 830000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Lan hồ điệp trắng loại A",
+          "qty": "5 cành",
+          "status": "Đủ nguồn cung"
+        }
+      ],
+      "orderCount": 58,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-14-0276",
+      "name": "Giỏ hoa chia buồn hồng môn trắng bề thế 3 tầng",
+      "tagline": "Nhẹ nhàng, an yên",
+      "price": 2700000,
+      "priceDisplay": "Từ 2.700.000đ",
+      "image": "/assets/products/prod_11_gio_hong_lan_tron.jpg",
+      "category": "gio-hoa",
+      "description": "Mẫu thiết kế hoa tang lễ kết hợp tinh tế giữa hồng môn trắng tươi mới và lá phụ ngoại nhập, giao tận nơi nhà tang lễ hoặc tư gia.",
+      "rating": "4.8",
+      "deliveryTime": "Giao hỏa tốc 60-90 phút",
+      "sku": "HV-KE14",
+      "cost": 1674000,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Trang trọng cao cấp"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 2700000,
+          "cost": 1674000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 3000000,
+          "cost": 1860000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 3400000,
+          "cost": 2108000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 54,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-19",
+      "name": "Chậu Lan Hồ Điệp Trắng 12 Cành Thuyền Gỗ VIP",
+      "tagline": "Bề thế bậc nhất, đại diện cơ quan đối tác",
+      "price": 2800000,
+      "priceDisplay": "Từ 2.800.000đ",
+      "image": "/assets/prod_lanhodiep.jpg",
+      "category": "lan-ho-diep",
+      "description": "Chậu lan hồ điệp trắng 12 cành ghép thuyền gỗ lũa tự nhiên sang trọng, thích hợp cho ban giám đốc, hội đồng quản trị phúng viếng đối tác chiến lược.",
+      "rating": 5,
+      "deliveryTime": "Giao trong 90 phút",
+      "sku": "HV-LHD12",
+      "cost": 1730000,
+      "displayStatus": true,
+      "tags": [
+        "Trang trọng cao cấp",
+        "Doanh nghiệp"
+      ],
+      "variants": [
+        {
+          "name": "Thuyền gỗ 12 cành VIP",
+          "price": 2800000,
+          "cost": 1730000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Lan hồ điệp trắng VIP",
+          "qty": "12 cành",
+          "status": "Đủ nguồn cung"
+        }
+      ],
+      "orderCount": 48,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-16",
+      "name": "Giỏ Hoa Lan Tím & Hồng Trắng Tưởng Niệm",
+      "tagline": "Tưởng nhớ sâu sắc người đã khuất",
+      "price": 950000,
+      "priceDisplay": "Từ 950.000đ",
+      "image": "/assets/products/prod_3_lang_3tang_lan_trang.jpg",
+      "category": "gio-hoa",
+      "description": "Giỏ hoa chia buồn kết hợp giữa lan Mokara tím hoàng gia và hồng cồ trắng tinh khiết, mang thông điệp tưởng nhớ và tiếc thương vô hạn.",
+      "rating": 5,
+      "deliveryTime": "Giao nhanh 60-90 phút",
+      "sku": "HV-GH03",
+      "cost": 580000,
+      "displayStatus": true,
+      "tags": [
+        "Trang trọng cao cấp",
+        "Tưởng nhớ"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn",
+          "price": 950000,
+          "cost": 580000
+        },
+        {
+          "name": "Cao cấp nơ nhung",
+          "price": 1250000,
+          "cost": 770000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Lan Mokara tím",
+          "qty": "12 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Hồng trắng Đà Lạt",
+          "qty": "15 bông",
+          "status": "Đủ nguồn cung"
+        }
+      ],
+      "orderCount": 45,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-17",
+      "name": "Lẵng Hoa Chia Buồn Sang Trọng Phối Nơ Nhung",
+      "tagline": "Bề thế, tinh tế cho không gian nhỏ",
+      "price": 1150000,
+      "priceDisplay": "Từ 1.150.000đ",
+      "image": "/assets/prod_kehoa.jpg",
+      "category": "gio-hoa",
+      "description": "Lẵng hoa giỏ mây cao cấp phối hoa lily trắng, lan hồ điệp và nơ nhung đen viền vàng, trang trọng lịch sự cho tư gia.",
+      "rating": 4.8,
+      "deliveryTime": "Giao trong 60 phút",
+      "sku": "HV-GH04",
+      "cost": 710000,
+      "displayStatus": true,
+      "tags": [
+        "Công giáo",
+        "Cao cấp"
+      ],
+      "variants": [
+        {
+          "name": "Mẫu chuẩn",
+          "price": 1150000,
+          "cost": 710000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa lily trắng",
+          "qty": "8 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp",
+          "qty": "3 cành",
+          "status": "Đủ nguồn cung"
+        }
+      ],
+      "orderCount": 42,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-13-9079",
+      "name": "Vòng hoa kính viếng hồng môn trắng bề thế 3 tầng",
+      "tagline": "Trang nghiêm, thành kính",
+      "price": 2700000,
+      "priceDisplay": "Từ 2.700.000đ",
+      "image": "/assets/prod_lanhodiep.jpg",
+      "category": "vong-hoa",
+      "description": "Mẫu thiết kế hoa tang lễ kết hợp tinh tế giữa hồng môn trắng tươi mới và lá phụ ngoại nhập, giao tận nơi nhà tang lễ hoặc tư gia.",
+      "rating": "4.8",
+      "deliveryTime": "Giao hỏa tốc 60-90 phút",
+      "sku": "HV-VH13",
+      "cost": 1674000,
+      "displayStatus": true,
+      "tags": [
+        "Phật giáo",
+        "Trang trọng cao cấp"
+      ],
+      "variants": [
+        {
+          "name": "Tiêu chuẩn (Tông Trắng)",
+          "price": 2700000,
+          "cost": 1674000
+        },
+        {
+          "name": "Cao cấp (Tông Trắng - Vàng)",
+          "price": 3000000,
+          "cost": 1860000
+        },
+        {
+          "name": "Đại lễ VIP (Tông Trắng - Tím)",
+          "price": 3400000,
+          "cost": 2108000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Hoa cúc trắng / lan trắng",
+          "qty": "Đầy đặn",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lan hồ điệp tuyển chọn",
+          "qty": "6-10 cành",
+          "status": "Đủ nguồn cung"
+        },
+        {
+          "name": "Lá đệm cau, thiết mộc lan",
+          "qty": "Tươi mới",
+          "status": "Sẵn sàng"
+        }
+      ],
+      "orderCount": 38,
+      "isBestSeller": false
+    },
+    {
+      "id": "prod-20",
+      "name": "Chậu Lan Hồ Điệp Trắng 20 Cành Đại Lễ VIP",
+      "tagline": "Quy mô đại lễ, đẳng cấp tôn nghiêm tối thượng",
+      "price": 4500000,
+      "priceDisplay": "Từ 4.500.000đ",
+      "image": "/assets/prod_lanhodiep.jpg",
+      "category": "lan-ho-diep",
+      "description": "Chậu lan hồ điệp trắng 20 cành đại tang được nghệ nhân cắm hoa thiết kế tạo phom thác đổ uy nghiêm, trang trọng bậc nhất.",
+      "rating": 5,
+      "deliveryTime": "Giao hẹn giờ chính xác",
+      "sku": "HV-LHD20",
+      "cost": 2790000,
+      "displayStatus": true,
+      "tags": [
+        "Trang trọng cao cấp",
+        "Đại lễ VIP"
+      ],
+      "variants": [
+        {
+          "name": "Chậu gốm sứ hoàng gia 20 cành",
+          "price": 4500000,
+          "cost": 2790000
+        }
+      ],
+      "ingredients": [
+        {
+          "name": "Lan hồ điệp trắng loại 1",
+          "qty": "20 cành",
+          "status": "Đủ nguồn cung"
+        }
+      ],
+      "orderCount": 35,
+      "isBestSeller": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Kệ hoa chia buồn",
+      "slug": "ke-hoa-chia-buon",
+      "icon": "fa-solid fa-monument",
+      "level": 1,
+      "productCount": 18,
+      "seo": {
+        "metaTitle": "Kệ Hoa Tang Lễ Đẹp, Trang Trọng - Giao Hỏa Tốc 60 Phút TP.HCM",
+        "metaDesc": "Đặt kệ hoa tang lễ 1 tầng, 2 tầng, 3 tầng sang trọng. Hoa tươi 100% tuyển chọn, băng rôn kính viếng trang nghiêm, giao đúng giờ viếng 24/7.",
+        "urlSlug": "ke-hoa-chia-buon"
+      },
+      "children": [
+        {
+          "id": "cat-1-1",
+          "name": "Kệ hoa 1 tầng thanh nhã",
+          "slug": "ke-hoa-1-tang",
+          "productCount": 6,
+          "level": 2
+        },
+        {
+          "id": "cat-1-2",
+          "name": "Kệ hoa 2 tầng sang trọng",
+          "slug": "ke-hoa-2-tang",
+          "productCount": 8,
+          "level": 2
+        },
+        {
+          "id": "cat-1-3",
+          "name": "Kệ hoa 3 tầng đại tang",
+          "slug": "ke-hoa-3-tang",
+          "productCount": 4,
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "cat-2",
+      "name": "Vòng hoa truyền thống",
+      "slug": "vong-hoa-truyen-thong",
+      "icon": "fa-solid fa-circle-notch",
+      "level": 1,
+      "productCount": 12,
+      "seo": {
+        "metaTitle": "Vòng Hoa Tang Lễ Truyền Thống Đẹp Nhất - Hoa Viếng Sài Gòn",
+        "metaDesc": "Mẫu vòng hoa cúc trắng, cúc vàng, hoa lan oval truyền thống viếng đám tang. Thiết kế trang nhã, ý nghĩa tiễn biệt sâu sắc.",
+        "urlSlug": "vong-hoa-truyen-thong"
+      },
+      "children": [
+        {
+          "id": "cat-2-1",
+          "name": "Vòng hoa cúc trắng tròn",
+          "slug": "vong-hoa-cuc-trang",
+          "productCount": 5,
+          "level": 2
+        },
+        {
+          "id": "cat-2-2",
+          "name": "Vòng hoa oval cúc lan",
+          "slug": "vong-hoa-oval",
+          "productCount": 4,
+          "level": 2
+        },
+        {
+          "id": "cat-2-3",
+          "name": "Vòng hoa Thánh Giá Công giáo",
+          "slug": "vong-hoa-thanh-gia",
+          "productCount": 3,
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "cat-3",
+      "name": "Giỏ hoa / Lẵng hoa chia buồn",
+      "slug": "gio-hoa-chia-buon",
+      "icon": "fa-solid fa-basket-shopping",
+      "level": 1,
+      "productCount": 8,
+      "seo": {
+        "metaTitle": "Giỏ Hoa, Lẵng Hoa Tang Lễ Để Bàn Nhẹ Nhàng, Ấm Áp",
+        "metaDesc": "Bộ sưu tập giỏ hoa viếng tang lễ đặt tại linh đường, tư gia. Nhẹ nhàng, trang trọng, hoa tươi bền màu suốt tang kỳ.",
+        "urlSlug": "gio-hoa-chia-buon"
+      },
+      "children": [
+        {
+          "id": "cat-3-1",
+          "name": "Giỏ hoa lan hồ điệp để bàn",
+          "slug": "gio-hoa-de-ban",
+          "productCount": 4,
+          "level": 2
+        },
+        {
+          "id": "cat-3-2",
+          "name": "Lẵng hoa ly trắng & cúc",
+          "slug": "lang-hoa-ly-trang",
+          "productCount": 4,
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "cat-4",
+      "name": "Lan hồ điệp viếng cao cấp",
+      "slug": "lan-ho-diep-vieng",
+      "icon": "fa-solid fa-spa",
+      "level": 1,
+      "productCount": 6,
+      "seo": {
+        "metaTitle": "Chậu Lan Hồ Điệp Trắng Viếng Đám Tang Cao Cấp - Tinh Tế & Bền Lâu",
+        "metaDesc": "Chậu lan hồ điệp trắng từ 5 đến 20 cành viếng tang lễ doanh nhân, đại biểu. Độ bền từ 3-4 tuần, thể hiện lòng kính trọng tột bậc.",
+        "urlSlug": "lan-ho-diep-vieng"
+      },
+      "children": [
+        {
+          "id": "cat-4-1",
+          "name": "Chậu lan 5 cành trang nhã",
+          "slug": "lan-5-canh",
+          "productCount": 2,
+          "level": 2
+        },
+        {
+          "id": "cat-4-2",
+          "name": "Chậu lan 10 cành bề thế",
+          "slug": "lan-10-canh",
+          "productCount": 2,
+          "level": 2
+        },
+        {
+          "id": "cat-4-3",
+          "name": "Chậu lan đại sảnh 20 cành",
+          "slug": "lan-20-canh",
+          "productCount": 2,
+          "level": 2
+        }
+      ]
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust-1",
+      "name": "Ngân hàng Vietcombank - CN Tân Bình",
+      "type": "B2B",
+      "phone": "0977 223 344",
+      "email": "hcns.tanbinh@vietcombank.com.vn",
+      "ordersCount": 26,
+      "totalSpent": 48500000,
+      "tier": "Đối Tác Kim Cương B2B",
+      "ribbonTemplates": [
+        "Ban Giám Đốc & Công Đoàn Vietcombank Chi Nhánh Tân Bình - Thành Kính Phân Ưu",
+        "Tập Thể Cán Bộ Nhân Viên Phòng Giao Dịch - Kính Viếng",
+        "Chi Bộ Đảng Vietcombank Tân Bình - Vô Cùng Thương Tiếc"
+      ],
+      "taxInfo": {
+        "companyName": "Ngân Hàng TMCP Ngoại Thương Việt Nam - Chi Nhánh Tân Bình",
+        "taxId": "0100150619-042",
+        "address": "108 Xuân Diệu, Phường 4, Quận Tân Bình, TP.HCM",
+        "einvoiceEmail": "hoadondientu@vietcombank.com.vn"
+      }
+    },
+    {
+      "id": "cust-2",
+      "name": "Tập Đoàn Vingroup",
+      "type": "B2B",
+      "phone": "0918 999 111",
+      "email": "admin.south@vingroup.net",
+      "ordersCount": 42,
+      "totalSpent": 96000000,
+      "tier": "Khách Hàng Chiến Lược",
+      "ribbonTemplates": [
+        "Chủ Tịch HĐQT & Ban Tổng Giám Đốc Tập Đoàn Vingroup - Kính Điếu",
+        "Ban Lãnh Đạo & Toàn Thể Cán Bộ Nhân Viên Vingroup - Thành Kính Phân Ưu"
+      ],
+      "taxInfo": {
+        "companyName": "Tập Đoàn Vingroup - Công Ty CP",
+        "taxId": "0101245486",
+        "address": "Số 7, Đường Bằng Lăng 1, KĐT Vinhomes Riverside, Long Biên, Hà Nội",
+        "einvoiceEmail": "accounting.einvoice@vingroup.net"
+      }
+    },
+    {
+      "id": "cust-3",
+      "name": "Công ty Cổ phần Chứng khoán SSI",
+      "type": "B2B",
+      "phone": "0982 555 666",
+      "email": "contact@ssi.com.vn",
+      "ordersCount": 18,
+      "totalSpent": 32400000,
+      "tier": "Đối Tác VIP",
+      "ribbonTemplates": [
+        "Ban Điều Hành & Tập Thể Nhân Viên SSI - Thành Kính Phân Ưu",
+        "Khối Dịch Vụ Chứng Khoán SSI - Kính Viếng"
+      ],
+      "taxInfo": {
+        "companyName": "Công ty Cổ phần Chứng khoán SSI",
+        "taxId": "0301449033",
+        "address": "72 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM",
+        "einvoiceEmail": "tax@ssi.com.vn"
+      }
+    },
+    {
+      "id": "cust-4",
+      "name": "Nguyễn Thị Lan",
+      "type": "B2C",
+      "phone": "0912 345 678",
+      "email": "lan.nguyen@gmail.com",
+      "ordersCount": 3,
+      "totalSpent": 3600000,
+      "tier": "Khách Hàng Thân Thiết",
+      "ribbonTemplates": [
+        "Gia đình Cháu Lan - Kính Viếng Hương Hồn Bác",
+        "Bạn bè thân hữu - Thành Kính Chia Buồn"
+      ],
+      "taxInfo": null
+    },
+    {
+      "id": "cust-5",
+      "name": "Trần Văn Minh",
+      "type": "B2C",
+      "phone": "0903 887 766",
+      "email": "minh.tran@techcorp.vn",
+      "ordersCount": 2,
+      "totalSpent": 2700000,
+      "tier": "Khách Mới",
+      "ribbonTemplates": [
+        "Tập Thể Cựu Sinh Viên Khóa 2012 ĐH Bách Khoa - Vô Cùng Thương Tiếc"
+      ],
+      "taxInfo": null
+    }
+  ],
+  "partners": [
+    {
+      "id": "part-1",
+      "name": "Shop Hoa Tươi Sài Gòn Q.3",
+      "manager": "Chị Ánh Tuyết",
+      "phone": "0908 111 222",
+      "districts": [
+        "Quận 3",
+        "Quận 1",
+        "Quận 10",
+        "Phú Nhuận"
+      ],
+      "rating": 4.9,
+      "successRate": 99.4,
+      "qcErrorRate": 0.4,
+      "activeOrders": 2,
+      "totalOrdersHandled": 418,
+      "status": "Đang mở cửa",
+      "leadTime": "45-60 phút",
+      "address": "148 Võ Thị Sáu, Phường Võ Thị Sáu, Q.3, TP.HCM"
+    },
+    {
+      "id": "part-2",
+      "name": "Shop Hoa Tươi Tâm An Gò Vấp",
+      "manager": "Anh Quang Huy",
+      "phone": "0909 333 444",
+      "districts": [
+        "Gò Vấp",
+        "Quận 12",
+        "Tân Bình"
+      ],
+      "rating": 4.8,
+      "successRate": 98.7,
+      "qcErrorRate": 0.9,
+      "activeOrders": 1,
+      "totalOrdersHandled": 295,
+      "status": "Đang mở cửa",
+      "leadTime": "60-75 phút",
+      "address": "88 Quang Trung, Phường 10, Gò Vấp, TP.HCM"
+    },
+    {
+      "id": "part-3",
+      "name": "Điện Hoa An Bình (Bình Hưng Hòa)",
+      "manager": "Chị Bích Thủy",
+      "phone": "0944 888 999",
+      "districts": [
+        "Bình Tân",
+        "Tân Phú",
+        "Bình Chánh"
+      ],
+      "rating": 4.95,
+      "successRate": 99.8,
+      "qcErrorRate": 0.2,
+      "activeOrders": 3,
+      "totalOrdersHandled": 560,
+      "status": "Đang mở cửa (Trực 24/7)",
+      "leadTime": "30-45 phút",
+      "address": "12 Bình Long, Phường Bình Hưng Hòa A, Bình Tân, TP.HCM"
+    },
+    {
+      "id": "part-4",
+      "name": "Hoa Tươi Thanh Nhã Bình Thạnh",
+      "manager": "Anh Hoàng Phúc",
+      "phone": "0938 777 666",
+      "districts": [
+        "Bình Thạnh",
+        "Thủ Đức",
+        "Quận 2"
+      ],
+      "rating": 4.75,
+      "successRate": 97.9,
+      "qcErrorRate": 1.5,
+      "activeOrders": 1,
+      "totalOrdersHandled": 184,
+      "status": "Đang mở cửa",
+      "leadTime": "60 phút",
+      "address": "245 Bạch Đằng, Phường 15, Bình Thạnh, TP.HCM"
+    }
+  ],
+  "deliveryShippers": [
+    {
+      "id": "ship-1",
+      "name": "Trần Quốc Bảo",
+      "phone": "0988 123 456",
+      "plate": "59F1-889.24",
+      "orderId": "DH26092501",
+      "destination": "Nhà tang lễ TP.HCM, 25 Lê Quý Đôn, Q.3",
+      "etaMinutes": 25,
+      "statusColor": "red",
+      "statusText": "Gấp! Còn 25 phút đến giờ viếng",
+      "lat": 10.7785,
+      "lng": 106.6912
+    },
+    {
+      "id": "ship-2",
+      "name": "Nguyễn Hoàng Nam",
+      "phone": "0933 654 321",
+      "plate": "59H2-341.12",
+      "orderId": "DH26092503",
+      "destination": "Chùa Vĩnh Nghiêm, 339 Nam Kỳ Khởi Nghĩa, Q.3",
+      "etaMinutes": 0,
+      "statusColor": "green",
+      "statusText": "Đã giao thành công (POD verified)",
+      "lat": 10.7909,
+      "lng": 106.6834
+    },
+    {
+      "id": "ship-3",
+      "name": "Lê Anh Tuấn",
+      "phone": "0909 777 888",
+      "plate": "59K1-778.90",
+      "orderId": "DH26092504",
+      "destination": "Nhà tang lễ BQP, 05 Phạm Ngũ Lão, Gò Vấp",
+      "etaMinutes": 50,
+      "statusColor": "yellow",
+      "statusText": "Còn 50 phút đến điểm viếng",
+      "lat": 10.8256,
+      "lng": 106.6845
+    }
+  ],
+  "qcQueue": [
+    {
+      "id": "qc-1",
+      "orderId": "DH26092502",
+      "customer": "Trần Văn Minh",
+      "product": "Kệ hoa chia buồn 2 tầng Vĩnh Cửu",
+      "partnerName": "Shop Hoa Tươi Sài Gòn Q.3",
+      "timeSent": "09:40 hôm nay",
+      "sampleImage": "/assets/products/prod_2_ke_hoa_2_tang.jpg",
+      "actualImage": "/assets/products/prod_2_ke_hoa_2_tang.jpg",
+      "ribbonText": "Tập Thể Cựu Sinh Viên Khóa 2012 ĐH Bách Khoa - Vô Cùng Thương Tiếc",
+      "status": "Chờ duyệt",
+      "issues": []
+    },
+    {
+      "id": "qc-2",
+      "orderId": "DH26092501",
+      "customer": "Nguyễn Thị Lan",
+      "product": "Vòng hoa cúc trắng dạng tròn tiễn biệt",
+      "partnerName": "Shop Hoa Tươi Sài Gòn Q.3",
+      "timeSent": "09:15 hôm nay",
+      "sampleImage": "/assets/products/prod_1_cuc_trang_tien_biet.jpg",
+      "actualImage": "/assets/products/prod_1_cuc_trang_tien_biet.jpg",
+      "ribbonText": "Ban Giám Đốc Công Ty Cổ Phần Công Nghệ ABC - Thành Kính Phân Ưu",
+      "status": "Đã duyệt cho đi giao",
+      "issues": []
+    }
+  ],
+  "payouts": [
+    {
+      "id": "pay-1",
+      "period": "Kỳ tuần 2 / Tháng 11 (07/11 - 14/11)",
+      "partnerId": "part-1",
+      "partnerName": "Shop Hoa Tươi Sài Gòn Q.3",
+      "ordersCount": 38,
+      "grossRevenue": 52000000,
+      "commissionRate": "20%",
+      "commissionAmount": 10400000,
+      "penalties": 0,
+      "penaltyReason": "Không có lỗi",
+      "netPayout": 41600000,
+      "status": "Đã chuyển khoản quyết toán"
+    },
+    {
+      "id": "pay-2",
+      "period": "Kỳ tuần 2 / Tháng 11 (07/11 - 14/11)",
+      "partnerId": "part-3",
+      "partnerName": "Điện Hoa An Bình (Bình Hưng Hòa)",
+      "ordersCount": 52,
+      "grossRevenue": 78000000,
+      "commissionRate": "20%",
+      "commissionAmount": 15600000,
+      "penalties": 0,
+      "penaltyReason": "Không có lỗi",
+      "netPayout": 62400000,
+      "status": "Đã chuyển khoản quyết toán"
+    },
+    {
+      "id": "pay-3",
+      "period": "Kỳ tuần 2 / Tháng 11 (07/11 - 14/11)",
+      "partnerId": "part-2",
+      "partnerName": "Shop Hoa Tươi Tâm An Gò Vấp",
+      "ordersCount": 22,
+      "grossRevenue": 31000000,
+      "commissionRate": "20%",
+      "commissionAmount": 6200000,
+      "penalties": 200000,
+      "penaltyReason": "1 đơn giao trễ 15p so với hẹn giờ viếng",
+      "netPayout": 24600000,
+      "status": "Chờ kế toán phê duyệt"
+    }
+  ],
+  "promotions": {
+    "activePromotions": [
+      {
+        "id": "promo-1",
+        "code": "HOAVIENG10",
+        "title": "Giảm 10% Cho Đơn Hàng Đầu Tiên",
+        "discount": "Giảm 10%",
+        "maxDiscount": "200.000đ",
+        "minOrder": "1.200.000đ",
+        "expiry": "31/12/2026",
+        "status": "active",
+        "statusLabel": "Đang áp dụng",
+        "badgeClass": "badge-active",
+        "description": "Áp dụng cho mọi khách hàng cá nhân và doanh nghiệp đặt hoa kính viếng trực tuyến hoặc qua hotline. Tặng kèm dải lụa in nội dung viếng cao cấp.",
+        "conditions": [
+          "Áp dụng cho đơn hàng từ 1.200.000đ trở lên.",
+          "Mỗi số điện thoại được sử dụng 01 lần.",
+          "Có hiệu lực đến hết ngày 31/12/2026 trên toàn hệ thống."
+        ]
+      },
+      {
+        "id": "promo-2",
+        "code": "TRAMTUOI2TR",
+        "title": "Chương Trình Trăm Tuổi - Trọn Gói Kệ 2 Tầng Chỉ 2 Triệu",
+        "discount": "Trọn gói 2.000.000đ",
+        "maxDiscount": "Tiết kiệm 500.000đ",
+        "minOrder": "Kệ hoa 2 tầng",
+        "expiry": "31/12/2026",
+        "status": "active",
+        "statusLabel": "Đang áp dụng",
+        "badgeClass": "badge-active",
+        "description": "Gói tri ân đặc biệt gồm: 01 Kệ hoa kính viếng cao cấp 2 tầng + Miễn phí vận chuyển hỏa tốc nội thành + Dải lụa nhung vàng cao cấp + Chụp 2 ảnh xác nhận nghiệm thu.",
+        "conditions": [
+          "Áp dụng cho các mẫu kệ hoa 2 tầng tiêu chuẩn.",
+          "Miễn phí giao hàng trong bán kính 10km.",
+          "Giới hạn 300 suất ưu đãi trong năm 2026."
+        ]
+      },
+      {
+        "id": "promo-3",
+        "code": "TRIAN200K",
+        "title": "Voucher Trừ Trực Tiếp 200.000đ Đơn Hoa Viếng",
+        "discount": "Trừ 200.000đ",
+        "maxDiscount": "200.000đ",
+        "minOrder": "2.000.000đ",
+        "expiry": "30/11/2026",
+        "status": "active",
+        "statusLabel": "Đang áp dụng",
+        "badgeClass": "badge-active",
+        "description": "Khấu trừ trực tiếp 200.000đ vào tổng hóa đơn khi đặt các mẫu hoa viếng từ 2 triệu đồng trở lên (Kệ hoa 3 tầng, Chậu lan hồ điệp).",
+        "conditions": [
+          "Áp dụng cho đơn hàng từ 2.000.000đ.",
+          "Nhập mã TRIAN200K tại bước thanh toán chuyển khoản."
+        ]
+      },
+      {
+        "id": "promo-4",
+        "code": "B2BDOANHNGHIEP",
+        "title": "Chính Sách Chiết Khấu Doanh Nghiệp (B2B) Lên Đến 15%",
+        "discount": "Chiết khấu 5% - 15%",
+        "maxDiscount": "Không giới hạn",
+        "minOrder": "Từ 3 kệ hoa",
+        "expiry": "Không giới hạn",
+        "status": "active",
+        "statusLabel": "Đang áp dụng",
+        "badgeClass": "badge-active",
+        "description": "Chương trình hợp tác lâu dài với cơ quan, doanh nghiệp: Chiết khấu trực tiếp trên từng đơn, miễn phí ship toàn thành phố, hỗ trợ xuất hóa đơn đỏ VAT trong ngày và công nợ 30 ngày.",
+        "conditions": [
+          "Mua từ 3 - 4 kệ: Giảm 5%",
+          "Mua từ 5 - 9 kệ: Giảm 10% + Freeship toàn thành phố",
+          "Mua từ 10 kệ trở lên: Giảm 15% + Hợp đồng công nợ 30 ngày"
+        ]
+      }
+    ],
+    "expiredPromotions": [
+      {
+        "id": "promo-exp-1",
+        "code": "VULAN2025",
+        "title": "Đại Lễ Vu Lan Báo Hiếu - Giảm 15% Hoa Viếng",
+        "discount": "Giảm 15%",
+        "maxDiscount": "300.000đ",
+        "minOrder": "1.500.000đ",
+        "expiry": "30/08/2025",
+        "status": "expired",
+        "statusLabel": "Đã hết hạn",
+        "badgeClass": "badge-expired",
+        "description": "Chương trình tri ân đấng sinh thành mùa Vu Lan Báo Hiếu năm 2025.",
+        "conditions": [
+          "Chương trình đã kết thúc vào ngày 30/08/2025.",
+          "Mã không còn giá trị áp dụng trong hệ thống."
+        ]
+      },
+      {
+        "id": "promo-exp-2",
+        "code": "TETNGUYENDAN25",
+        "title": "Ưu Đãi Đầu Xuân Ất Tỵ - Tặng Dải Lụa Viếng Thêu Vàng",
+        "discount": "Tặng quà 150.000đ",
+        "maxDiscount": "150.000đ",
+        "minOrder": "1.000.000đ",
+        "expiry": "15/02/2025",
+        "status": "expired",
+        "statusLabel": "Đã hết hạn",
+        "badgeClass": "badge-expired",
+        "description": "Chương trình tặng dải lụa viếng nhung thêu chỉ vàng dịp đầu xuân năm 2025.",
+        "conditions": [
+          "Chương trình đã kết thúc vào ngày 15/02/2025."
+        ]
+      }
+    ],
+    "shippingRules": {
+      "freeRadiusKm": 5,
+      "ratePerExtraKm": 5000,
+      "expressSurge": 50000
+    }
+  },
+  "reports": {
+    "flowerProfitMargin": [
+      {
+        "type": "Lan hồ điệp cao cấp",
+        "margin": 48.5,
+        "revenue": 170000000,
+        "profit": 82450000
+      },
+      {
+        "type": "Kệ hoa chia buồn 2-3 tầng",
+        "margin": 42,
+        "revenue": 349800000,
+        "profit": 146916000
+      },
+      {
+        "type": "Vòng hoa cúc lan truyền thống",
+        "margin": 37.5,
+        "revenue": 249600000,
+        "profit": 93600000
+      },
+      {
+        "type": "Giỏ hoa / Lẵng hoa để bàn",
+        "margin": 35,
+        "revenue": 64000000,
+        "profit": 22400000
+      }
+    ],
+    "partnerCancellationRates": [
+      {
+        "partner": "Điện Hoa An Bình (Bình Hưng Hòa)",
+        "orders": 560,
+        "cancelled": 1,
+        "rate": 0.18,
+        "rank": "Xuất Sắc"
+      },
+      {
+        "partner": "Shop Hoa Tươi Sài Gòn Q.3",
+        "orders": 418,
+        "cancelled": 2,
+        "rate": 0.48,
+        "rank": "Xuất Sắc"
+      },
+      {
+        "partner": "Shop Hoa Tươi Tâm An Gò Vấp",
+        "orders": 295,
+        "cancelled": 3,
+        "rate": 1.02,
+        "rank": "Khá"
+      },
+      {
+        "partner": "Hoa Tươi Thanh Nhã Bình Thạnh",
+        "orders": 184,
+        "cancelled": 3,
+        "rate": 1.63,
+        "rank": "Cần cải thiện"
+      }
+    ],
+    "marketingChannels": [
+      {
+        "channel": "Khách B2B Doanh nghiệp quay lại",
+        "share": 44.5,
+        "orders": 556,
+        "roi": "Tối ưu nhất (CAC ~ 0đ)"
+      },
+      {
+        "channel": "Tìm kiếm tự nhiên Google (SEO)",
+        "share": 28.2,
+        "orders": 352,
+        "roi": "Rất cao"
+      },
+      {
+        "channel": "Google Ads (Từ khóa: hoa viếng, hoa tang lễ)",
+        "share": 19.3,
+        "orders": 241,
+        "roi": "3.8x"
+      },
+      {
+        "channel": "Hotline giới thiệu trực tiếp",
+        "share": 8,
+        "orders": 99,
+        "roi": "Cao"
+      }
+    ]
+  },
+  "condolenceLibrary": [
+    {
+      "category": "Phật giáo / Dân gian truyền thống",
+      "templates": [
+        "Vô Cùng Thương Tiếc Tiễn Biệt Cụ - Nguyện Cầu Hương Linh Vãng Sanh Về Miền Cực Lạc",
+        "Thành Kính Phân Ưu Cùng Gia Đình Tang Quyến - Nam Mô A Di Đà Phật",
+        "Kính Viếng Hương Hồn Bác - Nguyện Hương Hồn Tiêu Diêu Nơi Miền Cực Lạc",
+        "Gia Đình [Tên Bạn] - Thành Kính Kính Điếu"
+      ]
+    },
+    {
+      "category": "Công giáo (Đạo Thiên Chúa)",
+      "templates": [
+        "Nguyện Xin Thiên Chúa Đón Nhận Linh Hồn [Tên Thánh/Họ Tên] Vào Nước Thiên Đàng",
+        "Thành Kính Phân Ưu - Nguyện Chúa Ban Ơn Bình An Và Nâng Đỡ Tang Quyến Trong Cơn Thử Thách",
+        "Hiệp Thông Cầu Nguyện Cho Linh Hồn [Tên Thánh] Sớm Hưởng Nhan Thánh Chúa",
+        "Kính Viếng Linh Hồn [Tên Thánh] - Chúa Là Sự Sống Lại Và Là Sự Sống"
+      ]
+    },
+    {
+      "category": "Doanh nghiệp & Cơ quan đoàn thể",
+      "templates": [
+        "Ban Giám Đốc & Toàn Thể Cán Bộ Nhân Viên [Tên Công Ty] - Thành Kính Phân Ưu",
+        "Chủ Tịch Hội Đồng Quản Trị & Ban Lãnh Đạo [Tên Doanh Nghiệp] - Kính Viếng",
+        "Tập Thể Đồng Nghiệp Công Ty [Tên Công Ty] - Vô Cùng Thương Tiếc Và Chia Buồn Cùng Gia Đình",
+        "Chi Bộ & Ban Chấp Hành Công Đoàn [Tên Đơn Vị] - Thành Kính Kính Điếu"
+      ]
+    },
+    {
+      "category": "Bạn bè & Bạn học thân hữu",
+      "templates": [
+        "Tập Thể Cựu Sinh Viên Khóa [Năm] Trường [Tên Trường] - Vô Cùng Thương Tiếc Tiễn Biệt Bạn",
+        "Nhóm Bạn Thân Thời Niên Thiếu - Mãi Mãi Nhớ Về Bạn, An Nghỉ Bạn Nhé",
+        "Các Bạn Đồng Môn - Thành Kính Tiễn Bạn Về Miền Mây Trắng"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Nguyễn Văn Hưng",
+      "email": "admin@hoavieng.vn",
+      "role": "Admin Tổng",
+      "status": "Online",
+      "avatar": "/assets/concept_backend.jpg"
+    },
+    {
+      "id": "usr-2",
+      "name": "Lê Minh Trí",
+      "email": "dispatch@hoavieng.vn",
+      "role": "Điều phối viên (CSKH)",
+      "status": "Online",
+      "avatar": "/assets/concept_backend.jpg"
+    },
+    {
+      "id": "usr-3",
+      "name": "Trần Thùy Linh",
+      "email": "qc@hoavieng.vn",
+      "role": "Nhân viên duyệt QC",
+      "status": "Online",
+      "avatar": "/assets/concept_backend.jpg"
+    },
+    {
+      "id": "usr-4",
+      "name": "Hoàng Mai Phương",
+      "email": "finance@hoavieng.vn",
+      "role": "Kế toán đối soát",
+      "status": "Away",
+      "avatar": "/assets/concept_backend.jpg"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1794971115329",
+      "user": "Admin Quản trị viên",
+      "action": "Tắt [🔥 Đặt nhiều nhất]",
+      "details": "Hủy huy hiệu 🔥 Đặt nhiều nhất cho mẫu [Vòng hoa hồng trắng mix cúc Calimero dạng vòng] (HV-VH04)",
+      "time": "10:05 hôm nay"
+    },
+    {
+      "id": "log-1794971114397",
+      "user": "Admin Quản trị viên",
+      "action": "Bật [🔥 Đặt nhiều nhất]",
+      "details": "Gắn huy hiệu 🔥 Đặt nhiều nhất & ưu tiên hiển thị Trang chủ cho mẫu [Vòng hoa hồng trắng mix cúc Calimero dạng vòng] (HV-VH04)",
+      "time": "10:05 hôm nay"
+    },
+    {
+      "id": "log-1794968877792",
+      "user": "Admin Quản trị viên",
+      "action": "Bật [🔥 Đặt nhiều nhất]",
+      "details": "Gắn huy hiệu 🔥 Đặt nhiều nhất & ưu tiên hiển thị Trang chủ cho mẫu [Vòng hoa cúc trắng dạng tròn tiễn biệt] (HV-VH01)",
+      "time": "09:27 hôm nay"
+    },
+    {
+      "id": "log-1794968877751",
+      "user": "Admin Quản trị viên",
+      "action": "Tắt [🔥 Đặt nhiều nhất]",
+      "details": "Hủy huy hiệu 🔥 Đặt nhiều nhất cho mẫu [Vòng hoa cúc trắng dạng tròn tiễn biệt] (HV-VH01)",
+      "time": "09:27 hôm nay"
+    },
+    {
+      "id": "log-1794904166150",
+      "user": "Admin Quản trị viên",
+      "action": "Phê duyệt hiển thị đánh giá",
+      "target": "Đánh giá của Nguyễn Văn Test (2 sao)",
+      "time": "15:29 17/11/2026",
+      "status": "success"
+    },
+    {
+      "id": "log-1",
+      "user": "Trần Thùy Linh (QC)",
+      "action": "Duyệt ảnh QC",
+      "details": "Duyệt ảnh thành phẩm đơn #DH26092501 (Chuẩn 100%)",
+      "time": "09:32 hôm nay"
+    },
+    {
+      "id": "log-2",
+      "user": "Lê Minh Trí (Điều phối)",
+      "action": "Gán đơn đối tác",
+      "details": "Đẩy đơn #DH26092505 cho Điện Hoa An Bình (Bình Hưng Hòa) qua Zalo OA",
+      "time": "10:16 hôm nay"
+    },
+    {
+      "id": "log-3",
+      "user": "Hoàng Mai Phương (Kế toán)",
+      "action": "Khớp tiền MBBank",
+      "details": "Khớp đối soát thanh toán 1.200.000đ cho đơn #ĐH26113061 qua STK MBBank 0966789639",
+      "time": "10:59 hôm nay"
+    },
+    {
+      "id": "log-4",
+      "user": "Lê Minh Trí (Điều phối)",
+      "action": "Sửa nội dung băng rôn",
+      "details": "Chỉnh sửa chính tả tên người mất cho đơn #DH26092502",
+      "time": "09:25 hôm nay"
+    },
+    {
+      "id": "log-5",
+      "user": "Nguyễn Văn Hưng (Admin)",
+      "action": "Cập nhật cấu hình",
+      "details": "Điều chỉnh ngưỡng cảnh báo đơn gấp từ 90 phút xuống 60 phút",
+      "time": "08:10 hôm nay"
+    }
+  ],
+  "settings": {
+    "general": {
+      "shopName": "HOA VIẾNG - Dịch Vụ Hoa Tang Lễ Chuyên Nghiệp",
+      "hotline": "0868 57 67 77 (Trực 24/7)",
+      "email": "info@hoavieng.vn",
+      "headquarters": "123 Nguyễn Văn Cừ, Quận 1, TP.HCM",
+      "leadTimeMinutes": 60,
+      "urgentThresholdMinutes": 90
+    },
+    "delivery": {
+      "baseRadiusKm": 5,
+      "baseFee": 0,
+      "extraFeePerKm": 5000,
+      "expressFee": 50000
+    },
+    "webhooks": {
+      "zaloZns": {
+        "enabled": true,
+        "appId": "389274921094",
+        "secretKey": "••••••••••••••••",
+        "templateOrderSuccess": "TMP_ZNS_HOAVIENG_01",
+        "templateQCApproved": "TMP_ZNS_HOAVIENG_02",
+        "status": "Đang kết nối (Active)"
+      },
+      "telegramAlert": {
+        "enabled": true,
+        "botToken": "712938472:AAH••••••••••••••••",
+        "chatId": "-100234857291 (Kênh Điều Phối Đơn Gấp)",
+        "status": "Đang kết nối (Active)"
+      },
+      "sepayVietQr": {
+        "enabled": true,
+        "bank": "MBBank (Ngân hàng TMCP Quân Đội)",
+        "accountNumber": "0966789639",
+        "accountName": "HOA VIENG",
+        "webhookUrl": "http://localhost:2000/api/webhooks/vietqr",
+        "status": "Đang kết nối Napas247 (Active)"
+      }
+    }
+  },
+  "activities": [
+    {
+      "id": "act-1794904927655",
+      "text": "Khách hàng Bà Trương Mỹ Lan gửi đánh giá 5⭐ (Đang chờ Quản trị viên duyệt)",
+      "time": "Vừa xong",
+      "type": "review"
+    },
+    {
+      "id": "act-1794904166144",
+      "text": "Khách hàng Nguyễn Văn Test gửi đánh giá 2⭐ (Đang chờ Quản trị viên duyệt)",
+      "time": "Vừa xong",
+      "type": "review"
+    },
+    {
+      "id": "act-1794890196130",
+      "type": "new_order",
+      "orderId": "ĐH26117127",
+      "title": "Đơn #ĐH26117127",
+      "description": "Khách đặt: Kệ hoa lan trắng, ly vàng dạng vòng hiện đại - tuyên test 2",
+      "timeAgo": "Vừa xong",
+      "icon": "cart",
+      "badgeColor": "blue"
+    },
+    {
+      "id": "act-1794887974838",
+      "type": "payment_received",
+      "orderId": "ĐH26113061",
+      "title": "Đơn #ĐH26113061",
+      "description": "Đã nhận thanh toán VietQR MBBank: 1.200.000đ",
+      "timeAgo": "Vừa xong",
+      "icon": "credit-card",
+      "badgeColor": "green"
+    },
+    {
+      "id": "act-1794887972089",
+      "type": "new_order",
+      "orderId": "ĐH26113061",
+      "title": "Đơn #ĐH26113061",
+      "description": "Khách đặt: Vòng hoa kính viếng - Chờ thanh toán (MBBank VietQR)",
+      "timeAgo": "Vừa xong",
+      "icon": "cart",
+      "badgeColor": "blue"
+    },
+    {
+      "id": "act-1794887954707",
+      "type": "new_order",
+      "orderId": "ĐH26119855",
+      "title": "Đơn #ĐH26119855",
+      "description": "Khách đặt: Vòng hoa kính viếng - vietqr",
+      "timeAgo": "Vừa xong",
+      "icon": "cart",
+      "badgeColor": "blue"
+    },
+    {
+      "id": "act-1794887951989",
+      "type": "payment_received",
+      "orderId": "DH26092502",
+      "title": "Đơn #DH26092502",
+      "description": "Đã nhận thanh toán VietQR MBBank: 1.500.000đ",
+      "timeAgo": "Vừa xong",
+      "icon": "credit-card",
+      "badgeColor": "green"
+    },
+    {
+      "id": "act-1794887166823",
+      "type": "new_order",
+      "orderId": "ĐH26113062",
+      "title": "Đơn #ĐH26113062",
+      "description": "Khách đặt mới: Vòng hoa cúc trắng dạng tròn tiễn biệt",
+      "timeAgo": "Vừa xong",
+      "icon": "cart",
+      "badgeColor": "blue"
+    },
+    {
+      "id": "act-1794886570973",
+      "type": "new_order",
+      "orderId": "ĐH26114231",
+      "title": "Đơn #ĐH26114231",
+      "description": "Khách đặt mới: Vòng Hoa Thánh Giá Đạo Thiên Chúa",
+      "timeAgo": "Vừa xong",
+      "icon": "cart",
+      "badgeColor": "blue"
+    },
+    {
+      "id": "act-1794884762333",
+      "type": "article_published",
+      "orderId": "art-5-2332",
+      "title": "Bài viết SEO mới",
+      "description": "Đã đăng: Nghi thức đưa tiễn linh cữu tran...",
+      "timeAgo": "Vừa xong",
+      "icon": "pen",
+      "badgeColor": "blue"
+    },
+    {
+      "id": "act-1",
+      "type": "status_update",
+      "orderId": "DH26092501",
+      "title": "Đơn #DH26092501",
+      "description": "Đã cập nhật: Đang giao",
+      "timeAgo": "5 phút trước",
+      "icon": "truck",
+      "badgeColor": "orange"
+    },
+    {
+      "id": "act-2",
+      "type": "payment",
+      "orderId": "DH26092500",
+      "title": "Đơn #DH26092500",
+      "description": "Đã thanh toán",
+      "timeAgo": "12 phút trước",
+      "icon": "shield",
+      "badgeColor": "green"
+    },
+    {
+      "id": "act-3",
+      "type": "delivered",
+      "orderId": "DH26092499",
+      "title": "Đơn #DH26092499",
+      "description": "Đã giao thành công",
+      "timeAgo": "30 phút trước",
+      "icon": "check",
+      "badgeColor": "green"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-pending-1",
+      "customer": "Lê Hoàng Yến",
+      "role": "Trưởng phòng Hành chính - Công ty CP Techcom",
+      "rating": 4,
+      "comment": "Hoa lan hồ điệp rất tươi và sang trọng, chậu sứ trắng đẹp mắt. Nhân viên giao đúng giờ viếng 14h tại Nhà tang lễ Chùa Vĩnh Nghiêm.",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80",
+      "date": "Hôm nay",
+      "createdAt": "2026-11-17T08:00:00.000Z",
+      "verified": false,
+      "status": "pending",
+      "likes": 0
+    },
+    {
+      "id": "rev-1",
+      "customer": "Nguyễn Minh Trí",
+      "role": "Giám đốc Công ty Đầu tư Nam Á",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
+      "rating": 5,
+      "date": "Hôm qua",
+      "comment": "Dịch vụ cực kỳ chu đáo và đúng giờ! Tôi đặt gấp giao tới Nhà tang lễ TP.HCM chỉ trong 60 phút. Hoa cúc mẫu đơn và lan hồ điệp rất tươi, dải lụa in chữ vàng sắc nét. Đội ngũ có gửi hình chụp trước và sau khi đặt vào linh đường.",
+      "verified": true,
+      "likes": 28,
+      "status": "approved"
+    },
+    {
+      "id": "rev-2",
+      "customer": "Trần Thu Hương",
+      "role": "Việt kiều Úc (Khách hàng từ xa)",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80",
+      "rating": 5,
+      "date": "15/11/2026",
+      "comment": "Gia đình tôi ở Sydney không về kịp tang lễ người thân, nhờ Hoa Viếng gửi giỏ hoa cúc trắng đến tư gia. Nhân viên nhiệt tình chụp ảnh góc viếng trang nghiêm và gửi xác nhận qua Zalo khiến tôi rất xúc động và yên tâm.",
+      "verified": true,
+      "likes": 35,
+      "status": "approved"
+    },
+    {
+      "id": "rev-3",
+      "customer": "Lê Hoàng Nam",
+      "role": "Đại diện Công đoàn FPT",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80",
+      "rating": 5,
+      "date": "14/11/2026",
+      "comment": "Đặt hoa viếng thân nhân đối tác công ty, băng rôn ghi đúng chức danh trang trọng chuẩn mực. Hoa tươi giữ nguyên form suốt 3 ngày tổ chức. Xuất hóa đơn VAT điện tử nhanh chóng, rất chuyên nghiệp.",
+      "verified": true,
+      "likes": 19,
+      "status": "approved"
+    },
+    {
+      "id": "rev-4",
+      "customer": "Bác Phạm Quang Vinh",
+      "role": "Hội đồng hương Quảng Nam tại TP.HCM",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80",
+      "rating": 5,
+      "date": "12/11/2026",
+      "comment": "Chậu lan hồ điệp trắng 9 cành giao tới chùa Vĩnh Nghiêm rất đẹp, hoa nở đều, cành uốn trang nhã và tôn nghiêm. Đánh giá 5 sao cho cái tâm của đội ngũ thợ cắm hoa Hoa Viếng.",
+      "verified": true,
+      "likes": 42,
+      "status": "approved"
+    }
+  ],
+  "articles": [
+    {
+      "id": "art-1",
+      "title": "Ý nghĩa hoa lan và hoa cúc trắng trong nghi lễ tang lễ truyền thống Việt Nam",
+      "slug": "y-nghia-hoa-lan-cuc-trang-tang-le",
+      "category": "Văn hóa tang lễ",
+      "excerpt": "Tìm hiểu thông điệp sâu sắc đằng sau sắc trắng thanh khiết của hoa cúc và lan hồ điệp - biểu tượng của sự tôn kính, tiếc thương và niềm tin linh hồn vãng sanh nơi cực lạc.",
+      "content": "Trong văn hóa truyền thống phương Đông, màu trắng của hoa cúc và lan hồ điệp đại diện cho sự thanh tịnh, buông bỏ muộn phiền nơi cõi tạm. Hoa cúc trắng thể hiện sự hiếu kính, trang nghiêm; trong khi hoa lan hồ điệp tượng trưng cho phẩm hạnh cao quý và lời tiễn biệt trọn vẹn yêu thương đến người quá cố...",
+      "author": "Ban Biên Tập Hoa Viếng",
+      "readTime": "4 phút đọc",
+      "publishedAt": "16/11/2026",
+      "views": 1850,
+      "image": "/assets/prod_vonghoa.jpg",
+      "featured": true
+    },
+    {
+      "id": "art-2",
+      "title": "Cách ghi dải băng viếng tang lễ trang trọng, đúng phép tắc và chuẩn mực",
+      "slug": "cach-ghi-dai-bang-vieng-tang-le-chuan-muc",
+      "category": "Cẩm nang phúng viếng",
+      "excerpt": "Hướng dẫn chi tiết cách dùng từ chuẩn mực: Thành Kính Phân Ưu, Vô Cùng Thương Tiếc hay Kính Điếu tùy theo mối quan hệ gia đình, thông gia hay đối tác doanh nghiệp.",
+      "content": "Nội dung in trên dải lụa viếng là thông điệp thiêng liêng thể hiện tấm lòng của người gửi. Đối với bạn bè đồng trang lứa, từ ngữ thường dùng là 'Vô Cùng Thương Tiếc'; đối với quan hệ đối tác công tác là 'Thành Kính Phân Ưu'; đối với bậc tiền bối là 'Kính Viếng Hương Hồn'...",
+      "author": "Chuyên gia Văn hóa",
+      "readTime": "5 phút đọc",
+      "publishedAt": "15/11/2026",
+      "views": 2420,
+      "image": "/assets/prod_kehoa.jpg",
+      "featured": true
+    },
+    {
+      "id": "art-3",
+      "title": "Top 5 mẫu kệ hoa chia buồn sang trọng dành riêng cho cơ quan, doanh nghiệp",
+      "slug": "top-5-mau-ke-hoa-chia-buon-doanh-nghiep",
+      "category": "Tư vấn chọn hoa",
+      "excerpt": "Tổng hợp những mẫu kệ hoa 2 tầng phối lan hồ điệp trắng và hoa ly ngoại nhập thể hiện sự trân trọng và uy tín của tổ chức khi phúng viếng đối tác.",
+      "content": "Khi đại diện cơ quan đi phúng viếng đối tác chiến lược hoặc cấp cao, kệ hoa 2 tầng bề thế mang lại sự trang trọng cao nhất. Các tone màu chủ đạo là trắng tinh khiết, vàng hoàng gia hoặc tím tưởng nhớ, kết hợp hoa lily Đà Lạt và lan hồ điệp nhập khẩu...",
+      "author": "Nghệ nhân Cắm hoa",
+      "readTime": "6 phút đọc",
+      "publishedAt": "14/11/2026",
+      "views": 3100,
+      "image": "/assets/prod_giohoa.jpg",
+      "featured": true
+    },
+    {
+      "id": "art-4",
+      "title": "Quy tắc phúng viếng tang lễ chuẩn phong tục: Những điều nên làm và đại kỵ",
+      "slug": "quy-tac-phung-vieng-tang-le-nen-va-khong-nen",
+      "category": "Phong tục tập quán",
+      "excerpt": "Những điều cốt lõi cần lưu ý về trang phục, lời ăn tiếng nói, và thời điểm gửi hoa viếng phù hợp nhất với giờ khâm liệm, nhập quan tại nhà tang lễ.",
+      "content": "Đi viếng đám tang đòi hỏi sự ý nhị và kính cẩn. Về thời điểm gửi hoa, hoa viếng chỉ nên được chuyển đến sau giờ khâm liệm (nhập quan) và trước giờ động quan (di quan). Về trang phục, nên chọn đồ màu tối hoặc trắng đen, tránh màu sắc sặc sỡ...",
+      "author": "Nhà nghiên cứu Phong tục",
+      "readTime": "5 phút đọc",
+      "publishedAt": "13/11/2026",
+      "views": 4290,
+      "image": "/assets/prod_lanhodiep.jpg",
+      "featured": true
+    },
+    {
+      "id": "art-5",
+      "title": "Nghi thức viếng đám tang người theo đạo Công giáo: Mẫu câu và kệ hoa phù hợp",
+      "slug": "nghi-thuc-vieng-dam-tang-cong-giao",
+      "category": "Văn hóa & Tôn giáo",
+      "excerpt": "Chia sẻ các điều cần biết khi đi phúng viếng tang lễ người Công giáo: Cách dùng từ 'Cầu Cho Linh Hồn Về Nước Chúa', các mẫu vòng hoa thánh giá và tone màu trắng thanh khiết.",
+      "content": "Trong đức tin Kitô giáo, sự qua đời không phải là dấu chấm hết mà là sự giải thoát để linh hồn trở về với Thiên Chúa nơi Thiên Đàng. Khi đi viếng tang lễ người Công giáo, người phúng viếng thường chọn vòng hoa thánh giá hoặc kệ hoa phối hoa cúc và hoa lily trắng...",
+      "author": "Linh mục & Chuyên gia Phụng vụ",
+      "readTime": "6 phút đọc",
+      "publishedAt": "12/11/2026",
+      "views": 3840,
+      "image": "/assets/products/prod_1_vong_hoa_cuc.jpg",
+      "featured": true
+    },
+    {
+      "id": "art-6",
+      "title": "Ý nghĩa hoa lan hồ điệp trắng trong lễ tang: Biểu tượng phẩm hạnh cao quý",
+      "slug": "y-nghia-hoa-lan-ho-diep-tang-le",
+      "category": "Ý nghĩa hoa viếng",
+      "excerpt": "Lan hồ điệp trắng được mệnh danh là nữ hoàng của các loài hoa tang lễ nhờ vẻ đẹp kiêu sa, tĩnh tại và sức sống bền bỉ suốt 30 - 45 ngày.",
+      "content": "Màu trắng của lan hồ điệp không gợi cảm giác lạnh lẽo mà mang lại ánh sáng của niềm an ủi, sự nhẹ nhõm và tấm lòng trong sáng không vướng bụi trần. Đây là loài hoa được các cơ quan, tổ chức doanh nghiệp ưu tiên lựa chọn hàng đầu...",
+      "author": "Nghệ nhân Cắm hoa",
+      "readTime": "5 phút đọc",
+      "publishedAt": "11/11/2026",
+      "views": 2950,
+      "image": "/assets/prod_lanhodiep.jpg",
+      "featured": true
+    },
+    {
+      "id": "art-7",
+      "title": "Hướng dẫn chọn hoa viếng tang lễ theo độ tuổi của người quá cố",
+      "slug": "chon-hoa-vieng-theo-do-tuoi",
+      "category": "Cẩm nang phúng viếng",
+      "excerpt": "Kinh nghiệm chọn tone màu hoa viếng: Người lớn tuổi thọ cao (hưởng thọ) chọn màu vàng hoặc trắng; người trẻ tuổi (hưởng dương) đại kỵ màu sắc lòe loẹt, chỉ dùng thuần trắng.",
+      "content": "Tùy theo số tuổi của người mất mà việc chọn màu sắc hoa mang ý nghĩa vô cùng tế nhị. Đối với người cao tuổi tạ thế, người ta xem đó là 'tang trắng hoá tang hồng' hay sự ra đi thanh thản, có thể kết hợp hoa cúc vàng, lan vàng để thể hiện sự viên mãn...",
+      "author": "Ban Biên Tập Hoa Viếng",
+      "readTime": "5 phút đọc",
+      "publishedAt": "10/11/2026",
+      "views": 4100,
+      "image": "/assets/prod_kehoa.jpg",
+      "featured": true
+    },
+    {
+      "id": "art-8",
+      "title": "Thời điểm vàng gửi hoa tang lễ: Trước giờ khâm liệm hay sau giờ nhập quan?",
+      "slug": "thoi-diem-vang-gui-hoa-tang-le",
+      "category": "Phong tục tập quán",
+      "excerpt": "Giải đáp băn khoăn của nhiều người về khung giờ thích hợp nhất để chuyển kệ hoa tới nhà tang lễ để tránh phạm điều kiêng kỵ trong lễ tang.",
+      "content": "Theo phong tục cổ truyền, hoa viếng chỉ được tiếp nhận SAU KHI gia đình đã hoàn tất lễ Khâm Liệm (Nhập Quan) và bắt đầu phát tang. Trước thời điểm này, linh cữu chưa được đóng nắp và gia quyến đang bận rộn làm lễ nội bộ...",
+      "author": "Nhà nghiên cứu Phong tục",
+      "readTime": "4 phút đọc",
+      "publishedAt": "09/11/2026",
+      "views": 5320,
+      "image": "/assets/prod_vonghoa.jpg",
+      "featured": true
+    }
+  ]
+}

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tin Tức & Cẩm Nang Tang Lễ - Hoa Viếng</title>
+  <meta name="description" content="Tổng hợp các bài viết chuẩn mực về phong tục phúng viếng, cách viết dải băng rôn chia buồn, và ý nghĩa từng loài hoa viếng theo tín ngưỡng và văn hóa Việt Nam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-gold: #DFBE82;
+      --gold-dark: #B58444;
+      --gold-light: #F4EADA;
+      --bg-dark: #14110E;
+      --border-color: #E6DFC5;
+      --font-serif: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-sans); background: #F8F5EE; color: #231E18; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Top Bar & Header */
+    .top-bar { background: #0E0C0A; color: #9E968B; font-size: 12px; padding: 8px 0; border-bottom: 1px solid rgba(223, 190, 130, 0.15); }
+    .top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+    .top-info { display: flex; gap: 16px; align-items: center; }
+    .top-info i { color: var(--primary-gold); }
+    .main-header { background: #14110E; padding: 16px 0; border-bottom: 2px solid rgba(223, 190, 130, 0.25); }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand-logo { display: flex; align-items: center; gap: 14px; }
+    .lotus-svg { width: 44px; height: 44px; }
+    .brand-text h1 { font-family: var(--font-serif); font-size: 22px; color: #FFFFFF; letter-spacing: 2px; line-height: 1.1; font-weight: 700; }
+    .brand-text p { font-size: 11px; color: var(--primary-gold); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+    .header-hotline-btn { background: linear-gradient(135deg, #DFBE82, #B58444); color: #14110E; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 6px; }
+
+    /* Navbar */
+    .navbar { background: #1C1814; border-bottom: 1px solid rgba(255, 255, 255, 0.08); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .nav-links { display: flex; list-style: none; gap: 6px; }
+    .nav-links li a { display: block; padding: 14px 16px; font-size: 13.5px; color: #D3CDC2; font-weight: 500; transition: all 0.2s; }
+    .nav-links li a:hover, .nav-links li a.active { color: var(--primary-gold); background: rgba(223, 190, 130, 0.08); }
+
+    /* Hero Banner */
+    .page-hero { background: linear-gradient(180deg, #1C1814 0%, #2A231C 100%); color: #fff; padding: 40px 0 48px; border-bottom: 1px solid rgba(223, 190, 130, 0.25); text-align: center; }
+    .breadcrumbs { display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 12.5px; color: #A9A092; margin-bottom: 14px; }
+    .breadcrumbs a:hover { color: var(--primary-gold); }
+    .page-hero h2 { font-family: var(--font-serif); font-size: 32px; color: #FFFFFF; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .page-hero p { color: #CFC7BA; font-size: 14.5px; max-width: 760px; margin: 0 auto; line-height: 1.6; }
+
+    /* Layout: Main content + Sidebar */
+    .news-layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; margin: 40px 0 60px; }
+
+    /* Search & Filter Bar */
+    .filter-bar { background: #FFFFFF; border: 1px solid var(--border-color); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+    .category-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cat-pill { background: #F4EADA; color: #5A5144; border: 1px solid transparent; font-size: 12.5px; font-weight: 600; padding: 6px 14px; border-radius: 20px; cursor: pointer; transition: all 0.2s; }
+    .cat-pill:hover { background: #DFBE82; color: #171410; }
+    .cat-pill.active { background: #171410; color: #DFBE82; border-color: #171410; }
+    .search-box { position: relative; min-width: 240px; }
+    .search-box input { width: 100%; padding: 8px 36px 8px 14px; border-radius: 20px; border: 1px solid #D8CCB8; font-size: 13px; font-family: var(--font-sans); outline: none; transition: border-color 0.2s; }
+    .search-box input:focus { border-color: var(--gold-dark); }
+    .search-box i { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #8A8175; font-size: 13px; }
+
+    /* Vertical Article Cards */
+    .articles-list { display: flex; flex-direction: column; gap: 24px; }
+    .article-card { background: #FFFFFF; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; display: flex; transition: all 0.25s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.03); cursor: pointer; }
+    .article-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-color: #DFBE82; }
+    .article-thumb-wrap { width: 280px; min-width: 280px; height: 190px; overflow: hidden; position: relative; background: #2A231C; }
+    .article-thumb { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .article-card:hover .article-thumb { transform: scale(1.06); }
+    .article-cat-badge { position: absolute; top: 12px; left: 12px; background: rgba(20, 17, 14, 0.85); color: #DFBE82; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; backdrop-filter: blur(4px); border: 1px solid rgba(223, 190, 130, 0.3); }
+
+    .article-info { padding: 20px 24px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+    .article-meta { display: flex; align-items: center; gap: 14px; font-size: 12px; color: #8A8175; margin-bottom: 8px; }
+    .article-meta span { display: flex; align-items: center; gap: 5px; }
+    .article-meta i { color: #A36F2B; }
+    .article-title { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: #171410; line-height: 1.4; margin-bottom: 8px; transition: color 0.2s; }
+    .article-card:hover .article-title { color: #A36F2B; }
+    .article-excerpt { font-size: 13.5px; color: #5D5447; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px; }
+    .article-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed #E6DFC5; padding-top: 10px; }
+    .article-author { font-size: 12px; color: #7A7062; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+    .read-more-btn { color: #8A642E; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+    .article-card:hover .read-more-btn { gap: 10px; color: #B58444; }
+
+    /* Pagination */
+    .pagination-wrap { display: flex; justify-content: space-between; align-items: center; margin-top: 36px; padding: 18px 24px; background: #FFFFFF; border: 1px solid var(--border-color); border-radius: 12px; }
+    .pagination-info { font-size: 13px; color: #7A7062; }
+    .pagination-info b { color: #171410; }
+    .pagination-buttons { display: flex; gap: 8px; align-items: center; }
+    .page-btn { min-width: 38px; height: 38px; padding: 0 12px; border-radius: 8px; border: 1px solid #D8CCB8; background: #FFFFFF; color: #3A3228; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
+    .page-btn:hover:not(:disabled) { background: #F4EADA; border-color: #DFBE82; color: #171410; }
+    .page-btn.active { background: #171410; border-color: #171410; color: #DFBE82; }
+    .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* Right Sidebar Widgets */
+    .sidebar-widget { background: #FFFFFF; border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+    .widget-title { font-family: var(--font-serif); font-size: 16px; font-weight: 700; color: #171410; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--primary-gold); display: flex; align-items: center; gap: 8px; }
+    .widget-title i { color: #B58444; }
+
+    /* Trending list */
+    .trending-list { display: flex; flex-direction: column; gap: 14px; }
+    .trending-item { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; transition: transform 0.2s; }
+    .trending-item:hover { transform: translateX(3px); }
+    .trending-thumb { width: 70px; height: 55px; border-radius: 6px; object-fit: cover; background: #2A231C; flex-shrink: 0; }
+    .trending-info h4 { font-family: var(--font-serif); font-size: 13px; line-height: 1.4; color: #171410; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .trending-item:hover .trending-info h4 { color: #A36F2B; }
+    .trending-info span { font-size: 11px; color: #8A8175; }
+
+    /* Hotline Banner in Sidebar */
+    .hotline-banner-widget { background: linear-gradient(135deg, #1A1612, #2B231B); color: #fff; border: 1px solid rgba(223, 190, 130, 0.4); text-align: center; border-radius: 12px; padding: 24px 20px; }
+    .hotline-banner-widget h4 { font-family: var(--font-serif); font-size: 17px; color: #DFBE82; margin-bottom: 8px; }
+    .hotline-banner-widget p { font-size: 12.5px; color: #CFC7BA; margin-bottom: 16px; }
+    .hotline-phone-link { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #DFBE82, #B58444); color: #14110E; font-size: 16px; font-weight: 800; padding: 10px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(223, 190, 130, 0.3); }
+
+    /* Tag Cloud */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag-cloud-item { background: #F4EADA; color: #554A3D; font-size: 12px; padding: 5px 12px; border-radius: 15px; transition: all 0.2s; cursor: pointer; }
+    .tag-cloud-item:hover { background: #DFBE82; color: #171410; }
+
+    /* Policy fast links */
+    .policy-fast-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .policy-fast-item a { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; color: #4B4135; padding: 7px 10px; border-radius: 6px; background: #FAF7F0; transition: all 0.2s; }
+    .policy-fast-item a:hover { background: #F4EADA; color: #A36F2B; padding-left: 14px; }
+
+    /* Article Reader Modal */
+    .article-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 9999; justify-content: center; align-items: center; padding: 20px; }
+    .article-modal.active { display: flex; }
+    .modal-box { background: #FFFFFF; border-radius: 16px; max-width: 840px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 36px; position: relative; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    .modal-close-btn { position: absolute; top: 20px; right: 20px; width: 34px; height: 34px; border-radius: 50%; background: #F0ECE4; border: none; font-size: 16px; color: #5A5144; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .modal-close-btn:hover { background: #171410; color: #DFBE82; }
+    .modal-article-cat { display: inline-block; font-size: 12px; font-weight: 700; color: #A36F2B; background: #F4EADA; padding: 4px 12px; border-radius: 15px; margin-bottom: 12px; }
+    .modal-article-title { font-family: var(--font-serif); font-size: 24px; color: #171410; font-weight: 700; line-height: 1.4; margin-bottom: 14px; }
+    .modal-article-meta { display: flex; gap: 16px; font-size: 12.5px; color: #7A7062; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #E8E0D0; }
+    .modal-article-img { width: 100%; max-height: 380px; object-fit: cover; border-radius: 10px; margin-bottom: 24px; }
+    .modal-article-body { font-size: 15px; line-height: 1.8; color: #352E25; }
+    .modal-article-body p { margin-bottom: 16px; }
+    .modal-article-body h3 { font-family: var(--font-serif); font-size: 18px; color: #171410; margin: 24px 0 10px; }
+    .modal-article-body blockquote { background: #FAF7F0; border-left: 4px solid var(--primary-gold); padding: 14px 20px; font-style: italic; color: #5A5043; border-radius: 0 8px 8px 0; margin: 18px 0; }
+    .modal-cta-box { background: #171410; border-radius: 10px; padding: 20px; color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+    .modal-cta-box h5 { font-family: var(--font-serif); font-size: 16px; color: #DFBE82; }
+    .modal-cta-box p { font-size: 12.5px; color: #CFC7BA; margin-top: 4px; }
+
+    /* Footer */
+    .main-footer { background: #14110E; color: #FFFFFF; padding: 60px 0 24px; border-top: 2px solid rgba(223, 190, 130, 0.25); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1.5fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-grid h4 { font-family: var(--font-serif); font-size: 16px; color: var(--primary-gold); margin-bottom: 16px; }
+    .footer-policies { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .footer-policy-item a { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: #D3CDC2; padding: 6px 0; transition: color 0.2s; }
+    .footer-policy-item a:hover { color: var(--primary-gold); }
+    .footer-policy-icon { width: 22px; color: var(--primary-gold); font-size: 12px; }
+    .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 20px; text-align: center; font-size: 12px; color: #8A8175; }
+
+    @media (max-width: 900px) {
+      .news-layout { grid-template-columns: 1fr; }
+      .article-card { flex-direction: column; }
+      .article-thumb-wrap { width: 100%; height: 210px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-info">
+        <span><i class="fa-solid fa-phone"></i> Hotline 24/7: <b>0868 57 67 77</b></span>
+        <span><i class="fa-solid fa-shield-halved"></i> Đảm bảo đúng giờ viếng - Đổi mới 100% nếu trễ</span>
+      </div>
+      <div>
+        <a href="/admin" style="color: #9E968B; font-size: 11.5px; margin-right: 14px;"><i class="fa-solid fa-lock"></i> Kênh Vận Hành</a>
+        <a href="/lien-he" style="color: var(--primary-gold); font-weight: 600;"><i class="fa-solid fa-building"></i> Khách Doanh Nghiệp (B2B)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-logo">
+        <svg class="lotus-svg" viewBox="0 0 100 100" fill="none">
+          <path d="M50 15C50 15 42 35 42 55C42 68 47 75 50 78C53 75 58 68 58 55C58 35 50 15 50 15Z" stroke="#DFBE82" stroke-width="2.5" fill="none"/>
+          <path d="M50 28C38 32 25 45 25 62C25 73 34 80 43 80C47 80 50 78 50 78" stroke="#B8860B" stroke-width="2"/>
+          <path d="M50 28C62 32 75 45 75 62C75 73 66 80 57 80C53 80 50 78 50 78" stroke="#B8860B" stroke-width="2"/>
+        </svg>
+        <div class="brand-text">
+          <h1>HOA VIẾNG</h1>
+          <p>Gửi trọn lời tưởng nhớ</p>
+        </div>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="text-align: right; color: #FFF; font-size: 12.5px;">
+          <div style="color: #DFBE82; font-weight: 700; font-size: 14px;"><i class="fa-solid fa-headset"></i> 0868 57 67 77</div>
+          <div style="color: #9E968B; font-size: 11px;">Tư vấn hoa tang lễ 24/7</div>
+        </div>
+        <a href="tel:0868576777" class="header-hotline-btn">
+          <i class="fa-solid fa-phone"></i> Gọi Đặt Nhanh
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <ul class="nav-links">
+        <li><a href="/">Trang Chủ</a></li>
+        <li><a href="/vong-hoa">Vòng Hoa</a></li>
+        <li><a href="/ke-hoa">Kệ Hoa</a></li>
+        <li><a href="/gio-hoa">Giỏ Hoa</a></li>
+        <li><a href="/lan-ho-diep">Lan Hồ Điệp</a></li>
+        <li><a href="/uu-dai">Ưu Đãi</a></li>
+        <li><a href="/tin-tuc" class="active">Tin Tức</a></li>
+        <li><a href="/lien-he">Liên Hệ</a></li>
+      </ul>
+      <div style="font-size: 13px; color: var(--primary-gold); font-weight: 600;">
+        <i class="fa-solid fa-book-open"></i> Cẩm Nang Tang Lễ Chuẩn Mực
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Trang Chủ</a>
+        <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+        <span style="color: var(--primary-gold);">Tin Tức & Cẩm Nang Tang Lễ</span>
+      </div>
+      <h2>KIẾN THỨC & CẨM NANG PHÚNG VIẾNG</h2>
+      <p>Tổng hợp những chia sẻ chuẩn mực về phong tục tang lễ Việt Nam, cách ghi dải băng viếng trang trọng, nghi lễ theo từng tôn giáo và ý nghĩa biểu tượng của các loài hoa chia buồn.</p>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+    <div class="news-layout">
+      <!-- Left Column: Articles List -->
+      <section>
+        <!-- Filter & Search Bar -->
+        <div class="filter-bar">
+          <div class="category-pills" id="categoryPills">
+            <button class="cat-pill active" onclick="filterByCategory('all')">Tất cả bài viết</button>
+            <button class="cat-pill" onclick="filterByCategory('Văn hóa tang lễ')">Văn hóa tang lễ</button>
+            <button class="cat-pill" onclick="filterByCategory('Cẩm nang phúng viếng')">Cẩm nang phúng viếng</button>
+            <button class="cat-pill" onclick="filterByCategory('Hướng dẫn chọn hoa')">Hướng dẫn chọn hoa</button>
+            <button class="cat-pill" onclick="filterByCategory('Nghi thức tôn giáo')">Nghi thức tôn giáo</button>
+          </div>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm bài viết..." oninput="handleSearch(this.value)">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <!-- Vertical Articles Container -->
+        <div class="articles-list" id="articlesContainer">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-wrap" id="paginationWrap">
+          <div class="pagination-info" id="paginationInfo">
+            Hiển thị trang <b>1</b> trên <b>2</b> (Tổng cộng 8 bài viết)
+          </div>
+          <div class="pagination-buttons" id="paginationButtons">
+            <!-- Buttons injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Sidebar -->
+      <aside>
+        <!-- Widget 1: Most Read Articles -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><i class="fa-solid fa-fire"></i> Bài Viết Đọc Nhiều Nhất</h3>
+          <div class="trending-list" id="trendingList">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+
+        <!-- Widget 2: Hotline 24/7 -->
+        <div class="hotline-banner-widget sidebar-widget">
+          <h4>Cần Tư Vấn Gấp Hoa Viếng?</h4>
+          <p>Túc trực 24/7 tiếp nhận yêu cầu, soạn câu đối trang trọng và giao nhanh trong 60–90 phút.</p>
+          <a href="tel:0868576777" class="hotline-phone-link">
+            <i class="fa-solid fa-phone-volume"></i> 0868 57 67 77
+          </a>
+        </div>
+
+        <!-- Widget 3: Popular Tags -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><i class="fa-solid fa-tags"></i> Chủ Đề Quan Tâm</h3>
+          <div class="tag-cloud">
+            <span class="tag-cloud-item" onclick="filterByKeyword('cúc trắng')">Hoa cúc trắng</span>
+            <span class="tag-cloud-item" onclick="filterByKeyword('lan hồ điệp')">Lan hồ điệp</span>
+            <span class="tag-cloud-item" onclick="filterByKeyword('băng viếng')">Băng rôn viếng</span>
+            <span class="tag-cloud-item" onclick="filterByKeyword('công giáo')">Tang lễ Công giáo</span>
+            <span class="tag-cloud-item" onclick="filterByKeyword('phật giáo')">Tang lễ Phật giáo</span>
+            <span class="tag-cloud-item" onclick="filterByKeyword('doanh nghiệp')">Hoa viếng công ty</span>
+            <span class="tag-cloud-item" onclick="filterByKeyword('giờ khâm liệm')">Giờ khâm liệm</span>
+          </div>
+        </div>
+
+        <!-- Widget 4: Quick Policy Links -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><i class="fa-solid fa-file-shield"></i> Chính Sách & Quy Định</h3>
+          <ul class="policy-fast-list">
+            <li class="policy-fast-item">
+              <a href="/chinh-sach#chinh-sach-bao-mat">
+                <span><i class="fa-solid fa-shield-halved" style="color: #DFBE82; margin-right: 6px;"></i> Chính sách bảo mật</span>
+                <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+              </a>
+            </li>
+            <li class="policy-fast-item">
+              <a href="/chinh-sach#bang-gia-van-chuyen">
+                <span><i class="fa-solid fa-truck-fast" style="color: #DFBE82; margin-right: 6px;"></i> Bảng giá vận chuyển</span>
+                <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+              </a>
+            </li>
+            <li class="policy-fast-item">
+              <a href="/chinh-sach#huong-dan-mua-hang">
+                <span><i class="fa-solid fa-cart-shopping" style="color: #DFBE82; margin-right: 6px;"></i> Hướng dẫn mua hàng</span>
+                <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+              </a>
+            </li>
+            <li class="policy-fast-item">
+              <a href="/chinh-sach#thong-tin-chuyen-khoan">
+                <span><i class="fa-solid fa-building-columns" style="color: #DFBE82; margin-right: 6px;"></i> Thông tin chuyển khoản</span>
+                <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+              </a>
+            </li>
+            <li class="policy-fast-item">
+              <a href="/chinh-sach#doi-tra-hoan-tien">
+                <span><i class="fa-solid fa-arrow-rotate-left" style="color: #DFBE82; margin-right: 6px;"></i> Đổi trả & hoàn tiền</span>
+                <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Article Detail Modal -->
+  <div class="article-modal" id="articleModal" onclick="handleModalBackdrop(event)">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeArticleModal()"><i class="fa-solid fa-xmark"></i></button>
+      <span class="modal-article-cat" id="modalCat">Văn hóa tang lễ</span>
+      <h2 class="modal-article-title" id="modalTitle">Tiêu đề bài viết</h2>
+      <div class="modal-article-meta">
+        <span><i class="fa-solid fa-user-pen"></i> <b id="modalAuthor">Ban Biên Tập</b></span>
+        <span><i class="fa-regular fa-calendar-days"></i> <span id="modalDate">16/11/2026</span></span>
+        <span><i class="fa-regular fa-clock"></i> <span id="modalReadTime">4 phút đọc</span></span>
+        <span><i class="fa-regular fa-eye"></i> <span id="modalViews">1,850 lượt xem</span></span>
+      </div>
+      <img src="/assets/prod_vonghoa.jpg" alt="" class="modal-article-img" id="modalImg">
+      <div class="modal-article-body" id="modalContent">
+        <!-- Content inserted dynamically -->
+      </div>
+      
+      <div class="modal-cta-box">
+        <div>
+          <h5>Bạn cần đặt hoa viếng tang lễ theo chuẩn nghi thức?</h5>
+          <p>Cam kết giao hoa đúng giờ lễ viếng, hình ảnh đối soát 2 bước chu đáo.</p>
+        </div>
+        <a href="/vong-hoa" class="header-hotline-btn" style="white-space: nowrap;">
+          <i class="fa-solid fa-cart-shopping"></i> Xem Mẫu Hoa Viếng
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <svg class="lotus-svg" viewBox="0 0 100 100" fill="none">
+              <path d="M50 15C50 15 42 35 42 55C42 68 47 75 50 78C53 75 58 68 58 55C58 35 50 15 50 15Z" stroke="#DFBE82" stroke-width="2.5" fill="none"/>
+              <path d="M50 28C38 32 25 45 25 62C25 73 34 80 43 80C47 80 50 78 50 78" stroke="#B8860B" stroke-width="2"/>
+              <path d="M50 28C62 32 75 45 75 62C75 73 66 80 57 80C53 80 50 78 50 78" stroke="#B8860B" stroke-width="2"/>
+            </svg>
+            <div class="brand-text">
+              <h1>HOA VIẾNG</h1>
+              <p>Gửi trọn lời tưởng nhớ</p>
+            </div>
+          </div>
+          <p style="font-size: 13px; color: #9E968B; line-height: 1.6;">
+            Đơn vị chuyên cung cấp hoa tang lễ, hoa kính viếng, lan hồ điệp cao cấp trên toàn quốc. Đảm bảo trang trọng, đúng giờ và hình ảnh xác nhận chu đáo.
+          </p>
+        </div>
+
+        <div>
+          <h4>Thông tin liên hệ</h4>
+          <ul style="list-style: none; font-size: 13px; color: #A9A296; display: flex; flex-direction: column; gap: 8px;">
+            <li><i class="fa-solid fa-phone" style="color: var(--primary-gold);"></i> 0868 57 67 77 (24/7)</li>
+            <li><i class="fa-solid fa-envelope" style="color: var(--primary-gold);"></i> info@hoavieng.vn</li>
+            <li><i class="fa-solid fa-location-dot" style="color: var(--primary-gold);"></i> 123 Nguyễn Văn Cừ, Q.1, TP.HCM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4><a href="/chinh-sach" style="color: #FFFFFF; text-decoration: none;">Chính sách & Quy định</a></h4>
+          <ul class="footer-policies">
+            <li class="footer-policy-item"><a href="/chinh-sach#chinh-sach-bao-mat"><span class="footer-policy-icon"><i class="fa-solid fa-shield-halved"></i></span><span>Chính sách bảo mật</span></a></li>
+            <li class="footer-policy-item"><a href="/chinh-sach#quy-dinh-su-dung"><span class="footer-policy-icon"><i class="fa-solid fa-scale-balanced"></i></span><span>Quy định sử dụng</span></a></li>
+            <li class="footer-policy-item"><a href="/chinh-sach#bang-gia-van-chuyen"><span class="footer-policy-icon"><i class="fa-solid fa-truck-fast"></i></span><span>Bảng giá vận chuyển</span></a></li>
+            <li class="footer-policy-item"><a href="/chinh-sach#huong-dan-mua-hang"><span class="footer-policy-icon"><i class="fa-solid fa-cart-shopping"></i></span><span>Hướng dẫn mua hàng</span></a></li>
+            <li class="footer-policy-item"><a href="/chinh-sach#thong-tin-chuyen-khoan"><span class="footer-policy-icon"><i class="fa-solid fa-building-columns"></i></span><span>Thông tin chuyển khoản</span></a></li>
+            <li class="footer-policy-item"><a href="/chinh-sach#doi-tra-hoan-tien"><span class="footer-policy-icon"><i class="fa-solid fa-arrow-rotate-left"></i></span><span>Đổi trả & hoàn tiền</span></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Kênh Thanh Toán</h4>
+          <p style="font-size: 12.5px; color: #A9A296; margin-bottom: 12px;">
+            MBBank: <b>0966789639</b> (HOA VIENG)<br>
+            Hỗ trợ xuất hóa đơn đỏ VAT cho doanh nghiệp trong 24h.
+          </p>
+          <a href="/lien-he" class="header-hotline-btn" style="display: inline-flex; font-size: 12px; padding: 8px 14px;">
+            <i class="fa-solid fa-map-location-dot"></i> Hệ Thống Cửa Hàng
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Hoa Viếng. Tất cả quyền được bảo lưu.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const ITEMS_PER_PAGE = 5; // 5 bài viết mỗi trang như yêu cầu người dùng
+    let allArticles = [];
+    let filteredArticles = [];
+    let currentPage = 1;
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    // Fetch articles from API with fallback
+    async function loadArticles() {
+      try {
+        const res = await fetch('/api/articles');
+        const json = await res.json();
+        if (json.success && json.articles && json.articles.length > 0) {
+          allArticles = json.articles;
+        } else {
+          allArticles = getFallbackArticles();
+        }
+      } catch (err) {
+        console.warn('API error, using local fallback:', err);
+        allArticles = getFallbackArticles();
+      }
+
+      applyFilterAndRender();
+      renderTrendingArticles();
+      checkUrlHash();
+    }
+
+    function applyFilterAndRender() {
+      filteredArticles = allArticles.filter(art => {
+        const matchCat = (currentCategory === 'all') || (art.category === currentCategory);
+        const q = currentSearch.toLowerCase().trim();
+        const matchSearch = !q || 
+          art.title.toLowerCase().includes(q) || 
+          (art.excerpt && art.excerpt.toLowerCase().includes(q)) ||
+          (art.content && art.content.toLowerCase().includes(q));
+        return matchCat && matchSearch;
+      });
+
+      currentPage = 1;
+      renderCurrentPage();
+    }
+
+    function renderCurrentPage() {
+      const container = document.getElementById('articlesContainer');
+      const total = filteredArticles.length;
+      const totalPages = Math.ceil(total / ITEMS_PER_PAGE) || 1;
+
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, total);
+      const pageItems = filteredArticles.slice(startIndex, endIndex);
+
+      if (pageItems.length === 0) {
+        container.innerHTML = `
+          <div style="background: #FFFFFF; border: 1px dashed var(--border-color); border-radius: 12px; padding: 40px; text-align: center; color: #8A8175;">
+            <i class="fa-solid fa-file-circle-xmark" style="font-size: 36px; margin-bottom: 12px; color: #DFBE82;"></i>
+            <h4 style="font-family: var(--font-serif); font-size: 17px; color: #171410;">Không tìm thấy bài viết phù hợp</h4>
+            <p style="font-size: 13px; margin-top: 6px;">Vui lòng thử tìm kiếm với từ khóa khác hoặc bấm nút "Tất cả bài viết".</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = pageItems.map(art => `
+          <article class="article-card" onclick="openArticleModal('${art.id}')">
+            <div class="article-thumb-wrap">
+              <img src="${art.image || '/assets/prod_vonghoa.jpg'}" alt="${art.title}" class="article-thumb" onerror="this.src='/assets/prod_vonghoa.jpg'">
+              <span class="article-cat-badge">${art.category || 'Văn hóa tang lễ'}</span>
+            </div>
+            <div class="article-info">
+              <div>
+                <div class="article-meta">
+                  <span><i class="fa-regular fa-calendar-days"></i> ${art.publishedAt || '16/11/2026'}</span>
+                  <span><i class="fa-regular fa-clock"></i> ${art.readTime || '4 phút đọc'}</span>
+                  <span><i class="fa-regular fa-eye"></i> ${(art.views || 1200).toLocaleString('vi-VN')}</span>
+                </div>
+                <h3 class="article-title">${art.title}</h3>
+                <p class="article-excerpt">${art.excerpt || 'Chia sẻ phong tục tang lễ chuẩn mực...'}</p>
+              </div>
+              <div class="article-footer">
+                <span class="article-author">
+                  <i class="fa-solid fa-feather-pointed" style="color: var(--primary-gold);"></i> ${art.author || 'Ban Biên Tập Hoa Viếng'}
+                </span>
+                <span class="read-more-btn">
+                  Đọc tiếp bài viết <i class="fa-solid fa-arrow-right-long"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      renderPagination(total, totalPages, startIndex, endIndex);
+    }
+
+    function renderPagination(total, totalPages, startIndex, endIndex) {
+      const infoEl = document.getElementById('paginationInfo');
+      const buttonsEl = document.getElementById('paginationButtons');
+
+      if (total === 0) {
+        infoEl.innerHTML = 'Không có bài viết';
+        buttonsEl.innerHTML = '';
+        return;
+      }
+
+      infoEl.innerHTML = `Hiển thị <b>${startIndex + 1} - ${endIndex}</b> trên tổng số <b>${total}</b> bài viết (Trang <b>${currentPage}</b>/<b>${totalPages}</b>)`;
+
+      let btnsHtml = `
+        <button class="page-btn" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      `;
+
+      for (let i = 1; i <= totalPages; i++) {
+        btnsHtml += `
+          <button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">
+            ${i}
+          </button>
+        `;
+      }
+
+      btnsHtml += `
+        <button class="page-btn" onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      `;
+
+      buttonsEl.innerHTML = btnsHtml;
+    }
+
+    function changePage(page) {
+      currentPage = page;
+      renderCurrentPage();
+      window.scrollTo({ top: document.querySelector('.page-hero').offsetHeight + 20, behavior: 'smooth' });
+    }
+
+    function filterByCategory(cat) {
+      currentCategory = cat;
+      const pills = document.querySelectorAll('.cat-pill');
+      pills.forEach(p => {
+        if (p.innerText.trim().includes(cat) || (cat === 'all' && p.innerText.includes('Tất cả'))) {
+          p.classList.add('active');
+        } else {
+          p.classList.remove('active');
+        }
+      });
+      applyFilterAndRender();
+    }
+
+    function handleSearch(val) {
+      currentSearch = val;
+      applyFilterAndRender();
+    }
+
+    function filterByKeyword(kw) {
+      document.getElementById('searchInput').value = kw;
+      currentSearch = kw;
+      applyFilterAndRender();
+      window.scrollTo({ top: document.querySelector('.page-hero').offsetHeight + 20, behavior: 'smooth' });
+    }
+
+    function renderTrendingArticles() {
+      const container = document.getElementById('trendingList');
+      const topItems = [...allArticles].sort((a,b) => (b.views || 0) - (a.views || 0)).slice(0, 4);
+
+      container.innerHTML = topItems.map(item => `
+        <div class="trending-item" onclick="openArticleModal('${item.id}')">
+          <img src="${item.image || '/assets/prod_vonghoa.jpg'}" alt="${item.title}" class="trending-thumb" onerror="this.src='/assets/prod_vonghoa.jpg'">
+          <div class="trending-info">
+            <h4>${item.title}</h4>
+            <span><i class="fa-regular fa-clock" style="color: #DFBE82;"></i> ${item.readTime || '3 phút'} · ${(item.views || 900).toLocaleString('vi-VN')} views</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Modal
+    function openArticleModal(id) {
+      const art = allArticles.find(a => a.id === id);
+      if (!art) return;
+
+      document.getElementById('modalCat').innerText = art.category || 'Văn hóa tang lễ';
+      document.getElementById('modalTitle').innerText = art.title;
+      document.getElementById('modalAuthor').innerText = art.author || 'Ban Biên Tập';
+      document.getElementById('modalDate').innerText = art.publishedAt || '16/11/2026';
+      document.getElementById('modalReadTime').innerText = art.readTime || '4 phút đọc';
+      document.getElementById('modalViews').innerText = (art.views || 1500).toLocaleString('vi-VN') + ' lượt xem';
+      document.getElementById('modalImg').src = art.image || '/assets/prod_vonghoa.jpg';
+
+      let bodyHtml = `
+        <p style="font-weight: 600; color: #554A3D; font-size: 16px; margin-bottom: 20px;">
+          ${art.excerpt || ''}
+        </p>
+        <p>${art.content || ''}</p>
+        <h3>1. Ý nghĩa biểu tượng và chuẩn mực phúng viếng</h3>
+        <p>Phúng viếng tang lễ không chỉ là nghi thức tiễn đưa người quá cố về nơi an nghỉ cuối cùng, mà còn là hành động thể hiện tình cảm tiếc thương chân thành, sự sẻ chia nỗi đau mất mát cùng tang quyến. Mỗi loài hoa, mỗi màu sắc được chọn đều mang những thông điệp tâm linh và phong tục văn hóa sâu sắc.</p>
+        <blockquote>
+          "Gửi hoa viếng là gửi trọn sự trang nghiêm, an ủi gia quyến và cầu chúc hương linh người mất sớm tiêu diêu miền cực lạc."
+        </blockquote>
+        <h3>2. Những lưu ý cần biết khi chuẩn bị dải ruy băng viếng</h3>
+        <p>Nội dung trên dải băng rôn cần tuân thủ nghiêm ngặt chuẩn mực: Ghi rõ danh xưng người gửi (Ví dụ: Ban Giám Đốc Công Ty ABC...), đại từ xưng hô tôn kính (Kính viếng / Thành kính phân ưu / Vô cùng thương tiếc). Cần kiểm tra kỹ chính tả và đại từ để tránh những sai sót đáng tiếc trong giờ phút trang trọng.</p>
+        <h3>3. Cam kết dịch vụ từ Hoa Viếng</h3>
+        <p>Hoa Viếng luôn cắm hoa mới 100% trong ngày, chụp ảnh thực tế tại cửa hàng để khách duyệt trước khi giao (ảnh QC), và chụp ảnh xác nhận vị trí tại lễ viếng (ảnh POD) để khách hàng an tâm tuyệt đối dù ở xa.</p>
+      `;
+
+      document.getElementById('modalContent').innerHTML = bodyHtml;
+      document.getElementById('articleModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+      history.pushState(null, '', '#' + (art.slug || art.id));
+    }
+
+    function closeArticleModal() {
+      document.getElementById('articleModal').classList.remove('active');
+      document.body.style.overflow = '';
+      history.pushState(null, '', window.location.pathname);
+    }
+
+    function handleModalBackdrop(e) {
+      if (e.target.id === 'articleModal') {
+        closeArticleModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeArticleModal();
+    });
+
+    function checkUrlHash() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const found = allArticles.find(a => a.id === hash || a.slug === hash);
+        if (found) {
+          openArticleModal(found.id);
+        }
+      }
+    }
+
+    function getFallbackArticles() {
+      return [
+        {
+          id: 'art-1',
+          title: 'Ý nghĩa hoa lan và hoa cúc trắng trong nghi lễ tang lễ truyền thống Việt Nam',
+          category: 'Văn hóa tang lễ',
+          publishedAt: '16/11/2026',
+          readTime: '4 phút đọc',
+          views: 1850,
+          author: 'Ban Biên Tập Hoa Viếng',
+          image: '/assets/prod_vonghoa.jpg',
+          excerpt: 'Tìm hiểu thông điệp sâu sắc đằng sau sắc trắng thanh khiết của hoa cúc và lan hồ điệp - biểu tượng của sự tôn kính, tiếc thương và niềm tin linh hồn vãng sanh nơi cực lạc.',
+          content: 'Trong văn hóa truyền thống phương Đông, màu trắng của hoa cúc và lan hồ điệp đại diện cho sự thanh tịnh, buông bỏ muộn phiền nơi cõi tạm...'
+        },
+        {
+          id: 'art-2',
+          title: 'Cách ghi dải băng viếng tang lễ trang trọng, đúng phép tắc và chuẩn mực',
+          category: 'Cẩm nang phúng viếng',
+          publishedAt: '15/11/2026',
+          readTime: '5 phút đọc',
+          views: 2420,
+          author: 'Thái Hoàng - Cố vấn nghi lễ',
+          image: '/assets/prod_kehoa.jpg',
+          excerpt: 'Hướng dẫn chi tiết cách viết dải ruy băng viếng cho cơ quan, công ty, cá nhân và thông gia; phân biệt chuẩn xác giữa "Kính viếng", "Thành kính phân ưu" và "Vô cùng thương tiếc".',
+          content: 'Dải băng rôn trên kệ hoa tang lễ là bộ mặt của người gửi, thể hiện sự kính trọng và phép lịch sự tối cao đối với gia quyến...'
+        },
+        {
+          id: 'art-3',
+          title: 'Top 5 mẫu kệ hoa chia buồn sang trọng dành riêng cho cơ quan, doanh nghiệp',
+          category: 'Hướng dẫn chọn hoa',
+          publishedAt: '14/11/2026',
+          readTime: '4 phút đọc',
+          views: 1680,
+          author: 'Ban Biên Tập Hoa Viếng',
+          image: '/assets/prod_giohoa.jpg',
+          excerpt: 'Gợi ý các thiết kế kệ hoa 2 tầng, hoa lan hồ điệp trắng và cúc mẫu đơn trang nhã, kèm dịch vụ xuất hóa đơn điện tử đỏ VAT và giao nhanh đúng giờ viếng.',
+          content: 'Khi đại diện cơ quan đi phúng viếng đối tác hoặc thân nhân nhân viên, kệ hoa không chỉ là sự sẻ chia mà còn thể hiện uy tín và văn hóa của doanh nghiệp...'
+        },
+        {
+          id: 'art-4',
+          title: 'Quy tắc phúng viếng tang lễ chuẩn phong tục: Những điều nên làm và đại kỵ',
+          category: 'Văn hóa tang lễ',
+          publishedAt: '12/11/2026',
+          readTime: '6 phút đọc',
+          views: 3100,
+          author: 'Minh Trí - Ban Văn Hóa',
+          image: '/assets/prod_lanhodiep.jpg',
+          excerpt: 'Những quy tắc ứng xử lễ nghĩa từ trang phục, thời điểm gửi hoa, cách thắp nhang và lời chia buồn cần tránh để giữ sự trang nghiêm và lòng thành kính.',
+          content: 'Tham dự tang lễ đòi hỏi sự tế nhị và chuẩn mực cao. Biết những điều nên và không nên làm giúp bạn bày tỏ sự kính trọng trọn vẹn nhất...'
+        },
+        {
+          id: 'art-5',
+          title: 'Nghi thức viếng đám tang người theo đạo Công giáo: Mẫu câu và kệ hoa phù hợp',
+          category: 'Nghi thức tôn giáo',
+          publishedAt: '10/11/2026',
+          readTime: '5 phút đọc',
+          views: 1450,
+          author: 'Lm. Phêrô cộng tác',
+          image: '/assets/products/prod_1_vong_hoa_cuc.jpg',
+          excerpt: 'Tìm hiểu mẫu hoa hình thánh giá, tông màu hoa trắng - tím trang trọng và câu phúng viếng đúng nghi thức Kitô giáo: "Cầu cho linh hồn... sớm về hưởng nhan Thánh Chúa".',
+          content: 'Đối với người Công giáo, sự qua đời là bước chuyển về với Thiên Chúa để hưởng sự sống đời đời. Việc chọn hoa và lời viếng cần phù hợp đức tin...'
+        },
+        {
+          id: 'art-6',
+          title: 'Ý nghĩa hoa lan hồ điệp trắng trong lễ tang: Biểu tượng phẩm hạnh cao quý',
+          category: 'Hướng dẫn chọn hoa',
+          publishedAt: '08/11/2026',
+          readTime: '3 phút đọc',
+          views: 1290,
+          author: 'Nghệ nhân Mai Anh',
+          image: '/assets/prod_lanhodiep.jpg',
+          excerpt: 'Tại sao lan hồ điệp trắng luôn là lựa chọn hàng đầu cho các lễ tang cấp cao? Khám phá vẻ đẹp sang trọng, bền lâu và ý nghĩa thanh khiết của loài hoa quý.',
+          content: 'Lan hồ điệp trắng mang vẻ đẹp tinh khôi, kiêu hãnh và bền bỉ, thể hiện tấm lòng kính trọng sâu sắc và sự trường tồn của những kỷ niệm đẹp...'
+        },
+        {
+          id: 'art-7',
+          title: 'Hướng dẫn chọn hoa viếng tang lễ theo độ tuổi của người quá cố',
+          category: 'Cẩm nang phúng viếng',
+          publishedAt: '05/11/2026',
+          readTime: '4 phút đọc',
+          views: 1980,
+          author: 'Ban Biên Tập Hoa Viếng',
+          image: '/assets/prod_kehoa.jpg',
+          excerpt: 'Cách lựa chọn tông màu hoa phù hợp: Người mất cao tuổi (hưởng thọ) dùng hoa trắng - vàng; người trẻ tuổi (hưởng dương) chuộng hoa trắng tinh khiết thanh thản.',
+          content: 'Lựa chọn hoa viếng phù hợp với độ tuổi thể hiện sự thấu hiểu phong tục và sự đồng cảm sâu sắc nhất với gia đình tang quyến...'
+        },
+        {
+          id: 'art-8',
+          title: 'Thời điểm vàng gửi hoa tang lễ: Trước giờ khâm liệm hay sau giờ nhập quan?',
+          category: 'Cẩm nang phúng viếng',
+          publishedAt: '02/11/2026',
+          readTime: '4 phút đọc',
+          views: 2210,
+          author: 'Ban Biên Tập Hoa Viếng',
+          image: '/assets/prod_vonghoa.jpg',
+          excerpt: 'Thời điểm gửi hoa viếng chuẩn nhất là sau khi gia đình hoàn tất lễ khâm liệm/nhập quan và bắt đầu mở cửa cho khách vào phúng viếng, tránh giao trước giờ.',
+          content: 'Biết chính xác thời điểm phúng viếng giúp hoa tươi lâu trong suốt các ngày tang lễ và không làm gián đoạn các nghi thức tâm linh nội bộ của gia quyến...'
+        }
+      ];
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadArticles();
+    });
+  </script>
+</body>
+</html>

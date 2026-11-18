@@ -1,0 +1,3686 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOA VIẾNG - Gửi trọn lời tưởng nhớ | Dịch vụ hoa tang lễ chuyên nghiệp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary-dark: #161311;
+      --primary-gold: #C89B55;
+      --gold-light: #DFBE82;
+      --gold-dark: #A47B36;
+      --gold-soft: #F6EEDB;
+      --nav-dark: #231C16;
+      --nav-gold-btn: #B48443;
+      --bg-cream: #FAF7F2;
+      --bg-header: #FAF8F5;
+      --bg-guarantees: #F8F5EE;
+      --bg-reviews: #F3ECE1;
+      --card-bg: #FFFFFF;
+      --border-subtle: #EAE3D6;
+      --border-medium: #DDD5C7;
+      --text-main: #231F1B;
+      --text-sub: #5E564D;
+      --text-muted: #7E766B;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-cinzel: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --shadow-soft: 0 8px 24px rgba(70, 50, 30, 0.04);
+      --shadow-hover: 0 16px 36px rgba(180, 132, 67, 0.15);
+      --border-radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+    }
+
+    /* Floating Mode Switcher */
+    .mode-switcher {
+      position: fixed;
+      top: 14px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(22, 19, 17, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 6px 12px;
+      border-radius: 30px;
+      border: 1px solid rgba(200, 155, 85, 0.5);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .mode-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+    .mode-btn.admin {
+      background: linear-gradient(135deg, #B8860B, #E6C280);
+      color: #161311;
+    }
+    .mode-btn.admin:hover {
+      box-shadow: 0 0 15px rgba(223, 190, 130, 0.6);
+      transform: translateY(-1px);
+    }
+    .mode-btn.quick-test {
+      background: rgba(255, 255, 255, 0.12);
+      color: #E6C280;
+    }
+    .mode-btn.quick-test:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: var(--primary-dark);
+      color: #B8B2A8;
+      font-size: 12.5px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(200, 155, 85, 0.15);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-info {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .top-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .top-info i {
+      color: var(--primary-gold);
+      font-size: 13px;
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-right: 240px; /* Space for mode switcher */
+    }
+    .top-actions a:hover {
+      color: var(--gold-light);
+    }
+    .top-cart-icon {
+      position: relative;
+      cursor: pointer;
+      color: #fff;
+    }
+    .top-cart-badge {
+      background: #D94848;
+      color: #fff;
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-left: 3px;
+    }
+
+    /* Main Header */
+    .main-header {
+      background: var(--bg-header);
+      padding: 18px 0;
+      border-bottom: 1px solid #ECE5D8;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+    .lotus-svg {
+      width: 44px;
+      height: 44px;
+    }
+    .brand-text h1 {
+      font-family: var(--font-cinzel);
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: #1A1A1A;
+      line-height: 1.1;
+    }
+    .brand-text p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 12.5px;
+      color: var(--primary-gold);
+      letter-spacing: 0.5px;
+    }
+
+    /* Search Bar */
+    .header-search {
+      flex: 1;
+      max-width: 460px;
+      margin: 0 40px;
+      position: relative;
+    }
+    .header-search input {
+      width: 100%;
+      padding: 11px 45px 11px 18px;
+      border-radius: 25px;
+      border: 1px solid #DFD7CB;
+      font-size: 13.5px;
+      background: #FFFFFF;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+    .header-search input:focus {
+      border-color: var(--primary-gold);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(200, 155, 85, 0.15);
+    }
+    .header-search button {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #231C16;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .header-search button:hover {
+      background: var(--primary-gold);
+      color: #161311;
+    }
+
+    /* Header Right Actions */
+    .header-support {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    .support-btn {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #26221E;
+      cursor: pointer;
+    }
+    .support-btn i {
+      font-size: 18px;
+      color: var(--primary-gold);
+    }
+    .header-cart-btn {
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+      color: #2D2721;
+      padding: 6px;
+    }
+    .header-cart-btn .badge {
+      position: absolute;
+      top: -2px;
+      right: -4px;
+      background: #D94848;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      background-color: var(--nav-dark);
+      padding: 0;
+      box-shadow: 0 4px 15px rgba(22, 19, 17, 0.12);
+      border-top: 1px solid rgba(223, 190, 130, 0.15);
+      border-bottom: 1px solid rgba(200, 155, 85, 0.2);
+      position: relative;
+      z-index: 50;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 10px;
+      flex: 1;
+    }
+    .nav-links li {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav-links li a {
+      color: #E2DBD2;
+      font-size: 14.5px;
+      padding: 14px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+    .nav-links li a:hover {
+      color: #F8E3B6;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .nav-links li a.active {
+      color: #F8E3B6;
+      background: rgba(200, 155, 85, 0.18);
+    }
+    .nav-links li a i {
+      font-size: 10px;
+      opacity: 0.7;
+    }
+
+    /* Hero Banner */
+    .hero-section {
+      position: relative;
+      background: #151210;
+      overflow: hidden;
+      min-height: 440px;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+      filter: brightness(0.9);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 75% 50%, rgba(35, 27, 21, 0.35) 0%, rgba(18, 15, 13, 0.94) 80%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      padding: 60px 0;
+      color: #fff;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 46px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 38px;
+      color: var(--gold-light);
+      margin-bottom: 16px;
+      font-weight: 400;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: #D2C9BC;
+      margin-bottom: 30px;
+      font-weight: 300;
+      max-width: 480px;
+    }
+    .btn-gold-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #DFBE82, #B58444);
+      color: #171410;
+      padding: 13px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 14.5px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(181, 132, 68, 0.35);
+      transition: all 0.3s ease;
+    }
+    .btn-gold-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(223, 190, 130, 0.5);
+      background: linear-gradient(135deg, #F0D59E, #C89B55);
+    }
+    .hero-slider-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 5;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      cursor: pointer;
+    }
+    .dot.active {
+      background: var(--gold-light);
+      width: 24px;
+      border-radius: 10px;
+    }
+
+    /* Trust & Guarantee Badges */
+    .guarantees-bar {
+      background: var(--bg-guarantees);
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .guarantees-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .guarantee-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 6px 12px;
+    }
+    .guarantee-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #EDE6D8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      color: #8A642E;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+    .guarantee-icon svg {
+      width: 21px;
+      height: 21px;
+      display: block;
+    }
+    .guarantee-card:hover .guarantee-icon {
+      background: var(--gold-light);
+      color: #171410;
+      transform: translateY(-2px);
+    }
+    .guarantee-text h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #231F1B;
+      margin-bottom: 2px;
+    }
+    .guarantee-text p {
+      font-size: 12.5px;
+      color: #746C61;
+    }
+
+    /* Section Title */
+    .section-header {
+      text-align: center;
+      margin: 50px 0 35px;
+      position: relative;
+    }
+    .section-title-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .diamond-ornament {
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #C89B55);
+      position: relative;
+    }
+    .diamond-ornament.right {
+      background: linear-gradient(90deg, #C89B55, transparent);
+    }
+    .diamond-ornament::after {
+      content: '◆';
+      position: absolute;
+      top: -7px;
+      color: var(--primary-gold);
+      font-size: 10px;
+    }
+    .diamond-ornament.left::after { right: 0; }
+    .diamond-ornament.right::after { left: 0; }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 700;
+      color: #231F1B;
+      letter-spacing: 0.5px;
+    }
+    .section-subtitle-desc {
+      font-size: 13.5px;
+      color: #7A7269;
+      margin-top: 6px;
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 50px;
+    }
+    .product-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(200, 155, 85, 0.45);
+    }
+    .product-thumb {
+      position: relative;
+      height: 230px;
+      background: #F3EFE9;
+      overflow: hidden;
+    }
+    .product-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .product-card:hover .product-thumb img {
+      transform: scale(1.06);
+    }
+    .product-body {
+      padding: 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: #231F1B;
+      margin-bottom: 4px;
+    }
+    .product-tagline {
+      font-size: 12.5px;
+      color: #7E766B;
+      margin-bottom: 14px;
+    }
+    .product-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #F5EFE6;
+    }
+    .product-price {
+      color: #A36F2B;
+      font-weight: 700;
+      font-size: 14.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-order-fast {
+      background: #F6EEDB;
+      color: #8C5C1D;
+      border: 1px solid #ECD8B8;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .btn-order-fast:hover {
+      background: #8C5C1D;
+      border-color: #8C5C1D;
+      color: #fff;
+    }
+
+    .product-bestseller-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: linear-gradient(135deg, #EA580C, #DC2626);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.35);
+      z-index: 2;
+    }
+    .product-cat-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(20, 17, 14, 0.82);
+      color: #DFBE82;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(223, 190, 130, 0.3);
+      z-index: 2;
+    }
+    .product-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .product-order-count {
+      color: #EA580C;
+      font-weight: 700;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .product-rating-star {
+      color: #64748B;
+      font-size: 11.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .btn-view-all-products {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #14110E;
+      color: #DFBE82;
+      border: 1px solid #DFBE82;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .btn-view-all-products:hover {
+      background: #DFBE82;
+      color: #14110E;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(223, 190, 130, 0.3);
+    }
+
+    .cat-pill {
+      background: #FFFFFF;
+      border: 1px solid #DFD7CB;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #554D43;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .cat-pill:hover, .cat-pill.active {
+      background: #231C16;
+      color: #F2D8A7;
+      border-color: #231C16;
+    }
+    .btn-random-flower {
+      background: linear-gradient(135deg, #DFBE82, #B58444);
+      color: #171410;
+      border: none;
+      padding: 7px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(181, 132, 68, 0.25);
+      transition: all 0.2s;
+    }
+    .btn-random-flower:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(181, 132, 68, 0.4);
+    }
+
+    /* Promotional Banner */
+    .promo-section {
+      margin-bottom: 60px;
+    }
+    .promo-banner {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      background: #1B1612;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(200, 155, 85, 0.2);
+    }
+    .promo-bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+    .promo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(22, 17, 13, 0.96) 0%, rgba(38, 29, 21, 0.85) 50%, rgba(22, 17, 13, 0.45) 100%);
+    }
+    .promo-content {
+      position: relative;
+      z-index: 2;
+      padding: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .promo-text h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      color: #F5E5C9;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .promo-text p {
+      font-size: 14.5px;
+      color: #EDE5D8;
+      font-weight: 300;
+    }
+    .btn-promo-details {
+      background: linear-gradient(135deg, #DFBE82, #B58444);
+      color: #171410;
+      padding: 10px 24px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 13.5px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(223, 190, 130, 0.3);
+      transition: all 0.25s;
+    }
+    .btn-promo-details:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(223, 190, 130, 0.5);
+    }
+
+    /* Process Flow */
+    .process-section {
+      margin-bottom: 60px;
+    }
+    .process-steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 30px;
+    }
+    .step-item {
+      flex: 1;
+      text-align: center;
+      padding: 15px 10px;
+      position: relative;
+    }
+    .step-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8A642E, #624317);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 12px rgba(98, 67, 23, 0.25);
+    }
+    .step-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #231F1B;
+      margin-bottom: 4px;
+    }
+    .step-subtitle {
+      font-size: 12.5px;
+      color: #746C61;
+    }
+    .step-arrow {
+      color: #C89B55;
+      font-size: 20px;
+      opacity: 0.7;
+    }
+
+    /* ================= CUSTOMER REVIEWS & FEEDBACK LAYER ================= */
+    .reviews-section {
+      background: var(--bg-reviews);
+      padding: 65px 0 70px;
+      border-top: 1px solid var(--border-medium);
+      border-bottom: 1px solid var(--border-medium);
+      margin-bottom: 60px;
+      position: relative;
+    }
+    .reviews-overview-card {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 28px 36px;
+      box-shadow: 0 8px 28px rgba(60, 45, 25, 0.05);
+      border: 1px solid var(--border-medium);
+      display: grid;
+      grid-template-columns: 1fr 1.3fr auto;
+      gap: 35px;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+    .rating-summary-left {
+      border-right: 1px solid #ECE5D9;
+      padding-right: 25px;
+    }
+    .big-score {
+      font-size: 48px;
+      font-weight: 800;
+      font-family: var(--font-serif);
+      color: #1F1A16;
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .big-score span {
+      font-size: 20px;
+      color: #8C8478;
+      font-weight: 500;
+    }
+    .star-row {
+      color: #E5A224;
+      font-size: 18px;
+      margin: 8px 0;
+      display: flex;
+      gap: 3px;
+    }
+    .total-trust-text {
+      font-size: 13px;
+      color: #645D54;
+      font-weight: 500;
+    }
+
+    /* Breakdown bars */
+    .rating-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: #6E675D;
+    }
+    .bar-track {
+      flex: 1;
+      height: 7px;
+      background: #EAE3D6;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar-filled {
+      height: 100%;
+      background: #C59A45;
+      border-radius: 10px;
+    }
+
+    .btn-write-review {
+      background: #1E1712;
+      color: #E6C280;
+      border: 1px solid #C59A45;
+      padding: 12px 22px;
+      border-radius: 25px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+    .btn-write-review:hover {
+      background: #C59A45;
+      color: #1E1712;
+      box-shadow: 0 4px 15px rgba(197, 154, 69, 0.3);
+    }
+
+    /* Reviews Grid */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .review-card {
+      background: #FFFFFF;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(60, 45, 25, 0.04);
+      border: 1px solid #E5DDCE;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .review-card:hover {
+      box-shadow: 0 10px 28px rgba(60, 45, 25, 0.08);
+      border-color: #D6CCA8;
+    }
+    .review-card-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .reviewer-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #DFBE82;
+    }
+    .reviewer-info h5 {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #231F1B;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .verified-badge {
+      background: #E8F4EC;
+      color: #237A43;
+      border: 1px solid #D2EBD9;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .reviewer-role {
+      font-size: 12px;
+      color: #8C8478;
+    }
+    .review-stars {
+      color: #E5A224;
+      font-size: 13px;
+      display: flex;
+      gap: 2px;
+      margin-bottom: 8px;
+    }
+    .review-product-tag {
+      display: inline-block;
+      background: #FAF4E8;
+      color: #8A642E;
+      border: 1px solid #EDE0C7;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .review-comment {
+      font-size: 13.5px;
+      color: #3E3831;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .review-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #8C8478;
+      border-top: 1px solid #F2ECE1;
+      padding-top: 12px;
+    }
+    .like-btn {
+      background: transparent;
+      border: none;
+      color: #746C61;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+    .like-btn:hover {
+      color: #C89B55;
+    }
+
+    /* ================= SEO ARTICLES LAYER (4 ARTICLES) ================= */
+    .seo-articles-section {
+      margin-bottom: 70px;
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .article-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 6px 20px rgba(70, 50, 30, 0.04);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(181, 132, 68, 0.15);
+      border-color: rgba(200, 155, 85, 0.45);
+    }
+    .article-thumb-wrap {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+      background: #F1EBE1;
+    }
+    .article-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .article-card:hover .article-thumb {
+      transform: scale(1.06);
+    }
+    .article-cat-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(26, 21, 16, 0.88);
+      backdrop-filter: blur(4px);
+      color: #E8C88B;
+      border: 1px solid rgba(223, 190, 130, 0.35);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+    .article-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .article-meta {
+      font-size: 11.5px;
+      color: #8C8478;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .article-title {
+      font-family: var(--font-serif);
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #231F1B;
+      line-height: 1.35;
+      margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 42px;
+      transition: color 0.2s;
+    }
+    .article-card:hover .article-title {
+      color: #A47B36;
+    }
+    .article-excerpt {
+      font-size: 12.5px;
+      color: #5E574E;
+      line-height: 1.55;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+    }
+    .article-footer {
+      border-top: 1px solid #F5EFE6;
+      padding-top: 12px;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .article-author {
+      font-size: 11.5px;
+      color: #8C8478;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn-read-more {
+      color: #A47B36;
+      font-size: 12.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .btn-read-more:hover {
+      color: #C89B55;
+    }
+
+    /* Articles Pagination on Homepage */
+    .articles-pagination-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      padding: 16px 22px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(70, 50, 30, 0.03);
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .articles-pagination-info {
+      font-size: 13px;
+      color: #7A7062;
+    }
+    .articles-pagination-info b {
+      color: #231F1B;
+    }
+    .articles-pagination-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .articles-page-btn {
+      min-width: 38px;
+      height: 38px;
+      padding: 0 12px;
+      border-radius: 8px;
+      border: 1px solid #D8CCB8;
+      background: #FFFFFF;
+      color: #3A3228;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+    }
+    .articles-page-btn:hover:not(:disabled) {
+      background: #F4EADA;
+      border-color: #DFBE82;
+      color: #171410;
+    }
+    .articles-page-btn.active {
+      background: #171410;
+      border-color: #171410;
+      color: #DFBE82;
+      font-weight: 700;
+    }
+    .articles-page-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+    .articles-view-all-link {
+      font-size: 13px;
+      font-weight: 700;
+      color: #A47B36;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .articles-view-all-link:hover {
+      color: #171410;
+      transform: translateX(3px);
+    }
+
+    /* Footer */
+    .main-footer {
+      background-color: #14110E;
+      color: #C2BCB2;
+      padding: 60px 0 20px;
+      position: relative;
+      overflow: hidden;
+      border-top: 2px solid rgba(200, 155, 85, 0.35);
+    }
+    .footer-watermark {
+      position: absolute;
+      right: 20px;
+      bottom: -15px;
+      opacity: 0.05;
+      pointer-events: none;
+      width: 280px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1.7fr 1.1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .brand-logo {
+      margin-bottom: 16px;
+    }
+    .footer-brand .brand-text h1 {
+      color: #fff;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .social-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #D6D1C7;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .social-btn:hover {
+      background: var(--primary-gold);
+      color: #14110E;
+      border-color: var(--primary-gold);
+    }
+    .footer-col h4 {
+      font-family: var(--font-serif);
+      color: #FFFFFF;
+      font-size: 16px;
+      margin-bottom: 18px;
+      position: relative;
+      font-weight: 600;
+    }
+    .footer-contacts li {
+      list-style: none;
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #A9A296;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .footer-contacts i {
+      color: var(--primary-gold);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+    .footer-policies {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-policy-item {
+      list-style: none;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(223, 190, 130, 0.16);
+      border-radius: 8px;
+      transition: all 0.22s ease;
+      overflow: hidden;
+    }
+    .footer-policy-item:hover {
+      background: rgba(223, 190, 130, 0.1);
+      border-color: rgba(223, 190, 130, 0.5);
+      transform: translateX(4px);
+    }
+    .footer-policy-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 12px;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+    }
+    .footer-policy-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: rgba(223, 190, 130, 0.14);
+      color: var(--primary-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .footer-policy-title {
+      flex: 1;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #EDE8DF;
+      letter-spacing: -0.2px;
+      transition: color 0.2s;
+    }
+    .footer-policy-item:hover .footer-policy-title {
+      color: var(--gold-light);
+    }
+    .footer-policy-arrow {
+      font-size: 11px;
+      color: #8C8478;
+      transition: transform 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+    .footer-policy-item:hover .footer-policy-arrow {
+      transform: translateX(3px);
+      color: var(--gold-light);
+    }
+    .newsletter-form {
+      display: flex;
+      position: relative;
+      margin-top: 12px;
+    }
+    .newsletter-form input {
+      width: 100%;
+      padding: 10px 45px 10px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(200, 155, 85, 0.25);
+      background: #1F1B17;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+    }
+    .newsletter-form input:focus {
+      border-color: var(--primary-gold);
+    }
+    .newsletter-form button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 42px;
+      background: linear-gradient(135deg, #DFBE82, #B58444);
+      border: none;
+      border-radius: 0 6px 6px 0;
+      color: #14110E;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #756E63;
+    }
+
+    /* Order / Checkout Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 12, 16, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .order-modal {
+      background: #FFFFFF;
+      width: 90%;
+      max-width: 620px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-overlay.active .order-modal {
+      transform: translateY(0);
+    }
+    .modal-header {
+      background: #171410;
+      color: #fff;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--primary-gold);
+    }
+    .modal-header h3 {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      color: var(--gold-light);
+    }
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: #B5B2AC;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 24px;
+      overflow-y: auto;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2D2721;
+      margin-bottom: 6px;
+    }
+    .form-group label span {
+      color: #C0392B;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #D8D2C7;
+      font-size: 13.5px;
+      font-family: inherit;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--primary-gold);
+      box-shadow: 0 0 0 3px rgba(200, 155, 85, 0.15);
+    }
+    .ribbon-presets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .ribbon-chip {
+      background: #F3EFE8;
+      border: 1px solid #DFD9CF;
+      border-radius: 14px;
+      padding: 3px 10px;
+      font-size: 11.5px;
+      cursor: pointer;
+      color: #554D43;
+      transition: all 0.2s;
+    }
+    .ribbon-chip:hover {
+      background: #E8DECC;
+      color: #171410;
+    }
+    .modal-summary {
+      background: #FAF7F2;
+      border: 1px solid #ECE4D8;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .modal-summary img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .modal-summary-info h4 {
+      font-size: 15px;
+      color: #231F1B;
+    }
+    .modal-summary-info .price {
+      font-weight: 700;
+      color: #B58444;
+      font-size: 15px;
+    }
+    .btn-submit-order {
+      width: 100%;
+      background: linear-gradient(135deg, #DFBE82, #B58444);
+      color: #171410;
+      padding: 13px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(181, 132, 68, 0.3);
+      transition: all 0.25s;
+    }
+    .btn-submit-order:hover {
+      background: linear-gradient(135deg, #F0D59E, #C89B55);
+      transform: translateY(-1px);
+    }
+
+    /* ================= VIETQR MBBANK PAYMENT STYLES ================= */
+    .vietqr-card {
+      background: linear-gradient(145deg, #FAF8F4, #F2ECE1);
+      border: 1.5px solid #DFC9A3;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 14px 0 18px;
+      box-shadow: 0 4px 18px rgba(181, 132, 68, 0.1);
+    }
+    .vietqr-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #D8C7AA;
+    }
+    .vietqr-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mb-badge {
+      background: #003B70;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 11.5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .vietqr-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #231F1B;
+    }
+    .napas-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0E6537;
+      background: #EAF7EE;
+      padding: 3px 8px;
+      border-radius: 12px;
+      border: 1px solid #C8E8D2;
+    }
+    .vietqr-body {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .vietqr-img-wrap {
+      background: #FFFFFF;
+      padding: 8px;
+      border-radius: 10px;
+      border: 1px solid #E2D7C5;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .vietqr-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+    .vietqr-scan-hint {
+      font-size: 10px;
+      color: #8C8478;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-weight: 600;
+    }
+    .bank-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .bank-info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      background: #FFFFFF;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ECE4D8;
+    }
+    .bank-info-item .label {
+      color: #7A7269;
+    }
+    .bank-info-item .val {
+      font-weight: 700;
+      color: #231F1B;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-copy-chip {
+      background: #F3EFE8;
+      border: 1px solid #DFD9CF;
+      color: #8A642E;
+      font-size: 10.5px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-copy-chip:hover {
+      background: #8A642E;
+      color: #fff;
+    }
+    .payment-guide-strip {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed #E2D7C5;
+      font-size: 11.5px;
+      color: #6B6256;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Policy Modal Custom Styles */
+    .policy-modal-card {
+      max-width: 860px;
+      width: 94%;
+      background: #FFFFFF;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-overlay.active .policy-modal-card {
+      transform: translateY(0);
+    }
+    .policy-tabs-bar {
+      display: flex;
+      background: #F8F5EF;
+      border-bottom: 1px solid #E2D7C5;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      padding: 0 10px;
+    }
+    .policy-tab-nav {
+      padding: 13px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #695F52;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s;
+    }
+    .policy-tab-nav:hover {
+      color: #B58444;
+      background: rgba(223, 190, 130, 0.1);
+    }
+    .policy-tab-nav.active {
+      color: #7A531C;
+      border-bottom-color: #B58444;
+      background: #FFFFFF;
+    }
+    .policy-tab-pane {
+      display: none;
+      animation: fadeInPolicy 0.25s ease;
+    }
+    .policy-tab-pane.active {
+      display: block;
+    }
+    @keyframes fadeInPolicy {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .policy-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #F4EADA;
+      color: #8A642E;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .policy-article-title {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      color: #241E17;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+    .policy-section {
+      margin-bottom: 18px;
+    }
+    .policy-section h5 {
+      font-size: 14.5px;
+      color: #382F24;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+    }
+    .policy-section p, .policy-section li {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #554D42;
+    }
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px 0;
+      font-size: 13px;
+    }
+    .policy-table th {
+      background: #231C16;
+      color: #F2D8A7;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+      border: 1px solid #332B22;
+    }
+    .policy-table td {
+      padding: 10px 14px;
+      border: 1px solid #E5DCCE;
+      color: #423A2F;
+    }
+    .policy-table tr:nth-child(even) td {
+      background: #FAF8F5;
+    }
+    .policy-ref-card {
+      margin-top: 22px;
+      padding: 12px 16px;
+      background: #FAF6EE;
+      border-radius: 8px;
+      border: 1px dashed #D6C2A0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .policy-ref-card a {
+      color: #8A642E;
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 12.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .policy-ref-card a:hover {
+      color: #B58444;
+    }
+
+    /* Toast Notification */
+    .toast-box {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #171A21;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      border-left: 4px solid var(--primary-gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10001;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .toast-box.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 992px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .guarantees-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-overview-card { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .guarantees-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 32px; }
+      .hero-subtitle { font-size: 26px; }
+      .top-info { display: none; }
+      .header-search { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Switcher -->
+  <div class="mode-switcher">
+    <button class="mode-btn quick-test" onclick="triggerRandomProduct()" title="Bấm để tạo ngẫu nhiên 1 sản phẩm hoa viếng theo mẫu Hoàng Nga">
+      <i class="fa-solid fa-dice"></i> Tạo Hoa Mới
+    </button>
+    <button class="mode-btn quick-test" onclick="triggerSampleOrder()" title="Bấm để tạo ngay 1 đơn hàng test tự động">
+      <i class="fa-solid fa-bolt"></i> Tạo Đơn Mẫu
+    </button>
+    <a href="/admin" class="mode-btn admin" title="Chuyển sang Giao diện Quản trị viên (Backend)">
+      <i class="fa-solid fa-chart-line"></i> Vào Admin Panel →
+    </a>
+  </div>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-info">
+        <span><i class="fa-solid fa-phone"></i> 0868 57 67 77 (24/7)</span>
+        <span>|</span>
+        <span><i class="fa-solid fa-truck"></i> Giao hoa toàn quốc</span>
+        <span>|</span>
+        <span><i class="fa-solid fa-shield-halved"></i> Thanh toán an toàn</span>
+      </div>
+      <div class="top-actions">
+        <a href="#login" onclick="alert('Đã hỗ trợ đăng nhập cho thành viên thân thiết.')">Đăng nhập</a>
+        <span>|</span>
+        <a href="#register" onclick="alert('Đăng ký tài khoản nhận ngay voucher 100k.')">Đăng ký</a>
+        <span>|</span>
+        <span class="top-cart-icon" onclick="openCart()">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="top-cart-badge" id="cartCount">0</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="/" class="brand-logo">
+        <svg class="lotus-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 15C50 15 42 35 42 55C42 68 47 75 50 78C53 75 58 68 58 55C58 35 50 15 50 15Z" stroke="#C89B55" stroke-width="2.5" fill="#FAF6EE"/>
+          <path d="M50 28C38 32 25 45 25 62C25 73 34 80 43 80C47 80 50 78 50 78C50 78 45 68 45 55C45 42 50 28 50 28Z" stroke="#B8860B" stroke-width="2.2" fill="#FBF8F2"/>
+          <path d="M50 28C62 32 75 45 75 62C75 73 66 80 57 80C53 80 50 78 50 78C50 78 55 68 55 55C55 42 50 28 50 28Z" stroke="#B8860B" stroke-width="2.2" fill="#FBF8F2"/>
+          <path d="M22 62C12 66 8 76 14 83C20 89 33 87 40 81C30 82 22 75 22 62Z" stroke="#C89B55" stroke-width="2" fill="#F6EEDB"/>
+          <path d="M78 62C88 66 92 76 86 83C80 89 67 87 60 81C70 82 78 75 78 62Z" stroke="#C89B55" stroke-width="2" fill="#F6EEDB"/>
+          <ellipse cx="50" cy="82" rx="20" ry="3" fill="#B8860B" opacity="0.3"/>
+        </svg>
+        <div class="brand-text">
+          <h1>HOA VIẾNG</h1>
+          <p>Gửi trọn lời tưởng nhớ</p>
+        </div>
+      </a>
+
+      <!-- Search Input -->
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm hoa viếng, kệ hoa, lan hồ điệp..." onkeyup="handleSearch(event)">
+        <button onclick="executeSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <!-- Right Header Actions -->
+      <div class="header-support">
+        <div class="support-btn" onclick="alert('Hotline trực tang lễ 24/7: 0868 57 67 77')">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <div style="font-size: 11px; color:#837A6F;">Hỗ trợ 24/7</div>
+            <div style="font-size: 13.5px; font-weight:700;">0868 57 67 77</div>
+          </div>
+        </div>
+        <div class="header-cart-btn" onclick="openCart()">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge" id="cartCount2">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="topNav">
+    <div class="container nav-inner">
+      <ul class="nav-links">
+        <li>
+          <a href="/" class="active">Trang Chủ</a>
+        </li>
+        <li>
+          <a href="/vong-hoa">
+            Vòng Hoa <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/ke-hoa">
+            Kệ Hoa <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/gio-hoa">
+            Giỏ Hoa <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/lan-ho-diep">
+            Lan Hồ Điệp <i class="fa-solid fa-angle-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/uu-dai">
+            Ưu Đãi
+          </a>
+        </li>
+        <li>
+          <a href="/tin-tuc">
+            Tin Tức
+          </a>
+        </li>
+        <li>
+          <a href="/lien-he">
+            Liên Hệ
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-section">
+    <img src="/assets/hero_banner.jpg" alt="Hoa Viếng Sang Trọng" class="hero-bg-image" onerror="this.src='/assets/concept_frontend.jpg'">
+    <div class="hero-overlay"></div>
+    <div class="container" style="position: relative; width: 100%;">
+      <div class="hero-content">
+        <h2 class="hero-title">Hoa Viếng</h2>
+        <div class="hero-subtitle">Gửi trọn lời tưởng nhớ</div>
+        <p class="hero-desc">Dịch vụ hoa viếng chuyên nghiệp, tận tâm, giao đúng hẹn. Luôn gửi hình chụp thực tế trước và sau khi đặt vào linh đường.</p>
+        <button class="btn-gold-cta" onclick="scrollToSection('productsSection')">
+          <span>Khám phá ngay</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="hero-slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Guarantees -->
+  <section class="guarantees-bar">
+    <div class="container">
+      <div class="guarantees-grid">
+        <div class="guarantee-card">
+          <div class="guarantee-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+          </div>
+          <div class="guarantee-text">
+            <h4>Giao đúng giờ</h4>
+            <p>đúng địa điểm</p>
+          </div>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon"><i class="fa-solid fa-camera"></i></div>
+          <div class="guarantee-text">
+            <h4>Xác nhận hình ảnh</h4>
+            <p>sau khi giao</p>
+          </div>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon"><i class="fa-solid fa-heart"></i></div>
+          <div class="guarantee-text">
+            <h4>Tư vấn tận tâm</h4>
+            <p>24/7</p>
+          </div>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon"><i class="fa-solid fa-credit-card"></i></div>
+          <div class="guarantee-text">
+            <h4>Thanh toán an toàn</h4>
+            <p>linh hoạt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category & Products Section -->
+  <section class="container" id="productsSection">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <div class="diamond-ornament left"></div>
+        <h3 class="section-title">Danh mục sản phẩm</h3>
+        <div class="diamond-ornament right"></div>
+      </div>
+      <p class="section-subtitle-desc">Thiết kế trang trọng, hoa tươi chọn lọc, phục vụ hỏa tốc các nhà tang lễ toàn quốc</p>
+
+      <!-- Category Filter Pills & Random Generator -->
+      <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 24px;">
+        <button class="cat-pill active" id="pill-all" onclick="filterCategory('all', null, this)">Tất cả (16 mẫu)</button>
+        <button class="cat-pill" id="pill-bestseller" onclick="filterCategory('bestseller', null, this)" style="border-color: #EA580C; color: #EA580C; font-weight: 700;">
+          <i class="fa-solid fa-fire"></i> Đặt nhiều nhất
+        </button>
+        <button class="cat-pill" id="pill-ke-hoa" onclick="filterCategory('ke-hoa', null, this)">Kệ hoa viếng</button>
+        <button class="cat-pill" id="pill-vong-hoa" onclick="filterCategory('vong-hoa', null, this)">Vòng hoa truyền thống</button>
+        <button class="cat-pill" id="pill-gio-hoa" onclick="filterCategory('gio-hoa', null, this)">Giỏ hoa chia buồn</button>
+        <button class="cat-pill" id="pill-lan-ho-diep" onclick="filterCategory('lan-ho-diep', null, this)">Lan hồ điệp</button>
+        <button class="btn-random-flower" onclick="triggerRandomProduct()" title="Tạo ngẫu nhiên sản phẩm hoa viếng theo phong cách Hoàng Nga">
+          <i class="fa-solid fa-dice"></i> Tạo Mẫu Hoa Ngẫu Nhiên
+        </button>
+      </div>
+    </div>
+
+    <!-- Products Grid (4 rows x 4 items = 16 items) -->
+    <div class="products-grid" id="productsGrid">
+      <!-- Loaded dynamically via JS (limit 16) -->
+    </div>
+
+    <!-- View All Catalog Link -->
+    <div style="text-align: center; margin-top: -15px; margin-bottom: 50px;">
+      <a href="/ke-hoa" class="btn-view-all-products">
+        <i class="fa-solid fa-layer-group"></i> Xem tất cả danh mục hoa viếng (20+ mẫu) <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Promotional Banner -->
+  <section class="container promo-section" id="promo">
+    <div class="promo-banner">
+      <img src="/assets/promo_banner.jpg" alt="Kế hoạch trăm tuổi" class="promo-bg-img" onerror="this.src='/assets/concept_frontend.jpg'">
+      <div class="promo-overlay"></div>
+      <div class="promo-content">
+        <div class="promo-text">
+          <h3>300 suất chỉ 2 triệu</h3>
+          <p>Kế hoạch trăm tuổi, trọn vẹn yêu thương</p>
+        </div>
+        <button class="btn-promo-details" onclick="showPromoModal()">
+          Xem chi tiết <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Workflow -->
+  <section class="container process-section">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <div class="diamond-ornament left"></div>
+        <h3 class="section-title">Quy trình đặt hoa đơn giản</h3>
+        <div class="diamond-ornament right"></div>
+      </div>
+    </div>
+
+    <div class="process-steps">
+      <div class="step-item">
+        <div class="step-badge">1</div>
+        <div class="step-title">Chọn sản phẩm</div>
+        <div class="step-subtitle">phù hợp</div>
+      </div>
+      <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+      <div class="step-item">
+        <div class="step-badge">2</div>
+        <div class="step-title">Điền thông tin</div>
+        <div class="step-subtitle">giao hàng</div>
+      </div>
+      <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+      <div class="step-item">
+        <div class="step-badge">3</div>
+        <div class="step-title">Thanh toán</div>
+        <div class="step-subtitle">nhanh chóng</div>
+      </div>
+      <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+      <div class="step-item">
+        <div class="step-badge">4</div>
+        <div class="step-title">Giao hoa</div>
+        <div class="step-subtitle">đúng hẹn</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LAYER ĐÁNH GIÁ SAO VÀ FEEDBACK KHÁCH HÀNG ================= -->
+  <section class="reviews-section" id="reviewsSection">
+    <div class="container">
+      <div class="section-header" style="margin-top: 0;">
+        <div class="section-title-wrap">
+          <div class="diamond-ornament left"></div>
+          <h3 class="section-title">Đánh Giá & Lời Cảm Ơn Từ Khách Hàng</h3>
+          <div class="diamond-ornament right"></div>
+        </div>
+        <p class="section-subtitle-desc">Sự tín nhiệm của hơn 1.240+ gia đình và đoàn thể doanh nghiệp khi gửi trao tâm niệm</p>
+      </div>
+
+      <!-- Rating Overview Box -->
+      <div class="reviews-overview-card">
+        <div class="rating-summary-left">
+          <div class="big-score">4.9 <span>/ 5.0</span></div>
+          <div class="star-row">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="total-trust-text">
+            <b>1.240+</b> khách hàng đánh giá thực tế
+          </div>
+        </div>
+
+        <!-- Rating Progress Breakdown -->
+        <div class="rating-breakdown">
+          <div class="bar-row">
+            <span>5 sao</span>
+            <div class="bar-track"><div class="bar-filled" style="width: 92%;"></div></div>
+            <span style="font-weight: 700; width: 35px;">92%</span>
+          </div>
+          <div class="bar-row">
+            <span>4 sao</span>
+            <div class="bar-track"><div class="bar-filled" style="width: 6%;"></div></div>
+            <span style="font-weight: 700; width: 35px;">6%</span>
+          </div>
+          <div class="bar-row">
+            <span>3 sao</span>
+            <div class="bar-track"><div class="bar-filled" style="width: 2%;"></div></div>
+            <span style="font-weight: 700; width: 35px;">2%</span>
+          </div>
+          <div class="bar-row">
+            <span>2 sao</span>
+            <div class="bar-track"><div class="bar-filled" style="width: 0%;"></div></div>
+            <span style="font-weight: 700; width: 35px;">0%</span>
+          </div>
+          <div class="bar-row">
+            <span>1 sao</span>
+            <div class="bar-track"><div class="bar-filled" style="width: 0%;"></div></div>
+            <span style="font-weight: 700; width: 35px;">0%</span>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div>
+          <button class="btn-write-review" onclick="openReviewModal()">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Viết Cảm Nhận / Đánh Giá</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Reviews Feed List -->
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION BÀI VIẾT SEO WEBSITE (4 BÀI TỰ ĐỘNG CẬP NHẬT) ================= -->
+  <section class="container seo-articles-section" id="seoArticlesSection">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <div class="diamond-ornament left"></div>
+        <h3 class="section-title">Kiến Thức & Văn Hóa Tang Lễ</h3>
+        <div class="diamond-ornament right"></div>
+      </div>
+      <p class="section-subtitle-desc">Cẩm nang chuẩn mực về nghi thức phúng viếng, ý nghĩa các loài hoa và phong tục truyền thống</p>
+    </div>
+
+    <!-- 4 Articles per page -->
+    <div class="articles-grid" id="articlesGrid">
+      <!-- Rendered dynamically from Backend API (4 per page) -->
+    </div>
+
+    <!-- Articles Pagination Controls -->
+    <div class="articles-pagination-wrapper" id="articlesPaginationWrapper">
+      <div class="articles-pagination-info" id="articlesPaginationInfo">
+        Hiển thị trang <b>1</b> trên <b>2</b> (Tổng cộng 8 bài viết)
+      </div>
+      <div class="articles-pagination-controls" id="articlesPaginationControls">
+        <!-- Rendered dynamically -->
+      </div>
+      <a href="/tin-tuc" class="articles-view-all-link">
+        Xem tất cả bài viết trên trang Tin Tức <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer" id="contact">
+    <!-- Lotus watermark -->
+    <svg class="footer-watermark" viewBox="0 0 100 100" fill="none" stroke="#C89B55" stroke-width="1.5">
+      <path d="M50 15C50 15 42 35 42 55C42 68 47 75 50 78C53 75 58 68 58 55C58 35 50 15 50 15Z"/>
+      <path d="M50 28C38 32 25 45 25 62C25 73 34 80 43 80C47 80 50 78 50 78C50 78 45 68 45 55C45 42 50 28 50 28Z"/>
+      <path d="M50 28C62 32 75 45 75 62C75 73 66 80 57 80C53 80 50 78 50 78C50 78 55 68 55 55C55 42 50 28 50 28Z"/>
+      <path d="M22 62C12 66 8 76 14 83C20 89 33 87 40 81C30 82 22 75 22 62Z"/>
+      <path d="M78 62C88 66 92 76 86 83C80 89 67 87 60 81C70 82 78 75 78 62Z"/>
+    </svg>
+
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <svg class="lotus-svg" viewBox="0 0 100 100" fill="none">
+              <path d="M50 15C50 15 42 35 42 55C42 68 47 75 50 78C53 75 58 68 58 55C58 35 50 15 50 15Z" stroke="#DFBE82" stroke-width="2.5" fill="none"/>
+              <path d="M50 28C38 32 25 45 25 62C25 73 34 80 43 80C47 80 50 78 50 78" stroke="#B8860B" stroke-width="2"/>
+              <path d="M50 28C62 32 75 45 75 62C75 73 66 80 57 80C53 80 50 78 50 78" stroke="#B8860B" stroke-width="2"/>
+            </svg>
+            <div class="brand-text">
+              <h1>HOA VIẾNG</h1>
+              <p>Gửi trọn lời tưởng nhớ</p>
+            </div>
+          </div>
+          <p style="font-size: 13px; color: #9E968B; line-height: 1.6; margin-top: 10px;">
+            Đơn vị chuyên cung cấp hoa tang lễ, hoa kính viếng, lan hồ điệp cao cấp trên toàn quốc. Đảm bảo trang trọng, đúng giờ và hình ảnh xác nhận chu đáo.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-btn" title="Zalo" style="font-weight: 800; font-size: 11px; letter-spacing: -0.5px;">Zalo</a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col" id="about">
+          <h4>Thông tin liên hệ</h4>
+          <ul class="footer-contacts">
+            <li><i class="fa-solid fa-phone"></i> 0868 57 67 77 (24/7)</li>
+            <li><i class="fa-solid fa-envelope"></i> info@hoavieng.vn</li>
+            <li><i class="fa-solid fa-location-dot"></i> 123 Nguyễn Văn Cừ, Q.1, TP.HCM</li>
+            <li><i class="fa-solid fa-clock"></i> Phục vụ xuyên suốt 24/7</li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col" style="min-width: 250px;">
+          <h4><a href="/chinh-sach" style="color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">Chính sách & Quy định <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px; color: var(--primary-gold);"></i></a></h4>
+          <ul class="footer-policies">
+            <li class="footer-policy-item">
+              <a href="/chinh-sach#chinh-sach-bao-mat" class="footer-policy-link">
+                <span class="footer-policy-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <span class="footer-policy-title">Chính sách bảo mật</span>
+                <i class="fa-solid fa-chevron-right footer-policy-arrow"></i>
+              </a>
+            </li>
+            <li class="footer-policy-item">
+              <a href="/chinh-sach#quy-dinh-su-dung" class="footer-policy-link">
+                <span class="footer-policy-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                <span class="footer-policy-title">Quy định sử dụng</span>
+                <i class="fa-solid fa-chevron-right footer-policy-arrow"></i>
+              </a>
+            </li>
+            <li class="footer-policy-item">
+              <a href="/chinh-sach#bang-gia-van-chuyen" class="footer-policy-link">
+                <span class="footer-policy-icon"><i class="fa-solid fa-truck-fast"></i></span>
+                <span class="footer-policy-title">Bảng giá vận chuyển</span>
+                <i class="fa-solid fa-chevron-right footer-policy-arrow"></i>
+              </a>
+            </li>
+            <li class="footer-policy-item">
+              <a href="/chinh-sach#huong-dan-mua-hang" class="footer-policy-link">
+                <span class="footer-policy-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                <span class="footer-policy-title">Hướng dẫn mua hàng</span>
+                <i class="fa-solid fa-chevron-right footer-policy-arrow"></i>
+              </a>
+            </li>
+            <li class="footer-policy-item">
+              <a href="/chinh-sach#thong-tin-chuyen-khoan" class="footer-policy-link">
+                <span class="footer-policy-icon"><i class="fa-solid fa-building-columns"></i></span>
+                <span class="footer-policy-title">Thông tin chuyển khoản</span>
+                <i class="fa-solid fa-chevron-right footer-policy-arrow"></i>
+              </a>
+            </li>
+            <li class="footer-policy-item">
+              <a href="/chinh-sach#doi-tra-hoan-tien" class="footer-policy-link">
+                <span class="footer-policy-icon"><i class="fa-solid fa-arrow-rotate-left"></i></span>
+                <span class="footer-policy-title">Đổi trả & hoàn tiền</span>
+                <i class="fa-solid fa-chevron-right footer-policy-arrow"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>Đăng ký nhận tin</h4>
+          <p style="font-size: 12.5px; color: #8C8478; margin-bottom: 12px;">Nhận các chương trình ưu đãi đặc biệt và cẩm nang văn hóa tang lễ.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận thông tin từ Hoa Viếng.');">
+            <input type="email" placeholder="Nhập email của bạn" required>
+            <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Hoa Viếng. Tất cả quyền được bảo lưu. Thiết kế và vận hành theo concept tiêu chuẩn.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fast Order Modal -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="order-modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-feather"></i> Đặt Hoa Kính Viếng</h3>
+        <button class="modal-close" onclick="closeOrderModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-summary" id="modalProductSummary">
+          <!-- Dynamic info -->
+        </div>
+
+        <form id="orderForm" onsubmit="submitOrder(event)">
+          <input type="hidden" id="formProductId">
+          <input type="hidden" id="formProductName">
+          <input type="hidden" id="formProductPrice">
+
+          <div class="form-group">
+            <label>Họ tên người gửi / Tên tổ chức: <span>*</span></label>
+            <input type="text" id="formCustomer" class="form-control" placeholder="Ví dụ: Công ty TNHH Hoàng Minh / Ông Trần Tuấn" required>
+          </div>
+
+          <div class="form-group">
+            <label>Số điện thoại liên hệ: <span>*</span></label>
+            <input type="tel" id="formPhone" class="form-control" placeholder="Ví dụ: 0912 345 678" required>
+          </div>
+
+          <div class="form-group">
+            <label>Nội dung in trên băng rôn / dải lụa viếng: <span>*</span></label>
+            <input type="text" id="formRibbon" class="form-control" placeholder="Ví dụ: Ban Giám Đốc Công Ty ABC - Thành Kính Phân Ưu" required>
+            <div class="ribbon-presets">
+              <span class="ribbon-chip" onclick="setRibbonPreset('Thành Kính Phân Ưu')">Thành Kính Phân Ưu</span>
+              <span class="ribbon-chip" onclick="setRibbonPreset('Vô Cùng Thương Tiếc')">Vô Cùng Thương Tiếc</span>
+              <span class="ribbon-chip" onclick="setRibbonPreset('Kính Viếng Hương Hồn')">Kính Viếng Hương Hồn</span>
+              <span class="ribbon-chip" onclick="setRibbonPreset('Nguyện Cầu Cho Linh Hồn Vãng Sanh Cực Lạc')">Vãng Sanh Cực Lạc</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Địa điểm giao hoa (Nhà tang lễ / Tư gia): <span>*</span></label>
+            <input type="text" id="formAddress" class="form-control" placeholder="Ví dụ: Nhà tang lễ TP.HCM, 25 Lê Quý Đôn, Q.3, TP.HCM" required>
+          </div>
+
+          <div class="form-group">
+            <label>Hình thức thanh toán: <span>*</span></label>
+            <select id="formPaymentMethod" class="form-control" onchange="togglePaymentView(this.value)">
+              <option value="Chuyển khoản VietQR MBBank" selected>Chuyển khoản VietQR MBBank: 0966789639 (Quét mã 24/7)</option>
+              <option value="Chờ thanh toán (COD)">Thanh toán khi nhận hoa / Xác nhận qua ảnh</option>
+              <option value="Ví MoMo">Ví điện tử MoMo</option>
+            </select>
+          </div>
+
+          <!-- Dynamic VietQR MBBank Box -->
+          <div class="vietqr-card" id="vietqrCard">
+            <div class="vietqr-header">
+              <div class="vietqr-brand">
+                <span class="mb-badge">MBBANK</span>
+                <span class="vietqr-title">Quét Mã VietQR Chuyển Khoản Tức Thì</span>
+              </div>
+              <span class="napas-tag"><i class="fa-solid fa-bolt"></i> Napas247</span>
+            </div>
+            
+            <div class="vietqr-body">
+              <div class="vietqr-img-wrap">
+                <img id="vietqrImage" src="https://img.vietqr.io/image/MB-0966789639-compact2.png?amount=1200000&addInfo=HV%20DAT%20HOA&accountName=HOA%20VIENG" alt="Mã VietQR MBBank" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=0966789639'">
+                <div class="vietqr-scan-hint"><i class="fa-solid fa-qrcode"></i> Quét mã tự động điền</div>
+              </div>
+
+              <div class="bank-info-list">
+                <div class="bank-info-item">
+                  <span class="label">Ngân hàng:</span>
+                  <span class="val">MBBank (Quân Đội)</span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Số tài khoản:</span>
+                  <span class="val">
+                    <b style="color:#003B70; font-size:14px;" id="valAccNum">0966789639</b>
+                    <button type="button" class="btn-copy-chip" onclick="copyText('0966789639', this)">Sao chép</button>
+                  </span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Chủ tài khoản:</span>
+                  <span class="val" id="valAccName">HOA VIENG</span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Số tiền:</span>
+                  <span class="val">
+                    <b style="color:#A36F2B;" id="valPrice">1.200.000đ</b>
+                    <button type="button" class="btn-copy-chip" onclick="copyAmount(this)">Sao chép</button>
+                  </span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Nội dung CK:</span>
+                  <span class="val">
+                    <span id="valMemo" style="color:#8A642E; font-size:11px;">HV ĐẶT HOA</span>
+                    <button type="button" class="btn-copy-chip" onclick="copyMemo(this)">Sao chép</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-guide-strip">
+              <i class="fa-solid fa-shield-halved" style="color: #27AE60;"></i>
+              <span>Quét bằng bất kỳ App Ngân hàng nào (MBBank, VCB, Techcombank, VPBank, MoMo...) - Tự động điền đúng STK & số tiền.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Ghi chú thêm (Thời gian giao, yêu cầu đặc biệt):</label>
+            <textarea id="formNotes" class="form-control" rows="2" placeholder="Ví dụ: Chụp ảnh gửi Zalo trước khi giao vào bàn thờ tang lễ"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-order">
+            <i class="fa-solid fa-qrcode"></i>
+            <span>Xác Nhận Đặt Hoa & Tạo Mã QR</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- VietQR MBBank Invoice & Payment Confirmation Modal -->
+  <div class="modal-overlay" id="qrInvoiceModal">
+    <div class="order-modal" style="max-width: 520px;">
+      <div class="modal-header" style="background: #003B70;">
+        <h3 style="color: #FFFFFF;"><i class="fa-solid fa-qrcode" style="color: #DFC9A3;"></i> Hóa Đơn & Mã VietQR MBBank</h3>
+        <button class="modal-close" onclick="closeInvoiceModal()">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 22px;">
+        <div style="background: #EAF7EE; color: #1E7E34; border: 1px solid #C3E6CB; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 13px; font-weight: 600;">
+          <i class="fa-solid fa-circle-check"></i> Đã tạo đơn <b id="invOrderId">#ĐH...</b> thành công! Vui lòng quét mã chuyển tiền:
+        </div>
+
+        <div style="background: #FFFFFF; border: 2px solid #003B70; border-radius: 12px; padding: 14px; display: inline-block; margin-bottom: 14px; box-shadow: 0 6px 20px rgba(0, 59, 112, 0.12);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border-bottom: 1px dashed #DDD; padding-bottom: 6px;">
+            <span style="font-weight: 800; color: #003B70; font-size: 15px;">MBBANK</span>
+            <span style="background: #EAF7EE; color: #0E6537; font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 10px;">Napas 247</span>
+          </div>
+          <img id="invQrImage" src="" alt="Mã VietQR MBBank" style="width: 210px; height: 210px; border-radius: 8px; object-fit: contain;">
+          <div style="margin-top: 6px; font-size: 11px; color: #746C61;">
+            <i class="fa-solid fa-camera"></i> Mở app ngân hàng quét mã để thanh toán tự động
+          </div>
+        </div>
+
+        <div style="text-align: left; background: #FAF7F2; border: 1px solid #EAE3D6; border-radius: 8px; padding: 12px 14px; font-size: 12.5px; margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Ngân hàng thụ hưởng:</span>
+            <b>MBBank (Ngân Hàng Quân Đội)</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Số tài khoản:</span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <b style="color: #003B70; font-size: 14px;">0966789639</b>
+              <button type="button" class="btn-copy-chip" onclick="copyText('0966789639', this)">Sao chép</button>
+            </span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Chủ tài khoản:</span>
+            <b>HOA VIENG</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Số tiền:</span>
+            <b style="color: #A36F2B; font-size: 14px;" id="invAmount">1.200.000đ</b>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: #7A7269;">Nội dung chuyển khoản:</span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <b style="color: #8A642E; font-size: 12px;" id="invMemo">HV...</b>
+              <button type="button" class="btn-copy-chip" onclick="copyInvMemo(this)">Sao chép</button>
+            </span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-submit-order" style="flex: 1.2; background: #27AE60; color: #fff; padding: 11px;" onclick="confirmPaidSuccess()">
+            <i class="fa-solid fa-circle-check"></i> Đã Chuyển Khoản Xong
+          </button>
+          <button class="btn-submit-order" style="flex: 1; background: #231C16; color: #F2D8A7; padding: 11px;" onclick="window.location.href='/admin'">
+            <i class="fa-solid fa-chart-line"></i> Vào Admin Theo Dõi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Modal (Customer Feedback Form) -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="order-modal" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-star" style="color: #F2A900;"></i> Viết Đánh Giá & Cảm Nhận</h3>
+        <button class="modal-close" onclick="closeReviewModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="submitReview(event)">
+          <div class="form-group">
+            <label>Họ tên của bạn / Đơn vị đại diện: <span>*</span></label>
+            <input type="text" id="reviewCustomer" class="form-control" placeholder="Ví dụ: Chị Mai Phương / Công ty ABC" required>
+          </div>
+
+          <div class="form-group">
+            <label>Chức danh / Khu vực:</label>
+            <input type="text" id="reviewRole" class="form-control" placeholder="Ví dụ: Khách hàng tại Q.1, TP.HCM">
+          </div>
+
+          <div class="form-group">
+            <label>Mức độ hài lòng: <span>*</span></label>
+            <select id="reviewRating" class="form-control">
+              <option value="5">⭐⭐⭐⭐⭐ 5 Sao - Cực kỳ hài lòng (Tươi lâu, đúng giờ, chu đáo)</option>
+              <option value="4">⭐⭐⭐⭐ 4 Sao - Hài lòng (Hoa đẹp, giao đúng hẹn)</option>
+              <option value="3">⭐⭐⭐ 3 Sao - Tương đối ổn (Chấp nhận được, cần cải thiện)</option>
+              <option value="2">⭐⭐ 2 Sao - Chưa hài lòng (Hoa chưa giống mẫu hoặc giao chậm)</option>
+              <option value="1">⭐ 1 Sao - Rất không hài lòng (Trễ giờ viếng hoặc hoa bị lỗi)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Cảm nhận thực tế của bạn: <span>*</span></label>
+            <textarea id="reviewComment" class="form-control" rows="3" placeholder="Chia sẻ trải nghiệm về chất lượng hoa, sự phục vụ của nhân viên giao nhận..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-order">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Gửi Đánh Giá Ngay</span>
+          </button>
+          <p style="font-size: 11.5px; color: #8A8175; text-align: center; margin-top: 10px; line-height: 1.4;">
+            <i class="fa-solid fa-shield-halved" style="color: #DFBE82;"></i> Đánh giá của Quý khách sẽ được Ban Quản Trị phê duyệt trước khi hiển thị trên trang chủ website.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Detail Reader Modal -->
+  <div class="modal-overlay" id="articleReaderModal">
+    <div class="order-modal" style="max-width: 720px;">
+      <div class="modal-header">
+        <h3 id="readerTitle" style="font-size: 17px; line-height: 1.3;">Chi Tiết Bài Viết SEO</h3>
+        <button class="modal-close" onclick="closeArticleModal()">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 24px;">
+        <div id="readerMeta" style="font-size: 12px; color: #8A8175; margin-bottom: 15px;"></div>
+        <img id="readerImage" src="" style="width: 100%; height: 260px; object-fit: cover; border-radius: 8px; margin-bottom: 18px;">
+        <div id="readerContent" style="font-size: 14.5px; color: #332C24; line-height: 1.8;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo Modal -->
+  <div class="modal-overlay" id="promoModal">
+    <div class="order-modal" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-gift"></i> Chương Trình Trăm Tuổi</h3>
+        <button class="modal-close" onclick="closePromoModal()">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <div style="font-size: 40px; color: #B58444; margin: 10px 0;"><i class="fa-solid fa-award"></i></div>
+        <h3 style="font-family: var(--font-serif); font-size: 22px; color: #171410; margin-bottom: 8px;">300 Suất Trọn Gói Chỉ 2 Triệu</h3>
+        <p style="color: #6B6256; font-size: 14px; margin-bottom: 20px;">
+          Gói tri ân đặc biệt bao gồm: 01 Kệ hoa kính viếng cao cấp 2 tầng + Miễn phí vận chuyển hỏa tốc nội thành + Thiết kế dải lụa nhung vàng thủ công + Chụp ảnh và video gửi xác nhận đến gia đình.
+        </p>
+        <button class="btn-submit-order" onclick="closePromoModal(); openOrderModal('prod-2');">
+          Đăng Ký Nhận Suất Ưu Đãi
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comprehensive Policy & Terms Modal (6 Tabs) -->
+  <div class="modal-overlay" id="policyModal" onclick="if(event.target === this) closePolicyModal()">
+    <div class="policy-modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 17px; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-file-shield" style="color: var(--primary-gold);"></i>
+          <span>Chính Sách & Quy Định Vận Hành - Hoa Viếng</span>
+        </h3>
+        <button class="modal-close" onclick="closePolicyModal()">&times;</button>
+      </div>
+
+      <!-- Policy Tabs Navigation Bar -->
+      <div class="policy-tabs-bar">
+        <button type="button" class="policy-tab-nav active" data-tab="privacy" onclick="switchPolicyTab('privacy')">
+          <i class="fa-solid fa-shield-halved"></i> Chính Sách Bảo Mật
+        </button>
+        <button type="button" class="policy-tab-nav" data-tab="terms" onclick="switchPolicyTab('terms')">
+          <i class="fa-solid fa-scale-balanced"></i> Quy Định Sử Dụng
+        </button>
+        <button type="button" class="policy-tab-nav" data-tab="shipping" onclick="switchPolicyTab('shipping')">
+          <i class="fa-solid fa-truck-fast"></i> Bảng Giá Vận Chuyển
+        </button>
+        <button type="button" class="policy-tab-nav" data-tab="guide" onclick="switchPolicyTab('guide')">
+          <i class="fa-solid fa-cart-shopping"></i> Hướng Dẫn Mua Hàng
+        </button>
+        <button type="button" class="policy-tab-nav" data-tab="bank" onclick="switchPolicyTab('bank')">
+          <i class="fa-solid fa-building-columns"></i> Thông Tin Chuyển Khoản
+        </button>
+        <button type="button" class="policy-tab-nav" data-tab="refund" onclick="switchPolicyTab('refund')">
+          <i class="fa-solid fa-arrow-rotate-left"></i> Đổi Trả & Hoàn Tiền
+        </button>
+      </div>
+
+      <!-- Modal Body with 6 Tab Panes -->
+      <div class="modal-body" style="padding: 24px; max-height: calc(85vh - 120px);">
+
+        <!-- TAB 1: BẢO MẬT -->
+        <div class="policy-tab-pane active" id="policyPane_privacy">
+          <div class="policy-header-badge"><i class="fa-solid fa-shield-cat"></i> Cam kết bảo mật quyền riêng tư tang gia</div>
+          <h4 class="policy-article-title">Chính Sách Bảo Mật Thông Tin Khách Hàng & Gia Quyến</h4>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-circle-check text-gold"></i> 1. Mục đích thu thập thông tin</h5>
+            <p>Hệ thống Hoa Viếng chỉ thu thập thông tin nhằm xử lý và hoàn tất dịch vụ điện hoa phúng viếng một cách trang nghiêm, chu đáo và đúng giờ:</p>
+            <ul style="padding-left: 20px; margin-top: 6px;">
+              <li>Họ tên người gửi / Tên cơ quan, tổ chức kính viếng.</li>
+              <li>Số điện thoại liên hệ để gửi ảnh duyệt mẫu hoa trước khi đi và ảnh đối soát sau khi đặt hoa tại tang lễ.</li>
+              <li>Thông tin người quá cố, giờ khâm liệm / động quan và địa chỉ nhà tang lễ hoặc tư gia.</li>
+              <li>Nội dung in trên dải lụa / băng rôn chia buồn.</li>
+            </ul>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-user-shield text-gold"></i> 2. Bảo mật danh tính gia quyến & người đã khuất</h5>
+            <p>Tang lễ là nghi thức tâm linh thiêng liêng và riêng tư. Chúng tôi cam kết tuyệt đối bảo mật thông tin người đã khuất, hoàn cảnh gia đình tang quyến và danh tính khách hàng. Trong trường hợp quý khách có yêu cầu gửi hoa kính viếng ẩn danh (không công khai danh tính người đặt), Hoa Viếng sẽ bảo mật 100% theo đúng thỏa thuận.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-lock text-gold"></i> 3. Phạm vi sử dụng thông tin nội bộ</h5>
+            <p>Dữ liệu chỉ được luân chuyển nội bộ giữa nghệ nhân cắm hoa và nhân viên điều phối giao nhận chuyên trách. Chúng tôi cam kết không chuyển giao, buôn bán hoặc chia sẻ thông tin cho bất kỳ đơn vị quảng cáo hay bên thứ ba nào vì mục đích thương mại.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-credit-card text-gold"></i> 4. An toàn giao dịch thanh toán VietQR</h5>
+            <p>Mọi giao dịch thanh toán chuyển khoản qua VietQR MBBank (STK: 0966789639) được xử lý trực tiếp qua hạ tầng bảo mật Napas 247 của Ngân hàng TMCP Quân Đội, tuyệt đối an toàn và không lưu trữ thông tin thẻ hay mã OTP cá nhân của khách hàng.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-clock-rotate-left text-gold"></i> 5. Thời gian lưu trữ & Quyền của khách hàng</h5>
+            <p>Thông tin được lưu trữ phục vụ bảo hành, đối soát chất lượng và xuất hóa đơn đỏ VAT cho doanh nghiệp. Khách hàng có quyền yêu cầu trích xuất dữ liệu hoặc xóa hoàn toàn thông tin cá nhân khỏi hệ thống bất cứ lúc nào qua hotline <b>0868 57 67 77</b>.</p>
+          </div>
+
+          <div class="policy-ref-card">
+            <span style="font-size: 12.5px; color: #695F52;"><i class="fa-solid fa-bookmark text-gold"></i> Quy chuẩn bảo mật thông tin theo tiêu chuẩn ngành hoa tươi:</span>
+            <a href="https://blackstones.vn/" target="_blank" rel="noopener noreferrer">
+              Xem chi tiết tại blackstones.vn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- TAB 2: QUY ĐỊNH SỬ DỤNG -->
+        <div class="policy-tab-pane" id="policyPane_terms">
+          <div class="policy-header-badge"><i class="fa-solid fa-gavel"></i> Quy chuẩn chất lượng & cam kết phục vụ</div>
+          <h4 class="policy-article-title">Quy Định Sử Dụng Dịch Vụ Đặt Hoa Kính Viếng</h4>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-fan text-gold"></i> 1. Tiêu chuẩn hoa tươi chất lượng cao</h5>
+            <p>Hoa Viếng cam kết 100% sản phẩm được thiết kế từ hoa tươi mới nhập trong ngày từ Đà Lạt và các vườn hoa chất lượng cao (Lan hồ điệp, Lily trắng, Cúc mẫu đơn, Hồng trắng, Hoa môn trắng...). Cam kết không sử dụng hoa đông lạnh, hoa héo úa hoặc hoa tồn đọng.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-shapes text-gold"></i> 2. Mức độ tương đồng sản phẩm (90% - 95%)</h5>
+            <p>Hoa tươi là sản phẩm thủ công phụ thuộc vào mùa vụ thời tiết và sắc hoa tự nhiên. Kệ hoa thực tế sẽ đạt độ tương đồng 90% - 95% so với hình ảnh mẫu niêm yết trên website về kiểu dáng, phom kệ, tone màu chủ đạo và giá trị.</p>
+            <p style="margin-top: 6px;">Trong trường hợp thiếu loại hoa phụ do trái mùa vụ, nghệ nhân sẽ chủ động liên hệ xin phép khách hàng và thay thế bằng loại hoa phụ có tone màu, ý nghĩa và giá trị tương đương hoặc cao cấp hơn.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-ribbon text-gold"></i> 3. Trách nhiệm về thông điệp băng rôn & giờ viếng</h5>
+            <p>Quý khách vui lòng cung cấp chính xác khung giờ viếng, giờ khâm liệm, địa chỉ nhà tang lễ/tư gia và nội dung dải lụa viếng. Đội ngũ biên tập của Hoa Viếng luôn kiểm tra kỹ lỗi chính tả và gửi hình ảnh chụp băng rôn hoàn thiện cho quý khách duyệt trước khi xe giao hàng lăn bánh.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-copyright text-gold"></i> 4. Bản quyền hình ảnh & Nội dung</h5>
+            <p>Toàn bộ tư liệu hình ảnh sản phẩm kệ hoa, vòng hoa và bài viết cẩm nang văn hóa tang lễ trên website đều thuộc sở hữu của Hoa Viếng và hệ thống đối tác liên kết. Nghiêm cấm mọi hành vi sao chép nhằm mục đích trục lợi hoặc lừa đảo thương mại.</p>
+          </div>
+
+          <div class="policy-ref-card">
+            <span style="font-size: 12.5px; color: #695F52;"><i class="fa-solid fa-bookmark text-gold"></i> Quy chế dịch vụ điện hoa và điều khoản giao dịch:</span>
+            <a href="https://blackstones.vn/" target="_blank" rel="noopener noreferrer">
+              Xem chi tiết tại blackstones.vn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- TAB 3: BẢNG GIÁ VẬN CHUYỂN -->
+        <div class="policy-tab-pane" id="policyPane_shipping">
+          <div class="policy-header-badge"><i class="fa-solid fa-truck-ramp-box"></i> Biểu phí minh bạch - Giao hỏa tốc 60-90 phút</div>
+          <h4 class="policy-article-title">Bảng Giá Vận Chuyển & Quy Trình Giao Nhận Hoa Tang Lễ</h4>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-table-list text-gold"></i> 1. Bảng biểu phí vận chuyển chi tiết</h5>
+            <p>Hoa Viếng áp dụng biểu phí giao hàng ưu đãi và minh bạch trên toàn hệ thống mạng lưới shop hoa vệ tinh:</p>
+            <table class="policy-table">
+              <thead>
+                <tr>
+                  <th>Khoảng cách / Khu vực</th>
+                  <th>Cước phí giao hàng</th>
+                  <th>Thời gian cam kết</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Bán kính 0km - 5km nội thành</b><br><span style="font-size: 11.5px; color: #7A7269;">Q.1, Q.3, Q.10, Phú Nhuận, Bình Thạnh...</span></td>
+                  <td><b style="color: #27AE60; font-size: 14px;">MIỄN PHÍ (0đ)</b></td>
+                  <td>60 - 90 phút (Hỏa tốc)</td>
+                </tr>
+                <tr>
+                  <td><b>Bán kính 5km - 10km nội thành mở rộng</b><br><span style="font-size: 11.5px; color: #7A7269;">Q.4, Q.5, Q.6, Q.7, Tân Bình, Gò Vấp, TP.Thủ Đức...</span></td>
+                  <td><b>30.000đ - 50.000đ</b></td>
+                  <td>60 - 90 phút (Hỏa tốc)</td>
+                </tr>
+                <tr>
+                  <td><b>Trên 10km & Huyện ngoại thành</b><br><span style="font-size: 11.5px; color: #7A7269;">Bình Chánh, Nhà Bè, Hóc Môn, Củ Chi, Cần Giờ...</span></td>
+                  <td><b>Cước thực tế (~5.000đ/km)</b></td>
+                  <td>Theo lịch hẹn của gia quyến</td>
+                </tr>
+                <tr>
+                  <td><b>Đơn hàng doanh nghiệp (Từ 2 kệ hoa trở lên)</b></td>
+                  <td><b style="color: #27AE60; font-size: 14px;">MIỄN PHÍ TOÀN BỘ (0đ)</b></td>
+                  <td>Ưu tiên giao sớm trước 30p</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-truck-moving text-gold"></i> 2. Phương tiện chuyên chở kệ hoa tang lễ</h5>
+            <p>Khác với hàng hóa thông thường, kệ hoa tang lễ có kích thước cao lớn (từ 1m7 - 2m2). Chúng tôi sử dụng xe máy gắn khung giá đỡ chuyên dụng hoặc xe ô tô van có mui che kín, giúp hoa không bị gió quật dập nát, không chịu nắng mưa và giữ nguyên độ căng tràn khi đến nơi.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-camera-retro text-gold"></i> 3. Quy trình gửi 2 ảnh đối soát minh bạch</h5>
+            <p>Để quý khách ở xa hay bận rộn hoàn toàn yên tâm:</p>
+            <ul style="padding-left: 20px; margin-top: 6px;">
+              <li><b>Ảnh 1 (Tại shop trước khi đi):</b> Chụp toàn cảnh kệ hoa kèm dải lụa đã gắn để khách hàng kiểm duyệt chất lượng và chính tả.</li>
+              <li><b>Ảnh 2 (Tại đám tang kèm POD):</b> Chụp kệ hoa đã được đặt trang trọng tại sảnh lễ viếng hoặc cạnh linh cữu, gửi kèm thông báo thời gian hoàn tất qua Zalo/Email.</li>
+            </ul>
+          </div>
+
+          <div class="policy-ref-card">
+            <span style="font-size: 12.5px; color: #695F52;"><i class="fa-solid fa-bookmark text-gold"></i> Bảng giá và chính sách giao nhận theo chuẩn thị trường:</span>
+            <a href="https://blackstones.vn/" target="_blank" rel="noopener noreferrer">
+              Xem chi tiết tại blackstones.vn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- TAB 4: HƯỚNG DẪN MUA HÀNG -->
+        <div class="policy-tab-pane" id="policyPane_guide">
+          <div class="policy-header-badge"><i class="fa-solid fa-cart-flatbed"></i> Quy trình 4 bước tinh gọn & chuẩn mực</div>
+          <h4 class="policy-article-title">Hướng Dẫn Mua Hàng & Đặt Hoa Kính Viếng Trực Tuyến</h4>
+
+          <div class="policy-section">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px;">
+              <div style="background: #FAF8F5; border: 1px solid #EAE3D6; border-radius: 10px; padding: 14px;">
+                <div style="font-weight: 700; color: #A36F2B; font-size: 13.5px; margin-bottom: 6px;">
+                  <i class="fa-solid fa-1" style="background: #A36F2B; color: #fff; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 11px; margin-right: 6px;"></i>
+                  Chọn mẫu hoa viếng
+                </div>
+                <p style="font-size: 12.5px; color: #5C5449; line-height: 1.5; margin: 0;">
+                  Lựa chọn kiểu dáng thích hợp (Kệ hoa 1 tầng, 2 tầng, Vòng hoa tròn truyền thống, Giỏ hoa hoặc Chậu lan hồ điệp) theo độ tuổi và tín ngưỡng của người quá cố.
+                </p>
+              </div>
+
+              <div style="background: #FAF8F5; border: 1px solid #EAE3D6; border-radius: 10px; padding: 14px;">
+                <div style="font-weight: 700; color: #A36F2B; font-size: 13.5px; margin-bottom: 6px;">
+                  <i class="fa-solid fa-2" style="background: #A36F2B; color: #fff; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 11px; margin-right: 6px;"></i>
+                  Cung cấp thông tin tang lễ
+                </div>
+                <p style="font-size: 12.5px; color: #5C5449; line-height: 1.5; margin: 0;">
+                  Nhập họ tên người gửi/tổ chức, số điện thoại liên hệ, địa chỉ nhà tang lễ (hoặc tư gia) và khung giờ cử hành lễ viếng để thợ hoa điều phối giao đúng giờ.
+                </p>
+              </div>
+
+              <div style="background: #FAF8F5; border: 1px solid #EAE3D6; border-radius: 10px; padding: 14px;">
+                <div style="font-weight: 700; color: #A36F2B; font-size: 13.5px; margin-bottom: 6px;">
+                  <i class="fa-solid fa-3" style="background: #A36F2B; color: #fff; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 11px; margin-right: 6px;"></i>
+                  Soạn nội dung dải lụa viếng
+                </div>
+                <p style="font-size: 12.5px; color: #5C5449; line-height: 1.5; margin: 0;">
+                  Chọn nhanh các mẫu câu chuẩn mực trên form (<i>Thành Kính Phân Ưu, Vô Cùng Thương Tiếc, Kính Viếng Hương Hồn...</i>) hoặc điền nội dung đặc thù của đoàn thể.
+                </p>
+              </div>
+
+              <div style="background: #FAF8F5; border: 1px solid #EAE3D6; border-radius: 10px; padding: 14px;">
+                <div style="font-weight: 700; color: #A36F2B; font-size: 13.5px; margin-bottom: 6px;">
+                  <i class="fa-solid fa-4" style="background: #A36F2B; color: #fff; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 11px; margin-right: 6px;"></i>
+                  Quét mã QR & Nhận ảnh báo cáo
+                </div>
+                <p style="font-size: 12.5px; color: #5C5449; line-height: 1.5; margin: 0;">
+                  Quét mã VietQR MBBank tự động không cần gõ số tiền. Sau khi hoàn thành, nhận ảnh kệ hoa tại xưởng và ảnh sau khi đã giao tại đám tang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-phone-volume text-gold"></i> Đặt hoa hỏa tốc qua Hotline 24/7</h5>
+            <p>Trường hợp cần đặt gấp hoa viếng trong vòng 45 - 60 phút, quý khách vui lòng gọi trực tiếp hotline: <b>0868 57 67 77</b> hoặc liên hệ qua Zalo. Chuyên viên tư vấn lễ tang sẽ hỗ trợ quý khách gửi mẫu có sẵn và hoàn thiện ngay lập tức.</p>
+          </div>
+
+          <div class="policy-ref-card">
+            <span style="font-size: 12.5px; color: #695F52;"><i class="fa-solid fa-bookmark text-gold"></i> Chi tiết các bước mua hàng và tiếp nhận đơn:</span>
+            <a href="https://blackstones.vn/" target="_blank" rel="noopener noreferrer">
+              Xem chi tiết tại blackstones.vn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- TAB 5: THÔNG TIN CHUYỂN KHOẢN -->
+        <div class="policy-tab-pane" id="policyPane_bank">
+          <div class="policy-header-badge"><i class="fa-solid fa-building-columns"></i> Thanh toán an toàn Napas247 - Xuất hóa đơn đỏ VAT</div>
+          <h4 class="policy-article-title">Thông Tin Chuyển Khoản & Hóa Đơn Tài Chính VAT</h4>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-landmark text-gold"></i> 1. Thông tin tài khoản ngân hàng chính thức</h5>
+            <div style="background: #FAF7F2; border: 1px solid #DFBE82; border-radius: 12px; padding: 18px; margin: 12px 0;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font-size: 13.5px;">
+                <div>
+                  <span style="color: #7A7269; display: block; font-size: 12px;">Ngân hàng thụ hưởng:</span>
+                  <b style="color: #171410; font-size: 14.5px;">MBBank (Ngân Hàng TMCP Quân Đội)</b>
+                </div>
+                <div>
+                  <span style="color: #7A7269; display: block; font-size: 12px;">Chi nhánh:</span>
+                  <b style="color: #171410;">Hồ Chí Minh</b>
+                </div>
+                <div>
+                  <span style="color: #7A7269; display: block; font-size: 12px;">Số tài khoản chính thức:</span>
+                  <div style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+                    <b style="color: #003B70; font-size: 17px; letter-spacing: 0.5px;">0966789639</b>
+                    <button type="button" class="btn-copy-chip" onclick="copyText('0966789639', this)">Sao chép STK</button>
+                  </div>
+                </div>
+                <div>
+                  <span style="color: #7A7269; display: block; font-size: 12px;">Chủ tài khoản:</span>
+                  <b style="color: #A36F2B; font-size: 15px;">HOA VIENG</b>
+                </div>
+              </div>
+              <div style="margin-top: 14px; padding-top: 12px; border-top: 1px dashed #DCCBB0; font-size: 12.5px; color: #5C5449;">
+                <b>Cú pháp chuyển khoản:</b> <code>HV[Mã_Đơn_Hàng]</code> hoặc <code>[Họ Tên Quý Khách] [Số Điện Thoại]</code>
+              </div>
+            </div>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-qrcode text-gold"></i> 2. Tiện ích quét mã VietQR tự động</h5>
+            <p>Hệ thống tự động sinh mã VietQR Napas 24/7 cho từng đơn hàng với số tiền và nội dung chuyển khoản được nạp sẵn. Quý khách chỉ cần mở App ngân hàng (Vietcombank, Techcombank, BIDV, Agribank, ACB, VPBank...) quét mã là hoàn tất trong 3 giây.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-file-invoice-dollar text-gold"></i> 3. Chính sách xuất hóa đơn điện tử VAT</h5>
+            <p>Hoa Viếng hỗ trợ xuất hóa đơn điện tử hợp lệ (VAT 8% - 10%) cho các doanh nghiệp, công ty, đoàn thể đặt hoa phúng viếng đối tác hoặc nhân viên:</p>
+            <ul style="padding-left: 20px; margin-top: 6px;">
+              <li>Quý khách vui lòng cung cấp Mã số thuế, Tên công ty, Địa chỉ trụ sở và Email nhận HĐĐT khi đặt hàng.</li>
+              <li>Hóa đơn đỏ điện tử được ký số và gửi thẳng vào hòm thư kế toán của quý công ty trong vòng 24 giờ.</li>
+            </ul>
+          </div>
+
+          <div class="policy-ref-card">
+            <span style="font-size: 12.5px; color: #695F52;"><i class="fa-solid fa-bookmark text-gold"></i> Hướng dẫn chuyển khoản và thanh toán điện hoa:</span>
+            <a href="https://blackstones.vn/" target="_blank" rel="noopener noreferrer">
+              Xem chi tiết tại blackstones.vn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- TAB 6: ĐỔI TRẢ & HOÀN TIỀN -->
+        <div class="policy-tab-pane" id="policyPane_refund">
+          <div class="policy-header-badge"><i class="fa-solid fa-rotate-left"></i> Cam kết bồi thường 100% khi có sai sót</div>
+          <h4 class="policy-article-title">Chính Sách Đổi Trả, Bảo Hành & Hoàn Tiền 100%</h4>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-hand-holding-dollar text-gold"></i> 1. Các trường hợp hoàn tiền 100%</h5>
+            <p>Chúng tôi thấu hiểu tang lễ diễn ra theo giờ khắc nghiêm ngặt và không thể dời lại. Hoa Viếng cam kết hoàn tiền 100% ngay lập tức trong các trường hợp sau:</p>
+            <ul style="padding-left: 20px; margin-top: 6px;">
+              <li>Giao hoa trễ giờ viếng tang lễ do lỗi chủ quan của cửa hàng hoặc đơn vị vận chuyển khiến khách hàng không thể phúng viếng kịp thời.</li>
+              <li>Hoa bị dập nát, gãy hỏng nghiêm trọng trong quá trình vận chuyển mà không kịp cắm thay thế trước giờ cử hành tang lễ.</li>
+              <li>Khách hàng hủy đơn hàng hợp lệ trước giờ cắm hoa ít nhất 2 tiếng (trước khi thợ cắm hoa xả nguyên liệu).</li>
+            </ul>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-arrows-rotate text-gold"></i> 2. Chính sách cắm lại & Đổi mới hỏa tốc trong 45 - 60 phút</h5>
+            <p>Trường hợp hoa giao đến có sự sai lệch lớn về tone màu chủ đạo so với ảnh đã duyệt tại xưởng, hoặc thiếu các loại hoa chính đã thỏa thuận, điều phối viên sẽ lập tức kích hoạt shop hoa vệ tinh gần nhất để cắm kệ mới thay thế hoặc cử nghệ nhân tới chỉnh sửa dặm hoa ngay tại sảnh tang lễ.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-pen-nib text-gold"></i> 3. Đổi dải lụa / Băng rôn viếng miễn phí trong 20 phút</h5>
+            <p>Nếu có bất kỳ sai sót nào về nội dung câu từ, chức danh, lỗi chính tả trên dải lụa viếng, nhân viên giao nhận sẽ in ngay dải lụa mới và mang tới thay thế trực tiếp trong vòng 20 - 30 phút hoàn toàn miễn phí.</p>
+          </div>
+
+          <div class="policy-section">
+            <h5><i class="fa-solid fa-phone-flip text-gold"></i> 4. Kênh tiếp nhận và tốc độ xử lý khiếu nại</h5>
+            <p>Đường dây nóng xử lý khiếu nại dịch vụ tang lễ: <b>0868 57 67 77</b>. Mọi phản hồi của quý khách sẽ được ban quản trị tiếp nhận và đưa ra phương án bồi thường thỏa đáng trong vòng 15 phút.</p>
+          </div>
+
+          <div class="policy-ref-card">
+            <span style="font-size: 12.5px; color: #695F52;"><i class="fa-solid fa-bookmark text-gold"></i> Quy định đổi trả hoàn tiền tiêu chuẩn ngành hoa tươi:</span>
+            <a href="https://blackstones.vn/" target="_blank" rel="noopener noreferrer">
+              Xem chi tiết tại blackstones.vn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-box" id="toast">
+    <i class="fa-solid fa-circle-check" style="color: #6FCF97; font-size: 20px;"></i>
+    <div id="toastMessage">Thông báo thành công</div>
+  </div>
+
+  <script>
+    let productsList = [];
+    let articlesList = [];
+    let reviewsList = [];
+
+    // Load All Data on Start
+    async function initApp() {
+      await loadProducts();
+      await loadReviews();
+      await loadArticles();
+    }
+
+    // 1. Load Products
+    // 1. Load Products (Top 16 sản phẩm, 4 dòng x 4 sản phẩm, ưu tiên đặt nhiều nhất)
+    function getCategoryName(cat) {
+      switch(cat) {
+        case 'ke-hoa': return 'Kệ hoa viếng';
+        case 'vong-hoa': return 'Vòng hoa';
+        case 'gio-hoa': return 'Giỏ hoa';
+        case 'lan-ho-diep': return 'Lan hồ điệp';
+        default: return 'Hoa viếng';
+      }
+    }
+
+    async function loadProducts() {
+      try {
+        const res = await fetch('/api/products');
+        const data = await res.json();
+        if (data.products) {
+          productsList = data.products;
+          // Sắp xếp ưu tiên: Sản phẩm được chọn "Đặt nhiều nhất" (isBestSeller) lên trước, sau đó xếp theo orderCount giảm dần
+          productsList.sort((a, b) => {
+            if (a.isBestSeller && !b.isBestSeller) return -1;
+            if (!a.isBestSeller && b.isBestSeller) return 1;
+            return (b.orderCount || 0) - (a.orderCount || 0);
+          });
+          renderProducts(productsList);
+        }
+      } catch (err) {
+        console.error('Failed to load products', err);
+      }
+    }
+
+    function renderProducts(list) {
+      const grid = document.getElementById('productsGrid');
+      // Giới hạn hiển thị đúng 16 sản phẩm (4 dòng x 4 sản phẩm)
+      const displayList = list.slice(0, 16);
+
+      grid.innerHTML = displayList.map(item => `
+        <div class="product-card">
+          <div class="product-thumb">
+            <span class="product-cat-tag">${getCategoryName(item.category)}</span>
+            ${item.isBestSeller ? '<span class="product-bestseller-badge"><i class="fa-solid fa-fire"></i> Đặt nhiều nhất</span>' : ''}
+            <img src="${item.image}" alt="${item.name}" onerror="this.src='/assets/concept_frontend.jpg'">
+          </div>
+          <div class="product-body">
+            <h4 class="product-name">${item.name}</h4>
+            <div class="product-meta-row">
+              <span class="product-order-count">
+                <i class="fa-solid fa-fire" style="color: #EA580C;"></i> Đã đặt <b>${item.orderCount || 50}+</b> lượt
+              </span>
+              <span class="product-rating-star">
+                <i class="fa-solid fa-star" style="color: #F2A900;"></i> 5.0
+              </span>
+            </div>
+            <div class="product-tagline">${item.tagline}</div>
+            <div class="product-footer">
+              <span class="product-price">
+                ${item.priceDisplay}
+                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+              </span>
+              <button class="btn-order-fast" onclick="openOrderModal('${item.id}')">
+                <i class="fa-solid fa-cart-plus"></i> Đặt hoa
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 2. Load Customer Reviews & Feedback
+    async function loadReviews() {
+      try {
+        const res = await fetch('/api/reviews');
+        const data = await res.json();
+        if (data.reviews) {
+          reviewsList = data.reviews;
+          renderReviews(reviewsList);
+        }
+      } catch (err) {
+        console.error('Failed to load reviews', err);
+      }
+    }
+
+    function renderReviewStars(rating) {
+      const r = Math.max(1, Math.min(5, parseInt(rating, 10) || 5));
+      let html = '';
+      for (let i = 1; i <= 5; i++) {
+        if (i <= r) {
+          html += '<i class="fa-solid fa-star" style="color: #F2A900;"></i>';
+        } else {
+          html += '<i class="fa-regular fa-star" style="color: #D6CBB8;"></i>';
+        }
+      }
+      return html;
+    }
+
+    function getStarDescription(rating) {
+      const map = {
+        5: 'Cực kỳ hài lòng',
+        4: 'Hài lòng',
+        3: 'Tương đối ổn',
+        2: 'Chưa hài lòng',
+        1: 'Rất không hài lòng'
+      };
+      return map[rating] || `${rating} Sao`;
+    }
+
+    function renderReviews(list) {
+      const grid = document.getElementById('reviewsGrid');
+      grid.innerHTML = list.map(r => `
+        <div class="review-card">
+          <div>
+            <div class="review-card-top">
+              <img src="${r.avatar}" alt="${r.customer}" class="reviewer-avatar" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80'">
+              <div class="reviewer-info">
+                <h5>${r.customer} ${r.verified ? '<span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Đã mua hàng</span>' : ''}</h5>
+                <div class="reviewer-role">${r.role || 'Khách hàng thân thiết'}</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <div class="review-stars" style="margin-bottom: 0;">
+                ${renderReviewStars(r.rating)}
+              </div>
+              <span style="font-size: 11.5px; font-weight: 700; color: #8A642E; background: #FAF4E8; border: 1px solid #EDE0C7; padding: 2px 10px; border-radius: 12px;">
+                ${getStarDescription(r.rating)}
+              </span>
+            </div>
+            <div class="review-comment">"${r.comment}"</div>
+          </div>
+          <div class="review-footer">
+            <span><i class="fa-regular fa-clock"></i> ${r.date}</span>
+            <button class="like-btn" onclick="likeReview(this, ${r.likes || 1})">
+              <i class="fa-regular fa-thumbs-up"></i> Hữu ích (<span>${r.likes || 1}</span>)
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function likeReview(btn, cur) {
+      const span = btn.querySelector('span');
+      span.innerText = parseInt(span.innerText, 10) + 1;
+      btn.style.color = '#C89B55';
+    }
+
+    function openReviewModal() {
+      document.getElementById('reviewModal').classList.add('active');
+    }
+    function closeReviewModal() {
+      document.getElementById('reviewModal').classList.remove('active');
+    }
+
+    async function submitReview(e) {
+      e.preventDefault();
+      const payload = {
+        customer: document.getElementById('reviewCustomer').value,
+        role: document.getElementById('reviewRole').value || 'Khách hàng',
+        rating: parseInt(document.getElementById('reviewRating').value, 10),
+        comment: document.getElementById('reviewComment').value
+      };
+
+      try {
+        const res = await fetch('/api/reviews', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        if (result.success) {
+          closeReviewModal();
+          document.getElementById('reviewCustomer').value = '';
+          document.getElementById('reviewRole').value = '';
+          document.getElementById('reviewComment').value = '';
+          document.getElementById('reviewRating').value = '5';
+          alert('Cảm ơn Quý khách đã gửi cảm nhận đánh giá!\n\nĐánh giá của Quý khách đã được gửi đến Ban Quản Trị Hoa Viếng. Sau khi Quản trị viên kiểm duyệt, cảm nhận sẽ được hiển thị công khai trên trang chủ website.');
+          if (typeof showToast === 'function') {
+            showToast('Đánh giá đã gửi và đang chờ Quản trị viên duyệt.');
+          }
+          await loadReviews();
+        } else {
+          alert('Có lỗi xảy ra: ' + (result.message || 'Không thể gửi đánh giá'));
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Không thể kết nối đến máy chủ. Vui lòng thử lại sau.');
+      }
+    }
+
+    // 3. Load 4 Latest SEO Articles (Auto-updates with Backend!)
+    // 3. Load SEO Articles & Pagination (4 bài / trang)
+    const ARTICLES_PER_PAGE = 4;
+    let currentArticlePage = 1;
+
+    async function loadArticles() {
+      try {
+        const res = await fetch('/api/articles');
+        const data = await res.json();
+        if (data.articles) {
+          articlesList = data.articles;
+          renderArticlesPage();
+        }
+      } catch (err) {
+        console.error('Failed to load articles', err);
+      }
+    }
+
+    function renderArticlesPage() {
+      const grid = document.getElementById('articlesGrid');
+      if (!grid) return;
+      const total = articlesList.length;
+      const totalPages = Math.ceil(total / ARTICLES_PER_PAGE) || 1;
+
+      if (currentArticlePage > totalPages) currentArticlePage = totalPages;
+      if (currentArticlePage < 1) currentArticlePage = 1;
+
+      const startIndex = (currentArticlePage - 1) * ARTICLES_PER_PAGE;
+      const endIndex = Math.min(startIndex + ARTICLES_PER_PAGE, total);
+      const pageItems = articlesList.slice(startIndex, endIndex);
+
+      grid.innerHTML = pageItems.map(art => `
+        <article class="article-card" onclick="openArticleReader('${art.id}')" style="cursor: pointer;">
+          <div class="article-thumb-wrap">
+            <img src="${art.image}" alt="${art.title}" class="article-thumb" onerror="this.src='/assets/concept_frontend.jpg'">
+            <span class="article-cat-badge">${art.category}</span>
+          </div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span><i class="fa-regular fa-calendar"></i> ${art.publishedAt}</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> ${art.readTime || '5 phút đọc'}</span>
+            </div>
+            <h4 class="article-title">${art.title}</h4>
+            <p class="article-excerpt">${art.excerpt}</p>
+            <div class="article-footer">
+              <div class="article-author">
+                <i class="fa-solid fa-feather-pointed" style="color: #C89B55;"></i>
+                <span>${art.author}</span>
+              </div>
+              <span class="btn-read-more">
+                Đọc tiếp <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      renderArticlesPagination(total, totalPages, startIndex, endIndex);
+    }
+
+    function renderArticlesPagination(total, totalPages, startIndex, endIndex) {
+      const infoEl = document.getElementById('articlesPaginationInfo');
+      const controlsEl = document.getElementById('articlesPaginationControls');
+      const wrapperEl = document.getElementById('articlesPaginationWrapper');
+
+      if (!wrapperEl || !infoEl || !controlsEl) return;
+
+      if (total === 0) {
+        wrapperEl.style.display = 'none';
+        return;
+      }
+      wrapperEl.style.display = 'flex';
+
+      infoEl.innerHTML = `Hiển thị <b>${startIndex + 1} - ${endIndex}</b> trên <b>${total}</b> bài viết (Trang <b>${currentArticlePage}</b>/<b>${totalPages}</b>)`;
+
+      if (totalPages <= 1) {
+        controlsEl.innerHTML = '';
+        return;
+      }
+
+      let html = `
+        <button class="articles-page-btn" onclick="changeArticlePage(${currentArticlePage - 1})" ${currentArticlePage === 1 ? 'disabled' : ''} title="Trang trước">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      `;
+
+      for (let i = 1; i <= totalPages; i++) {
+        html += `
+          <button class="articles-page-btn ${i === currentArticlePage ? 'active' : ''}" onclick="changeArticlePage(${i})">
+            ${i}
+          </button>
+        `;
+      }
+
+      html += `
+        <button class="articles-page-btn" onclick="changeArticlePage(${currentArticlePage + 1})" ${currentArticlePage === totalPages ? 'disabled' : ''} title="Trang sau">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      `;
+
+      controlsEl.innerHTML = html;
+    }
+
+    function changeArticlePage(page) {
+      const totalPages = Math.ceil(articlesList.length / ARTICLES_PER_PAGE) || 1;
+      if (page < 1 || page > totalPages) return;
+      currentArticlePage = page;
+      renderArticlesPage();
+      const sec = document.getElementById('seoArticlesSection');
+      if (sec) {
+        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function openArticleReader(id) {
+      const art = articlesList.find(a => a.id === id);
+      if (!art) return;
+
+      document.getElementById('readerTitle').innerText = art.title;
+      document.getElementById('readerMeta').innerHTML = `
+        <span style="color:#C89B55; font-weight:700;">${art.category}</span> &bull; 
+        Ngày đăng: ${art.publishedAt} &bull; Tác giả: ${art.author} &bull; ${art.views || 100} lượt xem
+      `;
+      document.getElementById('readerImage').src = art.image;
+      document.getElementById('readerContent').innerHTML = `
+        <p style="font-weight:600; color:#5D554B; margin-bottom:14px; font-size:15px; border-left:3px solid #C89B55; padding-left:12px;">
+          ${art.excerpt}
+        </p>
+        <p style="margin-bottom:12px;">${art.content}</p>
+        <div style="background:#FAF8F4; padding:15px; border-radius:8px; border:1px solid #ECE4D8; margin-top:20px;">
+          <h5 style="color:#A36F2B; margin-bottom:6px; font-size:14px;"><i class="fa-solid fa-circle-info"></i> Lời khuyên từ Hoa Viếng:</h5>
+          <p style="font-size:13px; color:#6B6256;">
+            Khi gửi điện hoa chia buồn, quý khách nên chọn hoa trước giờ khâm liệm hoặc báo trước cho chúng tôi thời gian tổ chức để lễ vật được trang trọng đưa vào đúng thời điểm.
+          </p>
+        </div>
+      `;
+      document.getElementById('articleReaderModal').classList.add('active');
+    }
+
+    function closeArticleModal() {
+      document.getElementById('articleReaderModal').classList.remove('active');
+    }
+
+    // Filters & Search
+    async function filterCategory(cat, el, pillEl) {
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+
+      if (el) {
+        el.classList.add('active');
+      } else {
+        const homeLink = document.querySelector('.nav-links a[href="/"]');
+        if (cat === 'all' && homeLink) homeLink.classList.add('active');
+      }
+
+      if (pillEl) {
+        pillEl.classList.add('active');
+      } else {
+        const targetPill = document.getElementById('pill-' + cat);
+        if (targetPill) targetPill.classList.add('active');
+      }
+
+      if (cat === 'all') {
+        renderProducts(productsList);
+      } else if (cat === 'bestseller') {
+        // Lọc các sản phẩm được gắn mác Đặt nhiều nhất
+        const bestSellers = productsList.filter(p => p.isBestSeller).sort((a, b) => (b.orderCount || 0) - (a.orderCount || 0));
+        renderProducts(bestSellers.length ? bestSellers : productsList);
+      } else {
+        const filtered = productsList.filter(p => p.category === cat);
+        renderProducts(filtered.length ? filtered : productsList);
+      }
+      scrollToSection('productsSection');
+    }
+
+    // Trigger Random Flower Product (Referenced from hoatuoihoangnga.com)
+    async function triggerRandomProduct() {
+      try {
+        const res = await fetch('/api/products/random', { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+          showToast(`🎲 Đã tạo mẫu mới: ${data.product.name}`);
+          await loadProducts();
+          scrollToSection('productsSection');
+        }
+      } catch (err) {
+        console.error('Create random product error:', err);
+      }
+    }
+
+    function handleSearch(e) {
+      if (e.key === 'Enter') executeSearch();
+    }
+    function executeSearch() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      if (!q) {
+        renderProducts(productsList);
+        return;
+      }
+      const filtered = productsList.filter(p => 
+        p.name.toLowerCase().includes(q) || p.tagline.toLowerCase().includes(q)
+      );
+      renderProducts(filtered);
+      scrollToSection('productsSection');
+    }
+
+    // Fast Order Modal
+    let currentPendingOrderId = null;
+
+    function openOrderModal(productId) {
+      const product = productsList.find(p => p.id === productId) || productsList[0];
+      if (!product) return;
+
+      document.getElementById('formProductId').value = product.id;
+      document.getElementById('formProductName').value = product.name;
+      document.getElementById('formProductPrice').value = product.price;
+
+      document.getElementById('modalProductSummary').innerHTML = `
+        <img src="${product.image}" onerror="this.src='/assets/concept_frontend.jpg'">
+        <div class="modal-summary-info">
+          <h4>${product.name}</h4>
+          <p style="font-size: 12px; color: #867E73;">${product.tagline}</p>
+          <div class="price">${product.priceDisplay}</div>
+        </div>
+      `;
+
+      updateVietQRPreview(product.price);
+      document.getElementById('orderModal').classList.add('active');
+    }
+
+    function updateVietQRPreview(price) {
+      const p = parseInt(price, 10) || 1200000;
+      const memo = 'HV DAT HOA';
+      const qrUrl = `https://img.vietqr.io/image/MB-0966789639-compact2.png?amount=${p}&addInfo=${encodeURIComponent(memo)}&accountName=${encodeURIComponent('HOA VIENG')}`;
+      
+      const imgEl = document.getElementById('vietqrImage');
+      if (imgEl) imgEl.src = qrUrl;
+
+      const priceEl = document.getElementById('valPrice');
+      if (priceEl) priceEl.innerText = p.toLocaleString('vi-VN') + 'đ';
+
+      const memoEl = document.getElementById('valMemo');
+      if (memoEl) memoEl.innerText = memo;
+    }
+
+    function togglePaymentView(method) {
+      const card = document.getElementById('vietqrCard');
+      if (!card) return;
+      if (method.includes('VietQR') || method.includes('Chuyển khoản')) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    function copyText(str, btn) {
+      navigator.clipboard.writeText(str).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Đã chép!';
+        btn.style.background = '#27AE60';
+        btn.style.color = '#fff';
+        setTimeout(() => {
+          btn.innerText = orig;
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 1500);
+      });
+    }
+
+    function copyAmount(btn) {
+      const price = document.getElementById('formProductPrice').value || '1200000';
+      copyText(price, btn);
+    }
+
+    function copyMemo(btn) {
+      const memo = document.getElementById('valMemo').innerText || 'HV DAT HOA';
+      copyText(memo, btn);
+    }
+
+    function copyInvMemo(btn) {
+      const memo = document.getElementById('invMemo').innerText;
+      copyText(memo, btn);
+    }
+
+    function closeInvoiceModal() {
+      document.getElementById('qrInvoiceModal').classList.remove('active');
+    }
+
+    async function confirmPaidSuccess() {
+      if (!currentPendingOrderId) {
+        closeInvoiceModal();
+        return;
+      }
+      try {
+        const res = await fetch(`/api/orders/${currentPendingOrderId}/payment`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const data = await res.json();
+        closeInvoiceModal();
+        showToast(`Đã ghi nhận thanh toán MBBank thành công cho đơn #${currentPendingOrderId}!`);
+        setTimeout(() => {
+          if (confirm(`Đơn hàng #${currentPendingOrderId} đã được xác nhận thanh toán qua MBBank 0966789639!\n\nBạn có muốn chuyển sang Admin Panel để xem đơn hàng đã cập nhật trạng thái không?`)) {
+            window.location.href = '/admin';
+          }
+        }, 600);
+      } catch (err) {
+        closeInvoiceModal();
+        showToast('Đã gửi thông báo thanh toán tới cửa hàng!');
+      }
+    }
+
+    function closeOrderModal() {
+      document.getElementById('orderModal').classList.remove('active');
+    }
+
+    function showPromoModal() {
+      document.getElementById('promoModal').classList.add('active');
+    }
+    function closePromoModal() {
+      document.getElementById('promoModal').classList.remove('active');
+    }
+
+    // Policy & Terms Modal Handlers
+    function openPolicyModal(tabKey = 'privacy') {
+      const modal = document.getElementById('policyModal');
+      if (modal) {
+        modal.classList.add('active');
+        switchPolicyTab(tabKey);
+      }
+    }
+
+    function closePolicyModal() {
+      const modal = document.getElementById('policyModal');
+      if (modal) {
+        modal.classList.remove('active');
+      }
+    }
+
+    function switchPolicyTab(tabKey) {
+      document.querySelectorAll('.policy-tab-nav').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tabKey);
+      });
+      document.querySelectorAll('.policy-tab-pane').forEach(pane => {
+        pane.classList.toggle('active', pane.id === `policyPane_${tabKey}`);
+      });
+    }
+
+    // Keyboard support (Escape to close modal)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePolicyModal();
+        closeOrderModal();
+        closePromoModal();
+        if (typeof closeInvoiceModal === 'function') closeInvoiceModal();
+      }
+    });
+
+    function setRibbonPreset(text) {
+      const input = document.getElementById('formRibbon');
+      input.value = `Công ty / Gia đình - ${text}`;
+      input.focus();
+    }
+
+    // Submit Order to Backend API
+    async function submitOrder(e) {
+      e.preventDefault();
+      const payload = {
+        productId: document.getElementById('formProductId').value,
+        product: document.getElementById('formProductName').value,
+        price: parseInt(document.getElementById('formProductPrice').value, 10),
+        customer: document.getElementById('formCustomer').value,
+        phone: document.getElementById('formPhone').value,
+        ribbon: document.getElementById('formRibbon').value,
+        address: document.getElementById('formAddress').value,
+        paymentMethod: document.getElementById('formPaymentMethod').value,
+        notes: document.getElementById('formNotes').value
+      };
+
+      try {
+        const res = await fetch('/api/orders', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        if (result.success) {
+          closeOrderModal();
+          updateCartBadge(1);
+
+          currentPendingOrderId = result.order.id;
+
+          // Open VietQR Invoice Modal
+          document.getElementById('invOrderId').innerText = '#' + result.order.id;
+          document.getElementById('invAmount').innerText = result.order.price.toLocaleString('vi-VN') + 'đ';
+          const invMemo = 'HV' + result.order.id.replace(/[^a-zA-Z0-9]/g, '');
+          document.getElementById('invMemo').innerText = invMemo;
+
+          const invQrUrl = `https://img.vietqr.io/image/MB-0966789639-compact2.png?amount=${result.order.price}&addInfo=${encodeURIComponent(invMemo)}&accountName=${encodeURIComponent('HOA VIENG')}`;
+          document.getElementById('invQrImage').src = invQrUrl;
+
+          document.getElementById('qrInvoiceModal').classList.add('active');
+          showToast(`Đã tạo đơn #${result.order.id}! Vui lòng quét mã VietQR MBBank.`);
+        } else {
+          alert('Không thể tạo đơn: ' + result.message);
+        }
+      } catch (err) {
+        console.error('Submit order error:', err);
+        showToast('Đã gửi thông tin đơn hàng thành công!');
+        closeOrderModal();
+      }
+    }
+
+    // Quick Test Sample Order
+    async function triggerSampleOrder() {
+      const randomNames = ['Công ty Cổ phần Xây dựng Delta', 'Ngân hàng Vietcombank - CN Tân Bình', 'Anh Hoàng Tuấn Vũ', 'Gia đình Bác Nguyễn Văn An'];
+      const randomProducts = productsList.length ? productsList : [
+        { id: 'prod-1', name: 'Vòng hoa kính viếng', price: 1200000 },
+        { id: 'prod-2', name: 'Kệ hoa chia buồn', price: 1500000 },
+        { id: 'prod-3', name: 'Giỏ hoa chia buồn', price: 800000 },
+        { id: 'prod-4', name: 'Lan hồ điệp', price: 2000000 }
+      ];
+      const p = randomProducts[Math.floor(Math.random() * randomProducts.length)];
+      const c = randomNames[Math.floor(Math.random() * randomNames.length)];
+
+      const samplePayload = {
+        productId: p.id,
+        product: p.name,
+        price: p.price,
+        customer: c,
+        phone: '098' + Math.floor(1000000 + Math.random() * 9000000),
+        ribbon: `${c} - Thành Kính Phân Ưu`,
+        address: 'Nhà tang lễ TP.HCM, Số 25 Lê Quý Đôn, Q.3, TP.HCM',
+        paymentMethod: 'Đã thanh toán (Chuyển khoản QR)',
+        notes: 'Chụp ảnh xác nhận gửi Zalo sau khi giao'
+      };
+
+      try {
+        const res = await fetch('/api/orders', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(samplePayload)
+        });
+        const result = await res.json();
+        showToast(`⚡ Đã tạo đơn mẫu ${result.order.id}! Xem ngay tại Admin.`);
+        updateCartBadge(1);
+      } catch (err) {
+        showToast('Đã tạo đơn mẫu thành công!');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMessage').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    function updateCartBadge(num) {
+      const b1 = document.getElementById('cartCount');
+      const b2 = document.getElementById('cartCount2');
+      const current = parseInt(b1.innerText, 10) || 0;
+      b1.innerText = current + num;
+      b2.innerText = current + num;
+    }
+
+    function openCart() {
+      alert('Giỏ hàng của bạn đang được kết nối trực tiếp với cổng thanh toán và quản trị Hoa Viếng.');
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Auto-refresh articles periodically so any new article published in Backend shows immediately on Frontend!
+    setInterval(() => {
+      loadArticles();
+    }, 5000);
+
+    // Init
+    window.addEventListener('DOMContentLoaded', () => {
+      initApp();
+    });
+  </script>
+</body>
+</html>

@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>HOA VIẾNG - Gửi trọn lời tưởng nhớ | Dịch vụ hoa tang lễ chuyên nghiệp</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,6 +13,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <style>
+    /* Triệt tiêu hoàn toàn thanh floating switcher */
+    .mode-switcher, .mode-btn {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      position: absolute !important;
+      left: -99999px !important;
+      top: -99999px !important;
+      height: 0 !important;
+      width: 0 !important;
+    }
+
     :root {
       --primary-dark: #161311;
       --primary-gold: #C89B55;
@@ -2941,6 +2957,14 @@
   </div>
 
   <script>
+    // Xóa triệt để thanh floating switcher nếu còn tồn tại
+    try {
+      document.querySelectorAll('.mode-switcher, .mode-btn').forEach(el => el.remove());
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.mode-switcher, .mode-btn').forEach(el => el.remove());
+      });
+    } catch(e) {}
+
     let productsList = [];
     let articlesList = [];
     let reviewsList = [];

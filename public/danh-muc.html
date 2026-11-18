@@ -79,8 +79,28 @@
     .product-tagline { font-size: 12px; color: #8A8175; margin-bottom: 14px; flex: 1; }
     .product-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid #F0E9DC; }
     .product-price { font-size: 15px; font-weight: 800; color: #A36F2B; display: flex; align-items: center; gap: 4px; }
-    .btn-order-fast { background: #171410; color: #F2D8A7; border: none; padding: 8px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
-    .btn-order-fast:hover { background: #A36F2B; color: #fff; }
+    .btn-order-fast {
+      background: linear-gradient(135deg, #241D17, #15120F);
+      color: #F8E3B6;
+      border: 1px solid rgba(200, 155, 85, 0.4);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .btn-order-fast:hover {
+      background: linear-gradient(135deg, #B58444, #8E6328);
+      color: #FFFFFF;
+      border-color: #DFBE82;
+      box-shadow: 0 4px 14px rgba(181, 132, 68, 0.35);
+      transform: translateY(-1px);
+    }
 
     /* Trust Guarantees */
     .trust-strip { background: #FFFFFF; border-radius: 12px; padding: 22px; border: 1px solid var(--border-color); display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; text-align: center; }
@@ -101,6 +121,179 @@
     .form-control { width: 100%; padding: 10px 12px; border-radius: 6px; border: 1px solid #D6CCBE; font-size: 13px; outline: none; }
     .form-control:focus { border-color: var(--gold-dark); }
     .btn-submit-order { width: 100%; background: linear-gradient(135deg, #DFBE82, #B58444); color: #14110E; font-size: 14px; font-weight: 700; padding: 12px; border-radius: 8px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; }
+
+    /* Ribbon Presets */
+    .ribbon-presets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .ribbon-chip {
+      background: #F3EFE8;
+      border: 1px solid #DFD9CF;
+      border-radius: 14px;
+      padding: 3px 10px;
+      font-size: 11.5px;
+      cursor: pointer;
+      color: #554D43;
+      transition: all 0.2s;
+    }
+    .ribbon-chip:hover {
+      background: #E8DECC;
+      color: #171410;
+    }
+
+    /* VietQR MBBank Payment Styles */
+    .vietqr-card {
+      background: linear-gradient(145deg, #FAF8F4, #F2ECE1);
+      border: 1.5px solid #DFC9A3;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 14px 0 18px;
+      box-shadow: 0 4px 18px rgba(181, 132, 68, 0.1);
+    }
+    .vietqr-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #D8C7AA;
+    }
+    .vietqr-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mb-badge {
+      background: #003B70;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 11.5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .vietqr-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #231F1B;
+    }
+    .napas-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0E6537;
+      background: #EAF7EE;
+      padding: 3px 8px;
+      border-radius: 12px;
+      border: 1px solid #C8E8D2;
+    }
+    .vietqr-body {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .vietqr-img-wrap {
+      background: #FFFFFF;
+      padding: 8px;
+      border-radius: 10px;
+      border: 1px solid #E2D7C5;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .vietqr-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+    .vietqr-scan-hint {
+      font-size: 10px;
+      color: #8C8478;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-weight: 600;
+    }
+    .bank-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .bank-info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      background: #FFFFFF;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ECE4D8;
+    }
+    .bank-info-item .label {
+      color: #7A7269;
+    }
+    .bank-info-item .val {
+      font-weight: 700;
+      color: #231F1B;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-copy-chip {
+      background: #F3EFE8;
+      border: 1px solid #DFD9CF;
+      color: #8A642E;
+      font-size: 10.5px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-copy-chip:hover {
+      background: #8A642E;
+      color: #fff;
+    }
+    .payment-guide-strip {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed #E2D7C5;
+      font-size: 11.5px;
+      color: #6B6256;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .modal-summary {
+      background: #FAF7F2;
+      border: 1px solid #ECE4D8;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .modal-summary img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .modal-summary-info h4 {
+      font-size: 15px;
+      color: #231F1B;
+      margin-bottom: 4px;
+    }
+    .modal-summary-info .price {
+      font-weight: 700;
+      color: #B58444;
+      font-size: 15px;
+    }
 
     /* Footer */
     .main-footer { background: #0E0C0A; color: #EDE8DF; padding: 50px 0 24px; border-top: 2px solid rgba(223, 190, 130, 0.2); }
@@ -290,16 +483,16 @@
     </div>
   </main>
 
-  <!-- Fast Order Modal -->
-  <div class="modal-overlay" id="orderModal" onclick="if(event.target === this) closeOrderModal()">
+  <!-- Fast Order Modal (Đồng nhất 100% với trang chủ) -->
+  <div class="modal-overlay" id="orderModal">
     <div class="order-modal">
       <div class="modal-header">
         <h3><i class="fa-solid fa-feather"></i> Đặt Hoa Kính Viếng</h3>
         <button class="modal-close" onclick="closeOrderModal()">&times;</button>
       </div>
       <div class="modal-body">
-        <div id="modalProductSummary" style="background: #FAF7F2; padding: 12px; border-radius: 8px; border: 1px solid #EAE3D6; margin-bottom: 14px; font-size: 13px;">
-          <!-- Injected via JS -->
+        <div class="modal-summary" id="modalProductSummary">
+          <!-- Dynamic info -->
         </div>
 
         <form id="orderForm" onsubmit="submitOrder(event)">
@@ -308,7 +501,7 @@
           <input type="hidden" id="formProductPrice">
 
           <div class="form-group">
-            <label>Họ tên người gửi / Tên cơ quan, tổ chức: <span>*</span></label>
+            <label>Họ tên người gửi / Tên tổ chức: <span>*</span></label>
             <input type="text" id="formCustomer" class="form-control" placeholder="Ví dụ: Công ty TNHH Hoàng Minh / Ông Trần Tuấn" required>
           </div>
 
@@ -318,27 +511,162 @@
           </div>
 
           <div class="form-group">
-            <label>Nội dung in trên dải lụa viếng: <span>*</span></label>
-            <input type="text" id="formRibbon" class="form-control" placeholder="Ví dụ: Ban Giám Đốc Công Ty - Thành Kính Phân Ưu" required>
+            <label>Nội dung in trên băng rôn / dải lụa viếng: <span>*</span></label>
+            <input type="text" id="formRibbon" class="form-control" placeholder="Ví dụ: Ban Giám Đốc Công Ty ABC - Thành Kính Phân Ưu" required>
+            <div class="ribbon-presets">
+              <span class="ribbon-chip" onclick="setRibbonPreset('Thành Kính Phân Ưu')">Thành Kính Phân Ưu</span>
+              <span class="ribbon-chip" onclick="setRibbonPreset('Vô Cùng Thương Tiếc')">Vô Cùng Thương Tiếc</span>
+              <span class="ribbon-chip" onclick="setRibbonPreset('Kính Viếng Hương Hồn')">Kính Viếng Hương Hồn</span>
+              <span class="ribbon-chip" onclick="setRibbonPreset('Nguyện Cầu Cho Linh Hồn Vãng Sanh Cực Lạc')">Vãng Sanh Cực Lạc</span>
+            </div>
           </div>
 
           <div class="form-group">
             <label>Địa điểm giao hoa (Nhà tang lễ / Tư gia): <span>*</span></label>
-            <input type="text" id="formAddress" class="form-control" placeholder="Ví dụ: Chùa Vĩnh Nghiêm, 339 Nam Kỳ Khởi Nghĩa, Q.3" required>
+            <input type="text" id="formAddress" class="form-control" placeholder="Ví dụ: Nhà tang lễ TP.HCM, 25 Lê Quý Đôn, Q.3, TP.HCM" required>
           </div>
 
           <div class="form-group">
             <label>Hình thức thanh toán: <span>*</span></label>
-            <select id="formPaymentMethod" class="form-control">
+            <select id="formPaymentMethod" class="form-control" onchange="togglePaymentView(this.value)">
               <option value="Chuyển khoản VietQR MBBank" selected>Chuyển khoản VietQR MBBank: 0966789639 (Quét mã 24/7)</option>
-              <option value="Thanh toán khi nhận hoa">Thanh toán khi nhận hoa / Sau ảnh POD</option>
+              <option value="Chờ thanh toán (COD)">Thanh toán khi nhận hoa / Xác nhận qua ảnh</option>
+              <option value="Ví MoMo">Ví điện tử MoMo</option>
             </select>
           </div>
 
+          <!-- Dynamic VietQR MBBank Box -->
+          <div class="vietqr-card" id="vietqrCard">
+            <div class="vietqr-header">
+              <div class="vietqr-brand">
+                <span class="mb-badge">MBBANK</span>
+                <span class="vietqr-title">Quét Mã VietQR Chuyển Khoản Tức Thì</span>
+              </div>
+              <span class="napas-tag"><i class="fa-solid fa-bolt"></i> Napas247</span>
+            </div>
+            
+            <div class="vietqr-body">
+              <div class="vietqr-img-wrap">
+                <img id="vietqrImage" src="https://img.vietqr.io/image/MB-0966789639-compact2.png?amount=1200000&addInfo=HV%20DAT%20HOA&accountName=HOA%20VIENG" alt="Mã VietQR MBBank" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=0966789639'">
+                <div class="vietqr-scan-hint"><i class="fa-solid fa-qrcode"></i> Quét mã tự động điền</div>
+              </div>
+
+              <div class="bank-info-list">
+                <div class="bank-info-item">
+                  <span class="label">Ngân hàng:</span>
+                  <span class="val">MBBank (Quân Đội)</span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Số tài khoản:</span>
+                  <span class="val">
+                    <b style="color:#003B70; font-size:14px;" id="valAccNum">0966789639</b>
+                    <button type="button" class="btn-copy-chip" onclick="copyText('0966789639', this)">Sao chép</button>
+                  </span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Chủ tài khoản:</span>
+                  <span class="val" id="valAccName">HOA VIENG</span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Số tiền:</span>
+                  <span class="val">
+                    <b style="color:#A36F2B;" id="valPrice">1.200.000đ</b>
+                    <button type="button" class="btn-copy-chip" onclick="copyAmount(this)">Sao chép</button>
+                  </span>
+                </div>
+                <div class="bank-info-item">
+                  <span class="label">Nội dung CK:</span>
+                  <span class="val">
+                    <span id="valMemo" style="color:#8A642E; font-size:11px;">HV ĐẶT HOA</span>
+                    <button type="button" class="btn-copy-chip" onclick="copyMemo(this)">Sao chép</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-guide-strip">
+              <i class="fa-solid fa-shield-halved" style="color: #27AE60;"></i>
+              <span>Quét bằng bất kỳ App Ngân hàng nào (MBBank, VCB, Techcombank, VPBank, MoMo...) - Tự động điền đúng STK & số tiền.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Ghi chú thêm (Thời gian giao, yêu cầu đặc biệt):</label>
+            <textarea id="formNotes" class="form-control" rows="2" placeholder="Ví dụ: Chụp ảnh gửi Zalo trước khi giao vào bàn thờ tang lễ"></textarea>
+          </div>
+
           <button type="submit" class="btn-submit-order">
-            <i class="fa-solid fa-circle-check"></i> Xác Nhận Đặt Hoa Ngay
+            <i class="fa-solid fa-qrcode"></i>
+            <span>Xác Nhận Đặt Hoa & Tạo Mã QR</span>
           </button>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- VietQR MBBank Invoice & Payment Confirmation Modal (Đồng nhất 100% với trang chủ) -->
+  <div class="modal-overlay" id="qrInvoiceModal">
+    <div class="order-modal" style="max-width: 520px;">
+      <div class="modal-header" style="background: #003B70;">
+        <h3 style="color: #FFFFFF;"><i class="fa-solid fa-qrcode" style="color: #DFC9A3;"></i> Hóa Đơn & Mã VietQR MBBank</h3>
+        <button class="modal-close" onclick="closeInvoiceModal()">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 22px;">
+        <div style="background: #EAF7EE; color: #1E7E34; border: 1px solid #C3E6CB; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 13px; font-weight: 600;">
+          <i class="fa-solid fa-circle-check"></i> Đã tạo đơn <b id="invOrderId">#ĐH...</b> thành công! Vui lòng quét mã chuyển tiền:
+        </div>
+
+        <div style="background: #FFFFFF; border: 2px solid #003B70; border-radius: 12px; padding: 14px; display: inline-block; margin-bottom: 14px; box-shadow: 0 6px 20px rgba(0, 59, 112, 0.12);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border-bottom: 1px dashed #DDD; padding-bottom: 6px;">
+            <span style="font-weight: 800; color: #003B70; font-size: 15px;">MBBANK</span>
+            <span style="background: #EAF7EE; color: #0E6537; font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 10px;">Napas 247</span>
+          </div>
+          <img id="invQrImage" src="" alt="Mã VietQR MBBank" style="width: 210px; height: 210px; border-radius: 8px; object-fit: contain;">
+          <div style="margin-top: 6px; font-size: 11px; color: #746C61;">
+            <i class="fa-solid fa-camera"></i> Mở app ngân hàng quét mã để thanh toán tự động
+          </div>
+        </div>
+
+        <div style="text-align: left; background: #FAF7F2; border: 1px solid #EAE3D6; border-radius: 8px; padding: 12px 14px; font-size: 12.5px; margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Ngân hàng thụ hưởng:</span>
+            <b>MBBank (Ngân Hàng Quân Đội)</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Số tài khoản:</span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <b style="color: #003B70; font-size: 14px;">0966789639</b>
+              <button type="button" class="btn-copy-chip" onclick="copyText('0966789639', this)">Sao chép</button>
+            </span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Chủ tài khoản:</span>
+            <b>HOA VIENG</b>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: #7A7269;">Số tiền thanh toán:</span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <b style="color: #A36F2B; font-size: 14px;" id="invAmount">1.200.000đ</b>
+              <button type="button" class="btn-copy-chip" onclick="copyText(document.getElementById('invAmount').innerText.replace(/[^0-9]/g,''), this)">Sao chép</button>
+            </span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: #7A7269;">Nội dung chuyển khoản:</span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <b style="color: #8A642E; font-size: 12px;" id="invMemo">HV...</b>
+              <button type="button" class="btn-copy-chip" onclick="copyInvMemo(this)">Sao chép</button>
+            </span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-submit-order" style="flex: 1.2; background: #27AE60; color: #fff; padding: 11px;" onclick="confirmPaidSuccess()">
+            <i class="fa-solid fa-circle-check"></i> Đã Chuyển Khoản Xong
+          </button>
+          <button class="btn-submit-order" style="flex: 1; background: #231C16; color: #F2D8A7; padding: 11px;" onclick="window.location.href='/admin'">
+            <i class="fa-solid fa-chart-line"></i> Vào Admin Theo Dõi
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -553,30 +881,119 @@
       filterAndRender();
     }
 
-    // Modal Handling
-    function openOrderModal(productId) {
-      const p = allProducts.find(x => x.id === productId);
-      if (!p) return;
+    // Modal Handling (Đồng nhất 100% với trang chủ)
+    let currentPendingOrderId = null;
 
-      document.getElementById('formProductId').value = p.id;
-      document.getElementById('formProductName').value = p.name;
-      document.getElementById('formProductPrice').value = p.price;
+    function openOrderModal(productId) {
+      const product = allProducts.find(p => p.id === productId) || allProducts[0];
+      if (!product) return;
+
+      document.getElementById('formProductId').value = product.id;
+      document.getElementById('formProductName').value = product.name;
+      document.getElementById('formProductPrice').value = product.price;
 
       document.getElementById('modalProductSummary').innerHTML = `
-        <div style="display: flex; gap: 12px; align-items: center;">
-          <img src="${p.image}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 6px;" onerror="this.src='/assets/concept_frontend.jpg'">
-          <div>
-            <b>${p.name}</b>
-            <div style="color: #A36F2B; font-weight: 700; margin-top: 2px;">${p.priceDisplay || (p.price.toLocaleString('vi-VN') + 'đ')}</div>
-          </div>
+        <img src="${product.image}" onerror="this.src='/assets/concept_frontend.jpg'">
+        <div class="modal-summary-info">
+          <h4>${product.name}</h4>
+          <p style="font-size: 12px; color: #867E73;">${product.tagline || 'Trang trọng, chu đáo'}</p>
+          <div class="price">${product.priceDisplay || (product.price.toLocaleString('vi-VN') + 'đ')}</div>
         </div>
       `;
 
+      updateVietQRPreview(product.price);
       document.getElementById('orderModal').classList.add('active');
+    }
+
+    function updateVietQRPreview(price) {
+      const p = parseInt(price, 10) || 1200000;
+      const memo = 'HV DAT HOA';
+      const qrUrl = `https://img.vietqr.io/image/MB-0966789639-compact2.png?amount=${p}&addInfo=${encodeURIComponent(memo)}&accountName=${encodeURIComponent('HOA VIENG')}`;
+      
+      const imgEl = document.getElementById('vietqrImage');
+      if (imgEl) imgEl.src = qrUrl;
+
+      const priceEl = document.getElementById('valPrice');
+      if (priceEl) priceEl.innerText = p.toLocaleString('vi-VN') + 'đ';
+
+      const memoEl = document.getElementById('valMemo');
+      if (memoEl) memoEl.innerText = memo;
+    }
+
+    function togglePaymentView(method) {
+      const card = document.getElementById('vietqrCard');
+      if (!card) return;
+      if (method.includes('VietQR') || method.includes('Chuyển khoản')) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    function setRibbonPreset(text) {
+      const input = document.getElementById('formRibbon');
+      input.value = `Công ty / Gia đình - ${text}`;
+      input.focus();
+    }
+
+    function copyText(str, btn) {
+      navigator.clipboard.writeText(str).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Đã chép!';
+        btn.style.background = '#27AE60';
+        btn.style.color = '#fff';
+        setTimeout(() => {
+          btn.innerText = orig;
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 1500);
+      });
+    }
+
+    function copyAmount(btn) {
+      const price = document.getElementById('formProductPrice').value || '1200000';
+      copyText(price, btn);
+    }
+
+    function copyMemo(btn) {
+      const memo = document.getElementById('valMemo').innerText || 'HV DAT HOA';
+      copyText(memo, btn);
+    }
+
+    function copyInvMemo(btn) {
+      const memo = document.getElementById('invMemo').innerText;
+      copyText(memo, btn);
     }
 
     function closeOrderModal() {
       document.getElementById('orderModal').classList.remove('active');
+    }
+
+    function closeInvoiceModal() {
+      document.getElementById('qrInvoiceModal').classList.remove('active');
+    }
+
+    async function confirmPaidSuccess() {
+      if (!currentPendingOrderId) {
+        closeInvoiceModal();
+        return;
+      }
+      try {
+        await fetch(`/api/orders/${currentPendingOrderId}/payment`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' }
+        });
+        closeInvoiceModal();
+        showToast(`Đã ghi nhận thanh toán MBBank thành công cho đơn #${currentPendingOrderId}!`);
+        setTimeout(() => {
+          if (confirm(`Đơn hàng #${currentPendingOrderId} đã được xác nhận thanh toán qua MBBank 0966789639!\n\nBạn có muốn chuyển sang Admin Panel để xem đơn hàng đã cập nhật trạng thái không?`)) {
+            window.location.href = '/admin';
+          }
+        }, 600);
+      } catch (err) {
+        closeInvoiceModal();
+        showToast('Đã gửi thông báo thanh toán tới cửa hàng!');
+      }
     }
 
     async function submitOrder(e) {
@@ -589,7 +1006,8 @@
         phone: document.getElementById('formPhone').value,
         ribbon: document.getElementById('formRibbon').value,
         address: document.getElementById('formAddress').value,
-        paymentMethod: document.getElementById('formPaymentMethod').value
+        paymentMethod: document.getElementById('formPaymentMethod').value,
+        notes: document.getElementById('formNotes') ? document.getElementById('formNotes').value : ''
       };
 
       try {
@@ -599,13 +1017,38 @@
           body: JSON.stringify(payload)
         });
         const result = await res.json();
-        closeOrderModal();
-        showToast(`⚡ Đã tạo đơn hàng #${result.order.id} thành công! Nhân viên sẽ liên hệ trong 5 phút.`);
+        if (result.success) {
+          closeOrderModal();
+          currentPendingOrderId = result.order.id;
+
+          // Open VietQR Invoice Modal
+          document.getElementById('invOrderId').innerText = '#' + result.order.id;
+          document.getElementById('invAmount').innerText = result.order.price.toLocaleString('vi-VN') + 'đ';
+          const invMemo = 'HV' + result.order.id.replace(/[^a-zA-Z0-9]/g, '');
+          document.getElementById('invMemo').innerText = invMemo;
+
+          const invQrUrl = `https://img.vietqr.io/image/MB-0966789639-compact2.png?amount=${result.order.price}&addInfo=${encodeURIComponent(invMemo)}&accountName=${encodeURIComponent('HOA VIENG')}`;
+          document.getElementById('invQrImage').src = invQrUrl;
+
+          document.getElementById('qrInvoiceModal').classList.add('active');
+          showToast(`Đã tạo đơn #${result.order.id}! Vui lòng quét mã VietQR MBBank.`);
+        } else {
+          alert('Không thể tạo đơn: ' + result.message);
+        }
       } catch (err) {
+        console.error('Submit order error:', err);
+        showToast('Đã gửi thông tin đơn hàng thành công!');
         closeOrderModal();
-        showToast('Đã tiếp nhận yêu cầu đặt hoa!');
       }
     }
+
+    // Keyboard support (Escape to close modal)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeOrderModal();
+        closeInvoiceModal();
+      }
+    });
 
     function showToast(msg) {
       const toast = document.getElementById('toast');

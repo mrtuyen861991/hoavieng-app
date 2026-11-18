@@ -575,20 +575,24 @@
       background: #F6EEDB;
       color: #8C5C1D;
       border: 1px solid #ECD8B8;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 12.5px;
+      font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-      transition: all 0.2s;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(140, 92, 29, 0.08);
+      font-family: inherit;
     }
     .btn-order-fast:hover {
-      background: #8C5C1D;
-      border-color: #8C5C1D;
-      color: #fff;
+      background: #EEDCBE;
+      border-color: #C89B55;
+      color: #6E3F0A;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(140, 92, 29, 0.15);
     }
 
     .product-bestseller-badge {
@@ -1908,9 +1912,10 @@
       .product-price {
         font-size: 13px !important;
       }
+      .btn-order-fast,
       .btn-order-flower {
-        padding: 6px 8px !important;
-        font-size: 11px !important;
+        padding: 5px 10px !important;
+        font-size: 11.5px !important;
       }
       .guarantees-grid { grid-template-columns: 1fr; }
       .articles-grid { grid-template-columns: 1fr; }

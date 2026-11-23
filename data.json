@@ -2086,36 +2086,117 @@
       "id": "usr-1",
       "name": "Nguyễn Văn Hưng",
       "email": "admin@hoavieng.vn",
+      "phone": "0966789639",
       "role": "Admin Tổng",
       "status": "Online",
-      "avatar": "/assets/concept_backend.jpg"
+      "avatar": "/assets/concept_backend.jpg",
+      "permissions": {
+        "dashboard": "full",
+        "orders": "full",
+        "products": "full",
+        "customers": "full",
+        "partners": "full",
+        "logistics": "full",
+        "qc": "full",
+        "finance": "full",
+        "reports": "full",
+        "articles": "full",
+        "reviews": "full",
+        "settings": "full"
+      }
     },
     {
       "id": "usr-2",
       "name": "Lê Minh Trí",
       "email": "dispatch@hoavieng.vn",
+      "phone": "0868576777",
       "role": "Điều phối viên (CSKH)",
       "status": "Online",
-      "avatar": "/assets/concept_backend.jpg"
+      "avatar": "/assets/concept_backend.jpg",
+      "permissions": {
+        "dashboard": "view",
+        "orders": "full",
+        "products": "view",
+        "customers": "full",
+        "partners": "edit",
+        "logistics": "full",
+        "qc": "edit",
+        "finance": "none",
+        "reports": "none",
+        "articles": "none",
+        "reviews": "edit",
+        "settings": "none"
+      }
     },
     {
       "id": "usr-3",
       "name": "Trần Thùy Linh",
       "email": "qc@hoavieng.vn",
+      "phone": "0912345678",
       "role": "Nhân viên duyệt QC",
       "status": "Online",
-      "avatar": "/assets/concept_backend.jpg"
+      "avatar": "/assets/concept_backend.jpg",
+      "permissions": {
+        "dashboard": "none",
+        "orders": "view",
+        "products": "view",
+        "customers": "none",
+        "partners": "view",
+        "logistics": "none",
+        "qc": "full",
+        "finance": "none",
+        "reports": "none",
+        "articles": "none",
+        "reviews": "view",
+        "settings": "none"
+      }
     },
     {
       "id": "usr-4",
       "name": "Hoàng Mai Phương",
       "email": "finance@hoavieng.vn",
+      "phone": "0987654321",
       "role": "Kế toán đối soát",
       "status": "Away",
-      "avatar": "/assets/concept_backend.jpg"
+      "avatar": "/assets/concept_backend.jpg",
+      "permissions": {
+        "dashboard": "view",
+        "orders": "view",
+        "products": "none",
+        "customers": "none",
+        "partners": "view",
+        "logistics": "none",
+        "qc": "none",
+        "finance": "full",
+        "reports": "full",
+        "articles": "none",
+        "reviews": "none",
+        "settings": "none"
+      }
     }
   ],
   "auditLogs": [
+    {
+      "id": "log-1795424989521",
+      "user": "Admin Quản trị viên",
+      "action": "Xóa tài khoản nhân sự",
+      "details": "Đã xóa tài khoản [Võ Hoàng Nam] (nam.logistics@hoavieng.vn) khỏi hệ thống",
+      "time": "16:09 hôm nay"
+    },
+    {
+      "id": "log-1795424979986",
+      "user": "Admin Quản trị viên",
+      "action": "Cập nhật phân quyền nhân sự",
+      "details": "Cập nhật thông tin & ma trận phân quyền cho [Võ Hoàng Nam] (nam.logistics@hoavieng.vn) - Vai trò: Trưởng ban điều hành",
+      "time": "16:09 hôm nay"
+    },
+    {
+      "id": "log-1795424974537",
+      "user": "Admin Quản trị viên",
+      "action": "Thêm tài khoản nhân sự",
+      "details": "Thêm tài khoản [Võ Hoàng Nam] (nam.logistics@hoavieng.vn) - Vai trò: Quản lý giao nhận",
+      "time": "16:09 hôm nay"
+    },
     {
       "id": "log-1794971115329",
       "user": "Admin Quản trị viên",
@@ -2232,7 +2313,7 @@
       "spreadsheetId": "12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY",
       "sheetUrl": "https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit",
       "title": "Web bán hoa viếng BLS",
-      "lastSync": "15:30:59 23/11/2026",
+      "lastSync": "16:10:14 23/11/2026",
       "status": "connected",
       "syncedSheets": [
         "Tổng quan & Doanh thu",

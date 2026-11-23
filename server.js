@@ -610,6 +610,147 @@ app.get('/api/users', (req, res) => {
   res.json({ success: true, users: data.users || [] });
 });
 
+app.post('/api/users', (req, res) => {
+  const data = readData();
+  const { name, email, phone, role, status, avatar, permissions } = req.body;
+  
+  if (!name || !email) {
+    return res.status(400).json({ success: false, error: 'Họ tên và email là thông tin bắt buộc!' });
+  }
+
+  // Kiểm tra trùng email
+  if ((data.users || []).some(u => u.email && u.email.toLowerCase() === email.toLowerCase().trim())) {
+    return res.status(400).json({ success: false, error: `Email "${email}" đã được đăng ký bởi nhân sự khác!` });
+  }
+
+  const defaultPermissions = {
+    dashboard: 'view',
+    orders: 'view',
+    products: 'view',
+    customers: 'view',
+    partners: 'view',
+    logistics: 'view',
+    qc: 'view',
+    finance: 'none',
+    reports: 'none',
+    articles: 'view',
+    reviews: 'view',
+    settings: 'none'
+  };
+
+  const newUser = {
+    id: 'usr-' + Date.now(),
+    name: name.trim(),
+    email: email.toLowerCase().trim(),
+    phone: phone ? phone.trim() : '',
+    role: role || 'Điều phối viên (CSKH)',
+    status: status || 'Online',
+    avatar: avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(name.trim())}&background=D4AF37&color=fff`,
+    permissions: permissions && typeof permissions === 'object' ? { ...defaultPermissions, ...permissions } : defaultPermissions,
+    createdAt: new Date().toISOString()
+  };
+
+  if (!data.users) data.users = [];
+  data.users.push(newUser);
+
+  // Ghi Audit Log
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: 'log-' + Date.now(),
+    user: req.body.operator || 'Admin Quản trị viên',
+    action: 'Thêm tài khoản nhân sự',
+    details: `Thêm tài khoản [${newUser.name}] (${newUser.email}) - Vai trò: ${newUser.role}`,
+    time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + ' hôm nay'
+  });
+
+  writeData(data);
+  res.json({ success: true, user: newUser, message: 'Đã thêm nhân sự và phân quyền thành công!' });
+});
+
+app.put('/api/users/:id', (req, res) => {
+  const data = readData();
+  const userId = req.params.id;
+  const userIndex = (data.users || []).findIndex(u => u.id === userId);
+
+  if (userIndex === -1) {
+    return res.status(404).json({ success: false, error: 'Không tìm thấy tài khoản nhân sự!' });
+  }
+
+  const existing = data.users[userIndex];
+  const { name, email, phone, role, status, avatar, permissions } = req.body;
+
+  // Bảo vệ tài khoản Super Admin usr-1
+  if (userId === 'usr-1') {
+    if (status && status !== 'Online') {
+      return res.status(400).json({ success: false, error: 'Không thể khóa hoặc thay đổi trạng thái của Quản trị viên tối cao (Super Admin)!' });
+    }
+  }
+
+  // Kiểm tra trùng email nếu thay đổi
+  if (email && email.toLowerCase().trim() !== (existing.email || '').toLowerCase()) {
+    if (data.users.some(u => u.id !== userId && u.email && u.email.toLowerCase() === email.toLowerCase().trim())) {
+      return res.status(400).json({ success: false, error: `Email "${email}" đã tồn tại trên hệ thống!` });
+    }
+  }
+
+  const updatedUser = {
+    ...existing,
+    name: name ? name.trim() : existing.name,
+    email: email ? email.toLowerCase().trim() : existing.email,
+    phone: phone !== undefined ? phone.trim() : (existing.phone || ''),
+    role: role || existing.role,
+    status: status || existing.status,
+    avatar: avatar || existing.avatar,
+    permissions: permissions && typeof permissions === 'object' ? { ...(existing.permissions || {}), ...permissions } : existing.permissions,
+    updatedAt: new Date().toISOString()
+  };
+
+  data.users[userIndex] = updatedUser;
+
+  // Ghi Audit Log
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: 'log-' + Date.now(),
+    user: req.body.operator || 'Admin Quản trị viên',
+    action: 'Cập nhật phân quyền nhân sự',
+    details: `Cập nhật thông tin & ma trận phân quyền cho [${updatedUser.name}] (${updatedUser.email}) - Vai trò: ${updatedUser.role}`,
+    time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + ' hôm nay'
+  });
+
+  writeData(data);
+  res.json({ success: true, user: updatedUser, message: 'Đã cập nhật thông tin và phân quyền thành công!' });
+});
+
+app.delete('/api/users/:id', (req, res) => {
+  const data = readData();
+  const userId = req.params.id;
+
+  if (userId === 'usr-1') {
+    return res.status(400).json({ success: false, error: 'Không thể xóa tài khoản Quản trị viên tối cao (Super Admin)!' });
+  }
+
+  const userIndex = (data.users || []).findIndex(u => u.id === userId);
+  if (userIndex === -1) {
+    return res.status(404).json({ success: false, error: 'Không tìm thấy tài khoản nhân sự cần xóa!' });
+  }
+
+  const deletedUser = data.users[userIndex];
+  data.users.splice(userIndex, 1);
+
+  // Ghi Audit Log
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: 'log-' + Date.now(),
+    user: req.body?.operator || 'Admin Quản trị viên',
+    action: 'Xóa tài khoản nhân sự',
+    details: `Đã xóa tài khoản [${deletedUser.name}] (${deletedUser.email}) khỏi hệ thống`,
+    time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + ' hôm nay'
+  });
+
+  writeData(data);
+  res.json({ success: true, message: `Đã xóa tài khoản [${deletedUser.name}] thành công!` });
+});
+
 app.get('/api/audit-logs', (req, res) => {
   const data = readData();
   res.json({ success: true, logs: data.auditLogs || [] });

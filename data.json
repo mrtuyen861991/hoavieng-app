@@ -96,6 +96,52 @@
   },
   "orders": [
     {
+      "id": "ĐH26114329",
+      "seq": 8,
+      "customer": "Anh Tuấn",
+      "customerType": "B2C",
+      "companyName": "",
+      "phone": "0918112233",
+      "product": "Kệ hoa lan vàng trang trọng",
+      "productId": "HV-KE01",
+      "sku": "HV-VH01",
+      "price": 1200000,
+      "cost": 744000,
+      "status": "Chờ xác nhận",
+      "time": "11:34 24/11",
+      "fullTimestamp": "2026-11-24T04:34:27.183Z",
+      "district": "Quận 3",
+      "address": "Nhà tang lễ Lê Quý Đôn, Q.3",
+      "isUrgent": false,
+      "deliveryDeadline": "Trong 90 phút",
+      "minutesLeft": 90,
+      "deceased": {
+        "name": "Người quá cố",
+        "funeralTime": "Lễ viếng tang lễ",
+        "place": "Nhà tang lễ Lê Quý Đôn, Q.3"
+      },
+      "ribbon": "Gia Đình Anh Tuấn - Thành Kính Phân Ưu",
+      "ribbonStyle": "Lụa đen viền vàng sang trọng",
+      "assignedPartner": null,
+      "shipper": null,
+      "photos": {
+        "shopPhoto": null,
+        "funeralPhoto": null,
+        "gpsLocation": null
+      },
+      "qcStatus": "Chưa có ảnh",
+      "paymentStatus": "Đã thanh toán (MBBank VietQR)",
+      "bankInfo": {
+        "bank": "MBBank",
+        "bankName": "Ngân hàng TMCP Quân Đội",
+        "accountNumber": "0966789639",
+        "accountName": "HOA VIENG",
+        "memo": "HVĐH26114329"
+      },
+      "notes": "Giao hoa trang trọng, đúng giờ.",
+      "paidAt": "2026-11-24T04:36:26.685Z"
+    },
+    {
       "id": "ĐH26117127",
       "seq": 7,
       "customer": "tuyên test 2",
@@ -2087,6 +2133,7 @@
       "name": "Nguyễn Văn Hưng",
       "email": "admin@hoavieng.vn",
       "phone": "0966789639",
+      "password": "123456",
       "role": "Admin Tổng",
       "status": "Online",
       "avatar": "/assets/concept_backend.jpg",
@@ -2110,6 +2157,7 @@
       "name": "Lê Minh Trí",
       "email": "dispatch@hoavieng.vn",
       "phone": "0868576777",
+      "password": "123456",
       "role": "Điều phối viên (CSKH)",
       "status": "Online",
       "avatar": "/assets/concept_backend.jpg",
@@ -2133,6 +2181,7 @@
       "name": "Trần Thùy Linh",
       "email": "qc@hoavieng.vn",
       "phone": "0912345678",
+      "password": "123456",
       "role": "Nhân viên duyệt QC",
       "status": "Online",
       "avatar": "/assets/concept_backend.jpg",
@@ -2156,6 +2205,7 @@
       "name": "Hoàng Mai Phương",
       "email": "finance@hoavieng.vn",
       "phone": "0987654321",
+      "password": "123456",
       "role": "Kế toán đối soát",
       "status": "Away",
       "avatar": "/assets/concept_backend.jpg",
@@ -2176,6 +2226,20 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "log-1795494986714",
+      "user": "Hoàng Mai Phương (Kế toán)",
+      "action": "Khớp tiền MBBank",
+      "details": "Khớp đối soát 1.200.000đ cho đơn #ĐH26114329",
+      "time": "11:36:26 hôm nay"
+    },
+    {
+      "id": "log-1795494442946",
+      "user": "Nguyễn Văn Hưng",
+      "action": "Đăng nhập Admin",
+      "details": "Đăng nhập thành công vào Admin Panel với vai trò [Admin Tổng]",
+      "time": "11:27 hôm nay"
+    },
     {
       "id": "log-1795424989521",
       "user": "Admin Quản trị viên",
@@ -2313,7 +2377,7 @@
       "spreadsheetId": "12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY",
       "sheetUrl": "https://docs.google.com/spreadsheets/d/12y8DzYZBqTEE760Aj9HXNOSHtXy-b3FZuEzqlo7VzvY/edit",
       "title": "Web bán hoa viếng BLS",
-      "lastSync": "16:10:14 23/11/2026",
+      "lastSync": "11:37:09 24/11/2026",
       "status": "connected",
       "syncedSheets": [
         "Tổng quan & Doanh thu",
@@ -2330,6 +2394,26 @@
     }
   },
   "activities": [
+    {
+      "id": "act-1795494986686",
+      "type": "payment_received",
+      "orderId": "ĐH26114329",
+      "title": "Đơn #ĐH26114329",
+      "description": "Đã khớp thanh toán MBBank 0966789639: 1.200.000đ",
+      "timeAgo": "Vừa xong",
+      "icon": "credit-card",
+      "badgeColor": "green"
+    },
+    {
+      "id": "act-1795494867183",
+      "type": "new_order",
+      "orderId": "ĐH26114329",
+      "title": "Đơn #ĐH26114329",
+      "description": "Khách đặt: Kệ hoa lan vàng trang trọng - Anh Tuấn",
+      "timeAgo": "Vừa xong",
+      "icon": "cart",
+      "badgeColor": "blue"
+    },
     {
       "id": "act-1794904927655",
       "text": "Khách hàng Bà Trương Mỹ Lan gửi đánh giá 5⭐ (Đang chờ Quản trị viên duyệt)",

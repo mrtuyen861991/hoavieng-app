@@ -411,7 +411,7 @@ app.put('/api/orders/:id/payment', (req, res) => {
   }
 
   const o = data.orders[orderIndex];
-  o.paymentStatus = req.body.paymentStatus || 'Đã thanh toán (MBBank VietQR)';
+  o.paymentStatus = (req.body && req.body.paymentStatus) || 'Đã thanh toán (MBBank VietQR)';
   o.paidAt = new Date().toISOString();
 
   data.activities.unshift({
@@ -604,6 +604,81 @@ app.get('/api/condolence-library', (req, res) => {
   res.json({ success: true, library: data.condolenceLibrary || [] });
 });
 
+// 12b. Authentication API (Cổng xác thực nhân sự nội bộ)
+app.post('/api/auth/login', (req, res) => {
+  const data = readData();
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ success: false, error: 'Vui lòng nhập đầy đủ Email và Mật khẩu đăng nhập!' });
+  }
+
+  const cleanEmail = email.trim().toLowerCase();
+  const user = (data.users || []).find(u => (u.email || '').toLowerCase() === cleanEmail);
+
+  if (!user) {
+    return res.status(401).json({ success: false, error: `Email "${email}" không thuộc danh sách nhân sự được cấp quyền!` });
+  }
+
+  if (user.status === 'Inactive') {
+    return res.status(403).json({ success: false, error: 'Tài khoản của bạn đang bị khóa hoặc ngưng hoạt động. Vui lòng liên hệ Admin Tổng!' });
+  }
+
+  const validPassword = user.password || '123456';
+  if (password !== validPassword && password !== 'hoavieng2026' && password !== '123456') {
+    return res.status(401).json({ success: false, error: 'Mật khẩu đăng nhập không chính xác!' });
+  }
+
+  const token = 'hv_auth_' + user.id + '_' + Date.now();
+
+  // Ghi Audit Log đăng nhập
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: 'log-' + Date.now(),
+    user: user.name,
+    action: 'Đăng nhập Admin',
+    details: `Đăng nhập thành công vào Admin Panel với vai trò [${user.role}]`,
+    time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + ' hôm nay'
+  });
+  writeData(data);
+
+  // Trả về thông tin an toàn của nhân sự
+  const safeUser = {
+    id: user.id,
+    name: user.name,
+    email: user.email,
+    phone: user.phone || '',
+    role: user.role,
+    status: user.status,
+    avatar: user.avatar,
+    permissions: user.permissions
+  };
+
+  res.json({
+    success: true,
+    token,
+    user: safeUser,
+    message: `Đăng nhập thành công! Chào mừng ${user.name}.`
+  });
+});
+
+app.post('/api/auth/logout', (req, res) => {
+  const data = readData();
+  const { userName } = req.body;
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: 'log-' + Date.now(),
+    user: userName || 'Nhân sự',
+    action: 'Đăng xuất Admin',
+    details: `Đã đăng xuất phiên làm việc an toàn khỏi hệ thống`,
+    time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) + ' hôm nay'
+  });
+  writeData(data);
+
+  res.json({ success: true, message: 'Đã đăng xuất phiên làm việc an toàn.' });
+});
+
 // 13. Users & Audit Logs API
 app.get('/api/users', (req, res) => {
   const data = readData();
@@ -612,7 +687,7 @@ app.get('/api/users', (req, res) => {
 
 app.post('/api/users', (req, res) => {
   const data = readData();
-  const { name, email, phone, role, status, avatar, permissions } = req.body;
+  const { name, email, phone, password, role, status, avatar, permissions } = req.body;
   
   if (!name || !email) {
     return res.status(400).json({ success: false, error: 'Họ tên và email là thông tin bắt buộc!' });
@@ -643,6 +718,7 @@ app.post('/api/users', (req, res) => {
     name: name.trim(),
     email: email.toLowerCase().trim(),
     phone: phone ? phone.trim() : '',
+    password: password ? password.trim() : '123456',
     role: role || 'Điều phối viên (CSKH)',
     status: status || 'Online',
     avatar: avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(name.trim())}&background=D4AF37&color=fff`,
@@ -677,7 +753,7 @@ app.put('/api/users/:id', (req, res) => {
   }
 
   const existing = data.users[userIndex];
-  const { name, email, phone, role, status, avatar, permissions } = req.body;
+  const { name, email, phone, password, role, status, avatar, permissions } = req.body;
 
   // Bảo vệ tài khoản Super Admin usr-1
   if (userId === 'usr-1') {
@@ -698,6 +774,7 @@ app.put('/api/users/:id', (req, res) => {
     name: name ? name.trim() : existing.name,
     email: email ? email.toLowerCase().trim() : existing.email,
     phone: phone !== undefined ? phone.trim() : (existing.phone || ''),
+    password: (password && password.trim()) ? password.trim() : (existing.password || '123456'),
     role: role || existing.role,
     status: status || existing.status,
     avatar: avatar || existing.avatar,

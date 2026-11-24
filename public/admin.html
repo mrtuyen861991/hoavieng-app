@@ -1165,9 +1165,252 @@
       color: #DFBE82;
       border-color: #B58444;
     }
+
+    /* ================= ADMIN AUTH GATE (LOGIN SCREEN) ================= */
+    .admin-auth-gate {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, #1E293B 0%, #0B0F19 100%);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .auth-card {
+      background: #111622;
+      border: 1px solid rgba(223, 190, 130, 0.4);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(223, 190, 130, 0.15);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      padding: 36px 32px;
+      text-align: center;
+      color: #F8FAFC;
+    }
+    .auth-logo-lotus {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 14px;
+      display: block;
+      filter: drop-shadow(0 4px 12px rgba(223, 190, 130, 0.35));
+    }
+    .auth-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #DFBE82;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .auth-subtitle {
+      font-size: 11.5px;
+      color: #94A3B8;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .auth-restricted-pill {
+      background: rgba(220, 38, 38, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #FCA5A5;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 11.5px;
+      line-height: 1.5;
+      text-align: left;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .auth-form-group {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .auth-form-group label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #CBD5E1;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .auth-input-wrapper {
+      position: relative;
+    }
+    .auth-input-wrapper i.prefix-icon {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      color: #94A3B8;
+      font-size: 14px;
+    }
+    .auth-input {
+      width: 100%;
+      background: #0B0F19;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 12px 14px 12px 40px;
+      color: #F8FAFC;
+      font-size: 13.5px;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.2s ease;
+    }
+    .auth-input:focus {
+      outline: none;
+      border-color: #DFBE82;
+      box-shadow: 0 0 0 3px rgba(223, 190, 130, 0.2);
+    }
+    .btn-auth-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #B58444, #8E6328);
+      color: #FFF;
+      border: none;
+      border-radius: 8px;
+      padding: 13px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(181, 132, 68, 0.4);
+      transition: all 0.2s ease;
+    }
+    .btn-auth-submit:hover {
+      background: linear-gradient(135deg, #DFBE82, #B58444);
+      transform: translateY(-1px);
+    }
+    .btn-auth-back {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #94A3B8;
+      font-size: 12px;
+      text-decoration: none;
+      margin-top: 18px;
+      transition: color 0.2s;
+    }
+    .btn-auth-back:hover {
+      color: #DFBE82;
+    }
+    .auth-quick-accounts {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.2);
+      text-align: left;
+    }
+    .auth-quick-title {
+      font-size: 11px;
+      color: #94A3B8;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .auth-account-chips {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .auth-account-chip {
+      background: #1E293B;
+      border: 1px solid #334155;
+      color: #CBD5E1;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .auth-account-chip:hover {
+      background: #0F172A;
+      color: #DFBE82;
+      border-color: #B58444;
+    }
+    .auth-error-box {
+      background: #FEE2E2;
+      border: 1px solid #FECACA;
+      color: #DC2626;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      margin-bottom: 14px;
+      display: none;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
+
+  <!-- ================= CỔNG XÁC THỰC ADMIN (LOGIN GATE) ================= -->
+  <div id="adminAuthGate" class="admin-auth-gate">
+    <div class="auth-card">
+      <svg class="auth-logo-lotus" viewBox="0 0 100 100" fill="none">
+        <path d="M50 8C48 24 36 38 24 45C36 50 46 62 50 78C54 62 64 50 76 45C64 38 52 24 50 8Z" fill="#DFBE82"/>
+        <path d="M50 25C42 38 28 48 10 52C26 58 38 68 45 84C47 70 54 58 64 50C54 44 46 36 50 25Z" fill="#B58444" opacity="0.8"/>
+        <path d="M50 25C58 38 72 48 90 52C74 58 62 68 55 84C53 70 46 58 36 50C46 44 54 36 50 25Z" fill="#8E6328" opacity="0.8"/>
+      </svg>
+      <div class="auth-title">HOA VIẾNG &bull; ADMIN</div>
+      <div class="auth-subtitle">Cổng Quản Trị Hệ Thống 5 Phân Hệ</div>
+
+      <div class="auth-restricted-pill">
+        <i class="fa-solid fa-shield-halved" style="font-size: 16px; margin-top: 2px; color: #EF4444;"></i>
+        <div>
+          <b>KHU VỰC GIỚI HẠN:</b> Hệ thống chỉ dành riêng cho nhân sự nội bộ được cấp tài khoản và phân quyền truy cập. Khách hàng vui lòng quay về trang chủ để đặt hoa.
+        </div>
+      </div>
+
+      <div id="loginErrorBox" class="auth-error-box"></div>
+
+      <form onsubmit="handleAdminLogin(event)">
+        <div class="auth-form-group">
+          <label>Email nhân sự: *</label>
+          <div class="auth-input-wrapper">
+            <i class="fa-solid fa-envelope prefix-icon"></i>
+            <input type="email" id="loginEmail" class="auth-input" placeholder="admin@hoavieng.vn" required autocomplete="username">
+          </div>
+        </div>
+
+        <div class="auth-form-group">
+          <label>Mật khẩu đăng nhập: *</label>
+          <div class="auth-input-wrapper">
+            <i class="fa-solid fa-lock prefix-icon"></i>
+            <input type="password" id="loginPassword" class="auth-input" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+        </div>
+
+        <button type="submit" id="btnSubmitLogin" class="btn-auth-submit">
+          <i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập Quản Trị
+        </button>
+      </form>
+
+      <a href="/" class="btn-auth-back">
+        <i class="fa-solid fa-arrow-left"></i> Quay Về Trang Chủ Khách Hàng (hoavieng.vn)
+      </a>
+
+      <!-- Quick Demo Account Pills for Testing/Staff -->
+      <div class="auth-quick-accounts">
+        <div class="auth-quick-title"><i class="fa-solid fa-key" style="margin-right: 4px;"></i> Tài khoản mẫu được cấp sẵn (Pass: <b>123456</b>):</div>
+        <div class="auth-account-chips">
+          <button type="button" class="auth-account-chip" onclick="quickFillLogin('admin@hoavieng.vn')">👑 Admin Tổng</button>
+          <button type="button" class="auth-account-chip" onclick="quickFillLogin('dispatch@hoavieng.vn')">🎧 Điều phối viên</button>
+          <button type="button" class="auth-account-chip" onclick="quickFillLogin('qc@hoavieng.vn')">📷 Nhân viên QC</button>
+          <button type="button" class="auth-account-chip" onclick="quickFillLogin('finance@hoavieng.vn')">💰 Kế toán</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Admin Sidebar Backdrop for Mobile/Tablet -->
   <div id="adminSidebarBackdrop" class="admin-sidebar-backdrop" onclick="closeAdminSidebar()"></div>
@@ -1297,13 +1540,13 @@
 
     <div class="sidebar-footer">
       <div class="admin-profile">
-        <img src="/assets/concept_backend.jpg" class="admin-avatar" onerror="this.src='https://ui-avatars.com/api/?name=Admin+Tong&background=B58444&color=fff'">
+        <img src="/assets/concept_backend.jpg" class="admin-avatar" id="sidebarAvatar" onerror="this.src='https://ui-avatars.com/api/?name=Admin+Tong&background=B58444&color=fff'">
         <div class="admin-info">
-          <div class="admin-name">Admin Quản trị viên</div>
-          <div class="admin-role">Super Admin &bull; Trực ban</div>
+          <div class="admin-name" id="sidebarAdminName">Admin Quản trị viên</div>
+          <div class="admin-role" id="sidebarAdminRole">Super Admin &bull; Trực ban</div>
         </div>
       </div>
-      <button class="logout-btn" onclick="alert('Đã đăng xuất phiên làm việc an toàn!')">
+      <button class="logout-btn" onclick="handleAdminLogout()">
         <i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất
       </button>
     </div>
@@ -2796,7 +3039,7 @@
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 14px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 14px;">
               <div class="form-group" style="margin-bottom: 0;">
                 <label>Vai trò hệ thống: *</label>
                 <select id="userModalRole" class="form-control" onchange="handleRoleDropdownChange(this.value)" style="font-family: 'Montserrat', sans-serif;">
@@ -2810,7 +3053,7 @@
                 </select>
               </div>
               <div class="form-group" style="margin-bottom: 0;">
-                <label>Trạng thái hoạt động: *</label>
+                <label>Trạng thái: *</label>
                 <select id="userModalStatus" class="form-control" style="font-family: 'Montserrat', sans-serif;">
                   <option value="Online">Online - Đang trực tuyến</option>
                   <option value="Away">Away - Tạm vắng mặt</option>
@@ -2818,8 +3061,12 @@
                 </select>
               </div>
               <div class="form-group" style="margin-bottom: 0;">
-                <label>Ảnh đại diện (Avatar URL):</label>
-                <input type="text" id="userModalAvatar" class="form-control" placeholder="/assets/concept_backend.jpg hoặc link URL" style="font-family: 'Montserrat', sans-serif;">
+                <label>Mật khẩu đăng nhập: *</label>
+                <input type="text" id="userModalPassword" class="form-control" placeholder="Mặc định: 123456" style="font-family: 'Montserrat', sans-serif;">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label>Ảnh đại diện (URL):</label>
+                <input type="text" id="userModalAvatar" class="form-control" placeholder="/assets/concept_backend.jpg" style="font-family: 'Montserrat', sans-serif;">
               </div>
             </div>
           </div>
@@ -2923,12 +3170,174 @@
     let selectedOrderId = null;
     let selectedOrderGroup = 'all';
 
-    // Initial Load
+    // ================= AUTHENTICATION & ACCESS CONTROL GATE =================
+    function checkAdminAuth() {
+      const stored = sessionStorage.getItem('hv_admin_user') || localStorage.getItem('hv_admin_user');
+      if (stored) {
+        try {
+          const user = JSON.parse(stored);
+          applyAuthenticatedUser(user);
+          const gate = document.getElementById('adminAuthGate');
+          if (gate) gate.style.display = 'none';
+          return true;
+        } catch (e) {
+          console.error('Error parsing stored user auth:', e);
+        }
+      }
+      const gate = document.getElementById('adminAuthGate');
+      if (gate) gate.style.display = 'flex';
+      return false;
+    }
+
+    function applyAuthenticatedUser(user) {
+      if (!user) return;
+      const avatarEl = document.getElementById('sidebarAvatar');
+      if (avatarEl) {
+        avatarEl.src = user.avatar || '/assets/concept_backend.jpg';
+        avatarEl.onerror = () => { avatarEl.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=B58444&color=fff`; };
+      }
+      const nameEl = document.getElementById('sidebarAdminName');
+      if (nameEl) nameEl.textContent = user.name;
+      const roleEl = document.getElementById('sidebarAdminRole');
+      if (roleEl) roleEl.innerHTML = `${user.role} &bull; <span style="color:#10B981;">Đã xác thực</span>`;
+
+      // Apply granular menu permissions
+      const perms = user.permissions || {};
+      const menuPermMap = {
+        'nav-overview': perms.dashboard,
+        'nav-orders': perms.orders,
+        'nav-products': perms.products,
+        'nav-categories': perms.products,
+        'nav-customers': perms.customers,
+        'nav-partners': perms.partners,
+        'nav-shipping': perms.logistics,
+        'nav-qc': perms.qc,
+        'nav-payments': perms.finance,
+        'nav-discounts': perms.finance,
+        'nav-reports': perms.reports,
+        'nav-content': perms.articles,
+        'nav-reviews': perms.reviews,
+        'nav-users': user.role === 'Admin Tổng' ? 'full' : (perms.settings || 'none'),
+        'nav-settings': perms.settings
+      };
+
+      Object.entries(menuPermMap).forEach(([navId, accessLevel]) => {
+        const item = document.getElementById(navId);
+        if (item && item.parentElement) {
+          if (accessLevel === 'none') {
+            item.parentElement.style.opacity = '0.35';
+            item.parentElement.title = 'Tài khoản chưa được phân quyền truy cập phân hệ này';
+          } else {
+            item.parentElement.style.opacity = '1';
+            item.parentElement.title = '';
+          }
+        }
+      });
+    }
+
+    async function handleAdminLogin(e) {
+      e?.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value.trim();
+      const errBox = document.getElementById('loginErrorBox');
+      const submitBtn = document.getElementById('btnSubmitLogin');
+
+      if (!email || !password) {
+        errBox.textContent = 'Vui lòng nhập đầy đủ Email và Mật khẩu!';
+        errBox.style.display = 'block';
+        return;
+      }
+
+      errBox.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang xác thực...';
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+
+        if (!data.success) {
+          errBox.textContent = data.error || 'Đăng nhập không thành công!';
+          errBox.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập Quản Trị';
+          return;
+        }
+
+        // Save auth state
+        sessionStorage.setItem('hv_admin_user', JSON.stringify(data.user));
+        localStorage.setItem('hv_admin_user', JSON.stringify(data.user));
+        sessionStorage.setItem('hv_admin_token', data.token);
+
+        applyAuthenticatedUser(data.user);
+        document.getElementById('adminAuthGate').style.display = 'none';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập Quản Trị';
+
+        // Load data immediately upon successful login
+        await refreshAllData();
+        await checkSheetsSyncStatus();
+      } catch (err) {
+        console.error('Login error:', err);
+        errBox.textContent = 'Lỗi kết nối tới máy chủ!';
+        errBox.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập Quản Trị';
+      }
+    }
+
+    function quickFillLogin(email) {
+      document.getElementById('loginEmail').value = email;
+      document.getElementById('loginPassword').value = '123456';
+      document.getElementById('loginErrorBox').style.display = 'none';
+    }
+
+    async function handleAdminLogout() {
+      const stored = sessionStorage.getItem('hv_admin_user') || localStorage.getItem('hv_admin_user');
+      let userName = 'Quản trị viên';
+      if (stored) {
+        try { userName = JSON.parse(stored).name; } catch(e){}
+      }
+
+      if (!confirm(`Xác nhận đăng xuất khỏi hệ thống quản trị?\n\nNhân sự: ${userName}`)) return;
+
+      try {
+        await fetch('/api/auth/logout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userName })
+        });
+      } catch(e) {}
+
+      sessionStorage.removeItem('hv_admin_user');
+      localStorage.removeItem('hv_admin_user');
+      sessionStorage.removeItem('hv_admin_token');
+
+      document.getElementById('adminAuthGate').style.display = 'flex';
+      document.getElementById('loginPassword').value = '';
+    }
+
+    // Initial Load Gate Check
     window.addEventListener('DOMContentLoaded', async () => {
-      await refreshAllData();
-      await checkSheetsSyncStatus();
-      setInterval(refreshAllData, 5000); // Polling every 5 seconds
-      setInterval(checkSheetsSyncStatus, 15000); // Check sheets sync status every 15s
+      const isAuth = checkAdminAuth();
+      if (isAuth) {
+        await refreshAllData();
+        await checkSheetsSyncStatus();
+      }
+      setInterval(() => {
+        if (sessionStorage.getItem('hv_admin_user') || localStorage.getItem('hv_admin_user')) {
+          refreshAllData();
+        }
+      }, 5000);
+      setInterval(() => {
+        if (sessionStorage.getItem('hv_admin_user') || localStorage.getItem('hv_admin_user')) {
+          checkSheetsSyncStatus();
+        }
+      }, 15000);
     });
 
     // GOOGLE SHEETS LIVE SYNC
@@ -4459,6 +4868,7 @@
       document.getElementById('userModalName').value = '';
       document.getElementById('userModalEmail').value = '';
       document.getElementById('userModalPhone').value = '';
+      document.getElementById('userModalPassword').value = '123456';
       document.getElementById('userModalRole').value = 'Điều phối viên (CSKH)';
       document.getElementById('userModalStatus').value = 'Online';
       document.getElementById('userModalAvatar').value = '';
@@ -4481,6 +4891,7 @@
       document.getElementById('userModalName').value = user.name || '';
       document.getElementById('userModalEmail').value = user.email || '';
       document.getElementById('userModalPhone').value = user.phone || '';
+      document.getElementById('userModalPassword').value = user.password || '123456';
       
       const roleSelect = document.getElementById('userModalRole');
       if (roleSelect) {
@@ -4562,6 +4973,7 @@
       const name = document.getElementById('userModalName').value.trim();
       const email = document.getElementById('userModalEmail').value.trim();
       const phone = document.getElementById('userModalPhone').value.trim();
+      const password = document.getElementById('userModalPassword')?.value.trim() || '123456';
       const role = document.getElementById('userModalRole').value;
       const status = document.getElementById('userModalStatus').value;
       const avatar = document.getElementById('userModalAvatar').value.trim();
@@ -4582,6 +4994,7 @@
         name,
         email,
         phone,
+        password,
         role,
         status,
         avatar: avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=D4AF37&color=fff`,
@@ -4890,6 +5303,38 @@
       if (window.innerWidth <= 992) {
         closeAdminSidebar();
       }
+
+      // Kiểm tra quyền hạn chi tiết của nhân sự đang đăng nhập
+      const stored = sessionStorage.getItem('hv_admin_user') || localStorage.getItem('hv_admin_user');
+      if (stored) {
+        try {
+          const user = JSON.parse(stored);
+          const perms = user.permissions || {};
+          const tabPermKey = {
+            'overview': 'dashboard',
+            'orders': 'orders',
+            'products': 'products',
+            'categories': 'products',
+            'customers': 'customers',
+            'partners': 'partners',
+            'shipping': 'logistics',
+            'qc': 'qc',
+            'payments': 'finance',
+            'discounts': 'finance',
+            'reports': 'reports',
+            'content': 'articles',
+            'reviews': 'reviews',
+            'users': 'settings',
+            'settings': 'settings'
+          }[tabName];
+
+          if (user.role !== 'Admin Tổng' && tabPermKey && perms[tabPermKey] === 'none') {
+            alert(`Tài khoản [${user.name}] chưa được phân quyền truy cập phân hệ này!\n\nVui lòng liên hệ Admin Tổng để được cấp quyền.`);
+            return;
+          }
+        } catch(e){}
+      }
+
       document.querySelectorAll('.menu-link').forEach(el => el.classList.remove('active'));
       const activeLink = document.getElementById('nav-' + tabName);
       if (activeLink) activeLink.classList.add('active');
